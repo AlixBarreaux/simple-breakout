@@ -1,17 +1,17 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Paddle.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Brick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=3]
-[ext_resource path="res://balls_manager.gd" type="Script" id=4]
-[ext_resource path="res://BrickHealth.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/balls_manager.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/InGameGUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/GUI/PauseMenu.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 928.202, 78.0024 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 253.195, 54.2526 )
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -38,14 +38,14 @@ position = Vector2( 435.249, 428.115 )
 score_value = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelTest/Bricks/Brick"]
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="BrickHealth" parent="LevelTest/Bricks" instance=ExtResource( 5 )]
 position = Vector2( 1025.51, 608.003 )
 score_value = 120
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelTest/Bricks/BrickHealth"]
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="Terrain" type="Node2D" parent="LevelTest"]
 

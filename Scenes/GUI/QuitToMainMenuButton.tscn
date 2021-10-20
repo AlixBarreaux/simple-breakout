@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://quit_to_main_menu_button.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/quit_to_main_menu_button.gd" type="Script" id=2]
 
 [node name="QuitToMainMenuButton" type="Button"]
 margin_top = 327.0
@@ -9,9 +9,9 @@ margin_right = 1051.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "QUIT"
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
