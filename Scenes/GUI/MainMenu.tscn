@@ -1,0 +1,183 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/GUI/QuitToDesktopButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GUI/CreditsMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GUI/OptionsMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/GUI/LevelSelectionMenu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/GUI/main_menu.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Fade In Out"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+new_game_scene_to_load = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -204.0
+margin_top = 40.0
+margin_right = 205.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 1 )
+text = "Simple Breakout"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -525.5
+margin_top = -312.0
+margin_right = 525.5
+margin_bottom = 312.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGameButton" type="Button" parent="ColorRect/ButtonsContainer"]
+margin_right = 1051.0
+margin_bottom = 100.0
+focus_neighbour_left = NodePath("../QuitToDesktopButton")
+focus_neighbour_top = NodePath("../QuitToDesktopButton")
+focus_neighbour_right = NodePath("../SelectLevelButton")
+focus_neighbour_bottom = NodePath("../SelectLevelButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "NEW_GAME"
+
+[node name="SelectLevelButton" type="Button" parent="ColorRect/ButtonsContainer"]
+margin_top = 130.0
+margin_right = 1051.0
+margin_bottom = 231.0
+focus_neighbour_left = NodePath("../NewGameButton")
+focus_neighbour_top = NodePath("../NewGameButton")
+focus_neighbour_right = NodePath("../OptionsButton")
+focus_neighbour_bottom = NodePath("../OptionsButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "SELECT_LEVEL"
+
+[node name="OptionsButton" type="Button" parent="ColorRect/ButtonsContainer"]
+margin_top = 261.0
+margin_right = 1051.0
+margin_bottom = 362.0
+focus_neighbour_left = NodePath("../SelectLevelButton")
+focus_neighbour_top = NodePath("../SelectLevelButton")
+focus_neighbour_right = NodePath("../CreditsButton")
+focus_neighbour_bottom = NodePath("../CreditsButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "OPTIONS"
+
+[node name="CreditsButton" type="Button" parent="ColorRect/ButtonsContainer"]
+margin_top = 392.0
+margin_right = 1051.0
+margin_bottom = 493.0
+focus_neighbour_left = NodePath("../OptionsButton")
+focus_neighbour_top = NodePath("../OptionsButton")
+focus_neighbour_right = NodePath("../QuitToDesktopButton")
+focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "CREDITS"
+
+[node name="QuitToDesktopButton" parent="ColorRect/ButtonsContainer" instance=ExtResource( 3 )]
+margin_top = 523.0
+focus_neighbour_left = NodePath("../CreditsButton")
+focus_neighbour_top = NodePath("../CreditsButton")
+focus_neighbour_right = NodePath("../NewGameButton")
+focus_neighbour_bottom = NodePath("../NewGameButton")
+
+[node name="VersionLabel" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -119.0
+margin_top = -85.1406
+margin_right = 119.0
+margin_bottom = -38.1406
+custom_fonts/font = SubResource( 2 )
+text = "VERSION_LABEL"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/VersionLabel"]
+autoplay = "Fade In Out"
+"anims/Fade In Out" = SubResource( 3 )
+
+[node name="MenusToDisplay" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelectionMenu" parent="MenusToDisplay" instance=ExtResource( 6 )]
+visible = false
+
+[node name="OptionsMenu" parent="MenusToDisplay" instance=ExtResource( 5 )]
+visible = false
+
+[node name="CreditsMenu" parent="MenusToDisplay" instance=ExtResource( 4 )]
+visible = false
+
+[connection signal="pressed" from="ColorRect/ButtonsContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="ColorRect/ButtonsContainer/SelectLevelButton" to="." method="_on_SelectLevelButton_pressed"]
+[connection signal="pressed" from="ColorRect/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="ColorRect/ButtonsContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="visibility_changed" from="MenusToDisplay/LevelSelectionMenu" to="." method="_on_LevelSelectionMenu_visibility_changed"]
+[connection signal="visibility_changed" from="MenusToDisplay/OptionsMenu" to="." method="_on_OptionsMenu_visibility_changed"]
+[connection signal="visibility_changed" from="MenusToDisplay/CreditsMenu" to="." method="_on_CreditsMenu_visibility_changed"]

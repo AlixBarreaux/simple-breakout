@@ -1,0 +1,9 @@
+This game is released under an MIT license, be it its code or its assets excluding the 
+ones cited below.
+
+
+Assets Downloaded and used in the game:
+
+Legend Font:
+Free for Commercial Use (10/19/2021)
+https://fontesk.com/legend-font

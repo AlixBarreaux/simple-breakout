@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/GUI/quit_to_desktop_button.gd" type="Script" id=2]
+
+[node name="QuitToDesktopButton" type="Button"]
+margin_top = 490.0
+margin_right = 1051.0
+margin_bottom = 624.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "QUIT_TO_DESKTOP"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="." to="." method="_on_QuitToDesktopButton_pressed"]

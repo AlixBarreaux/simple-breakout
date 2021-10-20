@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://in_game_gui.gd" type="Script" id=2]
+
+[node name="InGameGUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+current_lives = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -207.5
+margin_top = 30.0
+margin_right = 207.5
+margin_bottom = 41.0
+custom_constants/separation = 100
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesContainer" type="HBoxContainer" parent="HBoxContainer"]
+margin_right = 153.0
+margin_bottom = 41.0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesLabel" type="Label" parent="HBoxContainer/LivesContainer"]
+margin_right = 82.0
+margin_bottom = 41.0
+text = "LIVES:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesCounterLabel" type="Label" parent="HBoxContainer/LivesContainer"]
+margin_left = 102.0
+margin_right = 153.0
+margin_bottom = 41.0
+text = "000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreContainer" type="HBoxContainer" parent="HBoxContainer"]
+margin_left = 253.0
+margin_right = 415.0
+margin_bottom = 41.0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="HBoxContainer/ScoreContainer"]
+margin_right = 91.0
+margin_bottom = 41.0
+text = "SCORE:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreCounterLabel" type="Label" parent="HBoxContainer/ScoreContainer"]
+margin_left = 111.0
+margin_right = 162.0
+margin_bottom = 41.0
+text = "000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
