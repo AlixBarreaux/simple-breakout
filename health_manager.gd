@@ -7,6 +7,8 @@ extends Node
 export var current_health: int = 1
 export var max_health: int = 1
 
+signal died
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 
@@ -15,7 +17,7 @@ export var max_health: int = 1
 
 func decrease_current_health(amount: int) -> void:
 	self.current_health -= amount
-	if self.current_health < 0:
+	if self.current_health < 1:
 		self.current_health = 0
 		die()
 
@@ -26,6 +28,6 @@ func increase_current_health(amount: int) -> void:
 		self.current_health = self.max_health
 
 
-signal died
+
 func die() -> void:
 	self.emit_signal("died")

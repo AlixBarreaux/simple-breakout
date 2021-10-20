@@ -32,6 +32,9 @@ func _physics_process(delta: float) -> void:
 		var reflect = collision.remainder.bounce(collision.normal)
 		self.direction = self.direction.bounce(collision.normal)
 		reflect = self.move_and_collide(reflect)
+		
+		if collision.collider.is_in_group("bricks"):
+			collision.collider._receive_ball_collision()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------

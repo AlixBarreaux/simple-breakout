@@ -20,19 +20,15 @@ func _initialize_asserts() -> void:
 	assert(self.score_value > -1)
 
 
-func _on_Area2D_body_entered(_body: PhysicsBody2D) -> void:
-	self._disable()
-
-
 func _disable() -> void:
-	$Area2D.get_child(0).set_deferred("disabled", true)
-	$StaticBody2D.get_child(0).set_deferred("disabled", true)
+	self.get_child(0).set_deferred("disabled", true)
 	self.hide()
-	
-#	get_tree().get_root().get_node("InGameGUI").increase_score(self.score_value)
 
 
 func _enable() -> void:
-	$Area2D.get_child(0).disabled = false
-	$StaticBody2D.get_child(0).disabled = false
+	self.get_child(0).disabled = false
 	self.show()
+
+
+func _receive_ball_collision() -> void:
+	self._disable()

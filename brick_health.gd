@@ -20,9 +20,10 @@ func _initialize_signals() -> void:
 	health_manager.connect("died", self, "on_died")
 
 
-func _on_Area2D_body_entered(_body: PhysicsBody2D) -> void:
-	self.health_manager.decrease_current_health(1)
-
 
 func on_died() -> void:
 	_disable()
+
+
+func _receive_ball_collision() -> void:
+	self.health_manager.decrease_current_health(1)

@@ -8,8 +8,8 @@
 [node name="BrickHealth" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="HealthManager" parent="." index="2" instance=ExtResource( 2 )]
+[node name="HealthManager" parent="." index="0" instance=ExtResource( 2 )]
 current_health = 3
 
-[node name="Sprite" type="Sprite" parent="." index="3"]
+[node name="Sprite" type="Sprite" parent="." index="1"]
 texture = ExtResource( 4 )
