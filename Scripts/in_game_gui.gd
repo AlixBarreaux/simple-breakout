@@ -10,6 +10,7 @@ var current_score: int = 0
 onready var lives_counter_label: Label = $HBoxContainer/LivesContainer/LivesCounterLabel
 onready var score_counter_label: Label = $HBoxContainer/ScoreContainer/ScoreCounterLabel
 
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:

@@ -20,9 +20,10 @@ func _initialize_signals() -> void:
 	health_manager.connect("died", self, "on_died")
 
 
-
 func on_died() -> void:
+	print(self.name, " : I died.")
 	_disable()
+	self.emit_signal("brick_destroyed")
 
 
 func _receive_ball_collision() -> void:

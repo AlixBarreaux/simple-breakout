@@ -7,12 +7,10 @@
 [ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/InGameGUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/GUI/PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://bricks_manager.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 928.202, 78.0024 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 253.195, 54.2526 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 25, 540 )
@@ -32,20 +30,18 @@ position = Vector2( -22.2236, 0 )
 shape = SubResource( 1 )
 
 [node name="Bricks" type="Node2D" parent="LevelTest"]
+script = ExtResource( 8 )
 
 [node name="Brick" parent="LevelTest/Bricks" instance=ExtResource( 2 )]
-position = Vector2( 435.249, 428.115 )
+position = Vector2( 691.983, 605.563 )
 score_value = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelTest/Bricks/Brick"]
-shape = SubResource( 2 )
-
 [node name="BrickHealth" parent="LevelTest/Bricks" instance=ExtResource( 5 )]
-position = Vector2( 1025.51, 608.003 )
-score_value = 120
+position = Vector2( 1089.23, 502.141 )
+score_value = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelTest/Bricks/BrickHealth"]
-shape = SubResource( 2 )
+[node name="HealthManager" parent="LevelTest/Bricks/BrickHealth" index="0"]
+current_health = 2
 
 [node name="Terrain" type="Node2D" parent="LevelTest"]
 
