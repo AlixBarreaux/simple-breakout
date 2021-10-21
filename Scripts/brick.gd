@@ -35,6 +35,12 @@ func _enable() -> void:
 	self.show()
 
 
-func _receive_ball_collision() -> void:
+func on_died() -> void:
+	print(self.name, " : I died.")
 	self._disable()
 	self.emit_signal("brick_destroyed")
+
+
+func _receive_ball_collision() -> void:
+	self._disable()
+	self.on_died()
