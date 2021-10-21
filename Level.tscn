@@ -1,14 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=1]
-[ext_resource path="res://LivesManager.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/balls_manager.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/bricks_manager.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/Paddle.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/GUI/InGameGUI.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/GUI/PauseMenu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://level.gd" type="Script" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -22,10 +19,6 @@ extents = Vector2( 25, 940 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 16 )
-
-[node name="LivesManager" parent="." instance=ExtResource( 2 )]
-current_lives = 3
-lives_gui_node_path = NodePath("../InGameGUICanvasLayer/InGameGUI/HBoxContainer/LivesGUI")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 1010.26, 240.496 )
@@ -131,18 +124,3 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-
-[node name="InGameGUICanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="InGameGUI" parent="InGameGUICanvasLayer" instance=ExtResource( 14 )]
-visible = false
-margin_top = -2.37842
-margin_bottom = -2.37842
-
-[node name="PauseMenu" parent="InGameGUICanvasLayer" instance=ExtResource( 15 )]
-visible = false
-
-[connection signal="lives_set" from="LivesManager" to="InGameGUICanvasLayer/InGameGUI/HBoxContainer/LivesGUI" method="_on_LivesManager_lives_set"]
-[connection signal="tree_entered" from="InGameGUICanvasLayer/InGameGUI/HBoxContainer/LivesGUI" to="LivesManager" method="_on_LivesGUI_tree_entered"]
-
-[editable path="InGameGUICanvasLayer/InGameGUI"]
