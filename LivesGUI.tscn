@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://lives_gui.gd" type="Script" id=1]
+
+[node name="LivesGUI" type="HBoxContainer"]
+margin_right = 153.0
+margin_bottom = 41.0
+custom_constants/separation = 20
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesLabel" type="Label" parent="."]
+margin_left = 35.0
+margin_top = 13.0
+margin_right = 73.0
+margin_bottom = 27.0
+text = "LIVES:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesCounterLabel" type="Label" parent="."]
+margin_left = 93.0
+margin_top = 13.0
+margin_right = 117.0
+margin_bottom = 27.0
+text = "000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

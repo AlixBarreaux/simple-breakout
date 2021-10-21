@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/GUI/OptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/LevelSelectionMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/GUI/main_menu.gd" type="Script" id=7]
-[ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Main.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60

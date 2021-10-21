@@ -19,7 +19,9 @@ func _initialize_signals() -> void:
 	$Ball.connect("died", self, "on_ball_died")
 
 
+
+
 # To modify in case there are several balls since it's designed for 1 only
 func on_ball_died() -> void:
-
 	print("A ball died!")
+	Events.emit_signal("all_balls_died")

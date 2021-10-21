@@ -1,0 +1,148 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LivesManager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/balls_manager.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/bricks_manager.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Paddle.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/GUI/InGameGUI.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/GUI/PauseMenu.tscn" type="PackedScene" id=15]
+[ext_resource path="res://level.gd" type="Script" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 928.202, 78.0024 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 25, 540 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 25, 940 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 16 )
+
+[node name="LivesManager" parent="." instance=ExtResource( 2 )]
+current_lives = 3
+lives_gui_node_path = NodePath("../InGameGUICanvasLayer/InGameGUI/HBoxContainer/LivesGUI")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 1010.26, 240.496 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -22.2236, 0 )
+shape = SubResource( 1 )
+
+[node name="Bricks" type="Node2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="Brick" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 691.983, 605.563 )
+score_value = 1
+
+[node name="BrickHealth" parent="Bricks" instance=ExtResource( 13 )]
+position = Vector2( 1089.23, 502.141 )
+score_value = 3
+
+[node name="Terrain" type="Node2D" parent="."]
+
+[node name="Borders" type="Node2D" parent="Terrain"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="WallLeft" type="StaticBody2D" parent="Terrain/Borders"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="Terrain/Borders/WallLeft"]
+color = Color( 0, 0.0941176, 0.313726, 1 )
+polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1080, 0, 1080 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/WallLeft"]
+position = Vector2( 25, 540 )
+shape = SubResource( 2 )
+
+[node name="WallRight" type="StaticBody2D" parent="Terrain/Borders"]
+position = Vector2( 1930, 0 )
+collision_layer = 4
+collision_mask = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="Terrain/Borders/WallRight"]
+color = Color( 0, 0.0941176, 0.313726, 1 )
+polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1080, 0, 1080 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/WallRight"]
+position = Vector2( 25, 540 )
+shape = SubResource( 2 )
+
+[node name="Ceiling" type="StaticBody2D" parent="Terrain/Borders"]
+position = Vector2( 2070, 0 )
+rotation = 1.57079
+collision_layer = 4
+collision_mask = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="Terrain/Borders/Ceiling"]
+position = Vector2( 0, 140 )
+color = Color( 0, 0.0941176, 0.313726, 1 )
+polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1880, 0, 1880 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/Ceiling"]
+position = Vector2( 25, 1080 )
+shape = SubResource( 3 )
+
+[node name="Floor" type="StaticBody2D" parent="Terrain/Borders"]
+position = Vector2( 2070, 1030 )
+rotation = 1.57079
+collision_layer = 4
+collision_mask = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="Terrain/Borders/Floor"]
+position = Vector2( 0, 140 )
+color = Color( 0, 0.0941176, 0.313726, 1 )
+polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1880, 0, 1880 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/Floor"]
+position = Vector2( 25, 1080 )
+shape = SubResource( 3 )
+
+[node name="Paddles" type="Node2D" parent="."]
+
+[node name="Paddle" parent="Paddles" instance=ExtResource( 11 )]
+position = Vector2( 991.326, 996.533 )
+current_speed = 650
+
+[node name="Balls" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Ball" parent="Balls" instance=ExtResource( 12 )]
+position = Vector2( 997.47, 889.838 )
+
+[node name="ArenaBackgroundCanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="ArenaBackgroundCanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="InGameGUICanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InGameGUI" parent="InGameGUICanvasLayer" instance=ExtResource( 14 )]
+visible = false
+margin_top = -2.37842
+margin_bottom = -2.37842
+
+[node name="PauseMenu" parent="InGameGUICanvasLayer" instance=ExtResource( 15 )]
+visible = false
+
+[connection signal="lives_set" from="LivesManager" to="InGameGUICanvasLayer/InGameGUI/HBoxContainer/LivesGUI" method="_on_LivesManager_lives_set"]
+[connection signal="tree_entered" from="InGameGUICanvasLayer/InGameGUI/HBoxContainer/LivesGUI" to="LivesManager" method="_on_LivesGUI_tree_entered"]
+
+[editable path="InGameGUICanvasLayer/InGameGUI"]

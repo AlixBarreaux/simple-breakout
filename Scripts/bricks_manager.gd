@@ -18,13 +18,13 @@ func _initialize_signals() -> void:
 	for child in self.get_children():
 		child.connect("brick_destroyed", self, "on_brick_destroyed")
 		self.bricks_counter += 1
-		print(str(child) + " | " + str(self.bricks_counter))
+#		print(str(child) + " | " + str(self.bricks_counter))
 
 
 func on_brick_destroyed() -> void:
 	self.bricks_counter -= 1
 	
-	if self.bricks_counter < 1:
-		print(str(self.name) + ": There is no brick left!")
-	else:
-		print(str(self.name) + "There is at least one brick remaining!")
+#	if self.bricks_counter < 1:
+#		print(str(self.name) + ": There is no brick left!")
+#	else:
+#		print(str(self.name) + "There is at least one brick remaining!")

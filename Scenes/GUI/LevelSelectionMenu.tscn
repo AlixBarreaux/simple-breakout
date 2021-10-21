@@ -3,7 +3,7 @@
 [ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/GUI/LevelSelectionButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=3]
-[ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Main.tscn" type="PackedScene" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/GUI/level_selection_menu.gd" type="Script" id=6]
 

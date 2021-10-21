@@ -32,17 +32,12 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "BricksManager",
 "language": "GDScript",
-"path": "res://bricks_manager.gd"
+"path": "res://Scripts/bricks_manager.gd"
 }, {
 "base": "Control",
 "class": "CreditsMenu",
 "language": "GDScript",
 "path": "res://Scripts/GUI/credits_menu.gd"
-}, {
-"base": "Node",
-"class": "Events",
-"language": "GDScript",
-"path": "res://Singletons/events.gd"
 }, {
 "base": "Node",
 "class": "HealthManager",
@@ -54,6 +49,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/in_game_gui.gd"
 }, {
+"base": "Node2D",
+"class": "Level",
+"language": "GDScript",
+"path": "res://level.gd"
+}, {
 "base": "Button",
 "class": "LevelSelectionButton",
 "language": "GDScript",
@@ -63,6 +63,11 @@ _global_script_classes=[ {
 "class": "LevelSelectionMenu",
 "language": "GDScript",
 "path": "res://Scripts/GUI/level_selection_menu.gd"
+}, {
+"base": "Node",
+"class": "LivesManager",
+"language": "GDScript",
+"path": "res://lives_manager.gd"
 }, {
 "base": "Control",
 "class": "MainMenu",
@@ -92,7 +97,7 @@ _global_script_classes=[ {
 "base": "Button",
 "class": "QuitToMainMenuButton",
 "language": "GDScript",
-"path": "res://Scripts/quit_to_main_menu_button.gd"
+"path": "res://Scripts/GUI/quit_to_main_menu_button.gd"
 } ]
 _global_script_class_icons={
 "Ball": "",
@@ -101,11 +106,12 @@ _global_script_class_icons={
 "BrickHealth": "",
 "BricksManager": "",
 "CreditsMenu": "",
-"Events": "",
 "HealthManager": "",
 "InGameGUI": "",
+"Level": "",
 "LevelSelectionButton": "",
 "LevelSelectionMenu": "",
+"LivesManager": "",
 "MainMenu": "",
 "OptionsMenu": "",
 "Paddle": "",
@@ -117,8 +123,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Breakout"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Events="*res://Singletons/events.gd"
 
 [display]
 
