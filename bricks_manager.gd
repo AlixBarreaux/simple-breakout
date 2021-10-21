@@ -4,7 +4,7 @@ extends Node2D
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-
+var bricks_counter: int = 0
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -17,12 +17,14 @@ func _ready() -> void:
 func _initialize_signals() -> void:
 	for child in self.get_children():
 		child.connect("brick_destroyed", self, "on_brick_destroyed")
-		print(child)
+		self.bricks_counter += 1
+		print(str(child) + " | " + str(self.bricks_counter))
 
 
 func on_brick_destroyed() -> void:
-	print("on_brick_destroyed() triggered!")
-	if self.get_child_count() < 1:
+	self.bricks_counter -= 1
+	
+	if self.bricks_counter < 1:
 		print(str(self.name) + ": There is no brick left!")
 	else:
-		print("There is at least one brick remaining!")
+		print(str(self.name) + "There is at least one brick remaining!")
