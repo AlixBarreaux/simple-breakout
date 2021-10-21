@@ -19,6 +19,7 @@ signal lives_set
 
 func _ready() -> void:
 	self._initialize_asserts()
+	self._initialize_signals()
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
@@ -52,12 +53,12 @@ func set_current_lives(value: int) -> void:
 
 func decrease_current_lives(value: int) -> void:
 	self.current_lives -= value
-	self.set_current_lives(value)
+	self.set_current_lives(self.current_lives)
 
 
 func increase_current_lives(value: int) -> void:
 	self.current_lives += value
-	self.set_current_lives(value)
+	self.set_current_lives(self.current_lives)
 
 
 func on_all_balls_died() -> void:

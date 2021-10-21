@@ -8,6 +8,7 @@ export var current_health: int = 1
 export var max_health: int = 1
 
 signal died
+signal health_decreased
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -19,6 +20,7 @@ func decrease_current_health(amount: int) -> void:
 	self.current_health -= amount
 	if self.current_health < 1:
 		self.current_health = 0
+#		self.emit_signal("health_decreased")
 		die()
 
 

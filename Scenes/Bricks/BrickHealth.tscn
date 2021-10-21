@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/HealthManager.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/brick_health.gd" type="Script" id=4]
@@ -10,6 +9,3 @@ script = ExtResource( 4 )
 
 [node name="HealthManager" parent="." index="0" instance=ExtResource( 3 )]
 current_health = 3
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
-texture = ExtResource( 1 )

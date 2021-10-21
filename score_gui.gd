@@ -9,7 +9,6 @@ onready var score_counter_label: Label = $ScoreCounterLabel
 # ---------------------------------- RUN CODE ----------------------------------
 
 
-
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 

@@ -31,18 +31,49 @@ shape = SubResource( 1 )
 script = ExtResource( 10 )
 
 [node name="Brick" parent="Bricks" instance=ExtResource( 1 )]
-position = Vector2( 691.983, 605.563 )
+position = Vector2( 100, 400 )
+score_value = 1
+
+[node name="Brick2" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 300, 400 )
+score_value = 1
+
+[node name="Brick3" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 500, 400 )
+score_value = 1
+
+[node name="Brick4" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 700, 400 )
+score_value = 1
+
+[node name="Brick5" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 900, 400 )
+score_value = 1
+
+[node name="Brick6" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 1100, 400 )
+score_value = 1
+
+[node name="Brick7" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 1300, 400 )
+score_value = 1
+
+[node name="Brick8" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 1500, 400 )
+score_value = 1
+
+[node name="Brick9" parent="Bricks" instance=ExtResource( 1 )]
+position = Vector2( 1700, 400 )
 score_value = 1
 
 [node name="BrickHealth" parent="Bricks" instance=ExtResource( 13 )]
-position = Vector2( 1089.23, 502.141 )
+position = Vector2( 920, 720 )
 score_value = 3
 
 [node name="Terrain" type="Node2D" parent="."]
 
 [node name="Borders" type="Node2D" parent="Terrain"]
 __meta__ = {
-"_edit_group_": true,
 "_edit_lock_": true
 }
 

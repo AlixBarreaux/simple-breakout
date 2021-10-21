@@ -23,5 +23,5 @@ func _initialize_signals() -> void:
 
 # To modify in case there are several balls since it's designed for 1 only
 func on_ball_died() -> void:
-	print("A ball died!")
+	print(str(self.name) + " : A ball died!")
 	Events.emit_signal("all_balls_died")

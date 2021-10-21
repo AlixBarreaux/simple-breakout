@@ -42,9 +42,9 @@ func set_current_score(value: int) -> void:
 
 func decrease_current_score(value: int) -> void:
 	self.current_score -= value
-	self.set_current_score(value)
+	self.set_current_score(self.current_score)
 
 
 func increase_current_score(value: int) -> void:
 	self.current_score += value
-	self.set_current_score(value)
+	self.set_current_score(self.current_score)
