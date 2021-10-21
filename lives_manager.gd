@@ -6,10 +6,13 @@ extends Node
 
 export var current_lives: int = 0
 
+# Node Paths
 export (NodePath) onready var lives_gui_node_path = null
 
+# Node References
 onready var lives_gui: Control = null
 
+# Signals
 signal lives_set
 
 # ---------------------------------- RUN CODE ----------------------------------
@@ -23,7 +26,7 @@ func _on_LivesGUI_tree_entered() -> void:
 	lives_gui = get_node(lives_gui_node_path)
 
 	# Wait for the lives_gui node to be ready
-	# before sending the signal lives_set via set_lives() method
+	# before sending the signal lives_set via set_current_lives() method
 	yield(lives_gui, "ready")
 	self._initialize()
 
@@ -38,25 +41,24 @@ func _initialize_signals() -> void:
 
 
 func _initialize() -> void:
-	self.set_lives(self.current_lives)
+	self.set_current_lives(self.current_lives)
 
 
 # Lives
-func set_lives(value: int) -> void:
+func set_current_lives(value: int) -> void:
 	self.current_lives = value
 	self.emit_signal("lives_set", value)
 
 
-func decrease_lives(value: int) -> void:
+func decrease_current_lives(value: int) -> void:
 	self.current_lives -= value
-	self.set_lives(value)
+	self.set_current_lives(value)
 
 
-func increase_lives(value: int) -> void:
+func increase_current_lives(value: int) -> void:
 	self.current_lives += value
-	self.set_lives(value)
+	self.set_current_lives(value)
 
 
 func on_all_balls_died() -> void:
-	self.decrease_lives(1)
-
+	self.decrease_current_lives(1)

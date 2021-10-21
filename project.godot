@@ -64,6 +64,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/level_selection_menu.gd"
 }, {
+"base": "HBoxContainer",
+"class": "LivesGUI",
+"language": "GDScript",
+"path": "res://lives_gui.gd"
+}, {
 "base": "Node",
 "class": "LivesManager",
 "language": "GDScript",
@@ -98,6 +103,16 @@ _global_script_classes=[ {
 "class": "QuitToMainMenuButton",
 "language": "GDScript",
 "path": "res://Scripts/GUI/quit_to_main_menu_button.gd"
+}, {
+"base": "HBoxContainer",
+"class": "ScoreGUI",
+"language": "GDScript",
+"path": "res://score_gui.gd"
+}, {
+"base": "Node",
+"class": "ScoreManager",
+"language": "GDScript",
+"path": "res://score_manager.gd"
 } ]
 _global_script_class_icons={
 "Ball": "",
@@ -111,13 +126,16 @@ _global_script_class_icons={
 "Level": "",
 "LevelSelectionButton": "",
 "LevelSelectionMenu": "",
+"LivesGUI": "",
 "LivesManager": "",
 "MainMenu": "",
 "OptionsMenu": "",
 "Paddle": "",
 "PauseMenu": "",
 "QuitToDesktopButton": "",
-"QuitToMainMenuButton": ""
+"QuitToMainMenuButton": "",
+"ScoreGUI": "",
+"ScoreManager": ""
 }
 
 [application]

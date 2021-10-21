@@ -1,10 +1,10 @@
-class_name LivesGUI
+class_name ScoreGUI
 extends HBoxContainer
 
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-onready var lives_counter_label: Label = $LivesCounterLabel
+onready var score_counter_label: Label = $ScoreCounterLabel
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -16,8 +16,8 @@ func _ready() -> void:
 
 
 func _initialize() -> void:
-	self.lives_counter_label.text = "0"
+	self.score_counter_label.text = "0"
 
 
-func _on_LivesManager_lives_set(value: int) -> void:
-	self.lives_counter_label.text = str(value)
+func _on_ScoreManager_score_set(value: int) -> void:
+	self.score_counter_label.text = str(value)
