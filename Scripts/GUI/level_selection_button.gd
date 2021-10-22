@@ -52,3 +52,6 @@ func _on_LevelSelectionButton_pressed() -> void:
 #		printerr("(!) ERROR: In level_selection_button.gd")
 #		printerr("(!) Unkown error!")
 		
+
+#func load_level(scene_path: String) -> void:
+#	self.get_tree().change_scene("res://Scenes/Main.tscn")

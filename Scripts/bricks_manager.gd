@@ -24,7 +24,8 @@ func _initialize_signals() -> void:
 func on_brick_destroyed() -> void:
 	self.bricks_counter -= 1
 	
-#	if self.bricks_counter < 1:
+	if self.bricks_counter < 1:
+		Events.emit_signal("level_finished")
 #		print(str(self.name) + ": There is no brick left!")
 #	else:
 #		print(str(self.name) + "There is at least one brick remaining!")

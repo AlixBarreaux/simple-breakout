@@ -3,10 +3,9 @@
 [ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/GUI/LevelSelectionButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=3]
-[ext_resource path="res://Scenes/Main.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Level.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Miscellaneous/icon.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/GUI/level_selection_menu.gd" type="Script" id=6]
-
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -45,13 +44,25 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="LevelSelectionButton" parent="." instance=ExtResource( 2 )]
-focus_neighbour_left = NodePath("../BackButton")
-focus_neighbour_top = NodePath("../BackButton")
-focus_neighbour_right = NodePath("../BackButton")
-focus_neighbour_bottom = NodePath("../BackButton")
+[node name="LevelSelectionButton" parent="ColorRect" instance=ExtResource( 2 )]
+margin_left = 40.2596
+margin_right = 659.26
 level_to_load = ExtResource( 4 )
-level_name = "LEVEL_TEST"
+level_name = "Level 1"
+preview_image_stream_texture = ExtResource( 5 )
+
+[node name="LevelSelectionButton2" parent="ColorRect" instance=ExtResource( 2 )]
+margin_left = 690.77
+margin_right = 1309.77
+level_to_load = ExtResource( 4 )
+level_name = "Level 1"
+preview_image_stream_texture = ExtResource( 5 )
+
+[node name="LevelSelectionButton3" parent="ColorRect" instance=ExtResource( 2 )]
+margin_left = 1334.92
+margin_right = 1953.92
+level_to_load = ExtResource( 4 )
+level_name = "Level 1"
 preview_image_stream_texture = ExtResource( 5 )
 
 [node name="BackButton" type="Button" parent="."]
@@ -68,6 +79,9 @@ focus_neighbour_top = NodePath("../LevelSelectionButton")
 focus_neighbour_right = NodePath("../LevelSelectionButton")
 focus_neighbour_bottom = NodePath("../LevelSelectionButton")
 text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="visibility_changed" from="." to="." method="_on_LevelSelectionMenu_visibility_changed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

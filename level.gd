@@ -5,17 +5,36 @@ extends Node2D
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 export var current_lives: int = 0
+export var next_level_to_load: PackedScene = null
+
 var current_score: int = 0
 
 
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
+	self._initialize_asserts()
+	self._initialize_signals()
 	self._initialize()
 	self.show()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
+func _initialize_asserts() -> void:
+	assert(self.next_level_to_load != null)
+
+func _initialize_signals() -> void:
+	Events.connect("level_finished", self, "on_level_finished")
+
+
+func on_level_finished() -> void:
+	$LevelTransitionTimer.start()
+
+
+func _on_LevelTransitionTimer_timeout() -> void:
+	Global.replace_scene(self, self.next_level_to_load, self.get_parent(), self.get_index())
+
 
 
 func _initialize() -> void:

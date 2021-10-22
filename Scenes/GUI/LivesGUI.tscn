@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Scripts/GUI/lives_gui.gd" type="Script" id=1]
 
-
 [node name="LivesGUI" type="HBoxContainer"]
 margin_right = 153.0
 margin_bottom = 41.0

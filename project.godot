@@ -155,6 +155,7 @@ config/version=1
 
 Events="*res://Singletons/events.gd"
 Settings="*res://Singletons/settings.gd"
+Global="*res://Singletons/global.gd"
 
 [display]
 

@@ -1,3 +1,4 @@
+# Settings Singleton
 extends Node
 
 

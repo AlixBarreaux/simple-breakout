@@ -17,9 +17,9 @@ onready var back_button_pressed: Button = $BackButton
 
 func _on_LevelSelectionMenu_visibility_changed() -> void:
 	if self.visible:
-		$LevelSelectionButton.grab_focus()
+		$ColorRect/LevelSelectionButton.grab_focus()
 
 
 func _on_BackButton_pressed() -> void:
-	$LevelSelectionButton.release_focus()
+	$ColorRect/LevelSelectionButton.release_focus()
 	self.hide()

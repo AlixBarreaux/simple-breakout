@@ -144,6 +144,9 @@ script = ExtResource( 3 )
 [node name="Ball" parent="Balls" instance=ExtResource( 12 )]
 position = Vector2( 997.47, 889.838 )
 
+[node name="LevelTransitionTimer" type="Timer" parent="."]
+wait_time = 2.5
+
 [node name="ArenaBackgroundCanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
@@ -155,3 +158,5 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[connection signal="timeout" from="LevelTransitionTimer" to="." method="_on_LevelTransitionTimer_timeout"]
