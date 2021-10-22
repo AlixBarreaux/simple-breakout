@@ -90,7 +90,7 @@ focus_neighbour_bottom = NodePath("../SelectLevelButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "NEW_GAME"
+text = "hello"
 
 [node name="SelectLevelButton" type="Button" parent="ColorRect/ButtonsContainer"]
 margin_top = 130.0
@@ -103,7 +103,7 @@ focus_neighbour_bottom = NodePath("../OptionsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "SELECT_LEVEL"
+text = "select level"
 
 [node name="OptionsButton" type="Button" parent="ColorRect/ButtonsContainer"]
 margin_top = 261.0
@@ -116,7 +116,7 @@ focus_neighbour_bottom = NodePath("../CreditsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "OPTIONS"
+text = "options"
 
 [node name="CreditsButton" type="Button" parent="ColorRect/ButtonsContainer"]
 margin_top = 392.0
@@ -129,7 +129,7 @@ focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "CREDITS"
+text = "credits"
 
 [node name="QuitToDesktopButton" parent="ColorRect/ButtonsContainer" instance=ExtResource( 3 )]
 margin_top = 523.0
@@ -137,6 +137,7 @@ focus_neighbour_left = NodePath("../CreditsButton")
 focus_neighbour_top = NodePath("../CreditsButton")
 focus_neighbour_right = NodePath("../NewGameButton")
 focus_neighbour_bottom = NodePath("../NewGameButton")
+text = "quit to desktop"
 
 [node name="VersionLabel" type="Label" parent="ColorRect"]
 anchor_left = 0.5

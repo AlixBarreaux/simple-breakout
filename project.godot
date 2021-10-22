@@ -147,6 +147,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Events="*res://Singletons/events.gd"
+Settings="*res://Singletons/settings.gd"
 
 [display]
 
@@ -176,6 +177,11 @@ move_right={
 2d_physics/layer_2="Balls"
 2d_physics/layer_3="Terrain"
 2d_physics/layer_4="BricksBallDetector"
+
+[locale]
+
+translations=PoolStringArray( "res://Translations/fr/Menus/menus_fr.po", "res://Translations/de/Menus/menus_de.po" )
+locale_filter=[ 0, [  ] ]
 
 [physics]
 

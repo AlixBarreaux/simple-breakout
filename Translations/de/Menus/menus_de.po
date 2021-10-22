@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ki Squad Studio\n"
+"POT-Creation-Date: 2022-10-22 11:00+0200\n"
+"PO-Revision-Date: 2021-10-22 13:58+0200\n"
+"Last-Translator: \n"
+"Language-Team: Ki Squad Studio <none@none.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Keywords for Strings
+msgid "back"
+msgstr ""
+
+# Keywords for Strings
+msgid "credits"
+msgstr ""
+
+msgid "game over"
+msgstr ""
+
+msgid "hello"
+msgstr "hallo"
+
+#, fuzzy
+msgid "new game"
+msgstr "neue spiel"
+
+msgid "options"
+msgstr ""
+
+msgid "quit to desktop"
+msgstr ""
+
+msgid "quit to main menu"
+msgstr ""
+
+msgid "select level"
+msgstr ""

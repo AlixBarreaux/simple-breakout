@@ -1,0 +1,42 @@
+﻿#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ki Squad Studio\n"
+"POT-Creation-Date: 2022-10-22 11:00+0200\n"
+"PO-Revision-Date: 2022-10-22 11:00+0100\n"
+"Last-Translator: Ki Squad Studio \n"
+"Language-Team: Ki Squad Studio <none@none.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+# Keywords for Strings
+
+msgid "back"
+msgstr ""
+
+msgid "credits"
+msgstr ""
+
+msgid "game over"
+msgstr ""
+
+msgid "hello"
+msgstr ""
+
+msgid "new game"
+msgstr ""
+
+msgid "options"
+msgstr ""
+
+msgid "quit to desktop"
+msgstr ""
+
+msgid "quit to main menu"
+msgstr ""
+
+msgid "select level"
+msgstr ""
+
