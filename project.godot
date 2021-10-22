@@ -67,7 +67,7 @@ _global_script_classes=[ {
 "base": "HBoxContainer",
 "class": "LivesGUI",
 "language": "GDScript",
-"path": "res://lives_gui.gd"
+"path": "res://Scripts/GUI/lives_gui.gd"
 }, {
 "base": "Node",
 "class": "LivesManager",
@@ -148,7 +148,7 @@ _global_script_class_icons={
 
 config/name="Simple Breakout"
 run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://Miscellaneous/icon.png"
 config/version=1
 
 [autoload]

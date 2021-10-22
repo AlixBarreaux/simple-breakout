@@ -70,7 +70,7 @@ focus_neighbour_bottom = NodePath("../SelectLevelButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "hello"
+text = "new game"
 
 [node name="SelectLevelButton" type="Button" parent="ColorRect/ButtonsContainer"]
 margin_top = 130.0
