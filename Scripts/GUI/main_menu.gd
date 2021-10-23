@@ -6,6 +6,11 @@ extends Control
 
 export var new_game_scene_to_load: PackedScene = null
 
+# TEST
+var game_scene_path: String = "res://Game.tscn"
+export var new_game_level_to_load_path: String = ""
+# CHECK FOR BOTH NOT EMPTY !!!!
+# END TEST
 
 # Buttons
 onready var new_game_button: Button = $ColorRect/ButtonsContainer/NewGameButton
@@ -35,7 +40,27 @@ func _initialize_asserts() -> void:
 # Buttons Signals
 func _on_NewGameButton_pressed() -> void:
 	# warning-ignore: return_value_discarded
-	get_tree().change_scene_to(self.new_game_scene_to_load)
+	var error_code: int = 0
+#	get_tree().change_scene_to(self.new_game_scene_to_load)
+	
+	
+	
+
+
+	# TEST
+	error_code = self.get_tree().change_scene(self.game_scene_path)
+	Global.set_level_to_load_path(self.new_game_level_to_load_path)
+	# END TEST
+
+
+
+
+
+
+
+
+
+
 
 
 func _on_SelectLevelButton_pressed() -> void:

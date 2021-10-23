@@ -40,6 +40,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/GUI/credits_menu.gd"
 }, {
 "base": "Node",
+"class": "Game",
+"language": "GDScript",
+"path": "res://game.gd"
+}, {
+"base": "Node",
 "class": "HealthManager",
 "language": "GDScript",
 "path": "res://Scripts/health_manager.gd"
@@ -126,6 +131,7 @@ _global_script_class_icons={
 "BrickHealth": "",
 "BricksManager": "",
 "CreditsMenu": "",
+"Game": "",
 "HealthManager": "",
 "InGameGUI": "",
 "Level": "",
@@ -147,7 +153,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Simple Breakout"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/GUI/MainMenu.tscn"
 config/icon="res://Miscellaneous/icon.png"
 config/version=1
 

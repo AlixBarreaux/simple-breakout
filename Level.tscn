@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Levels/LevelTemporary.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/balls_manager.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/bricks_manager.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/Paddle.tscn" type="PackedScene" id=11]
@@ -19,6 +20,7 @@ extents = Vector2( 25, 940 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 16 )
+next_level_to_load = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 1010.26, 240.496 )

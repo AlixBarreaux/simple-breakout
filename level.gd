@@ -36,7 +36,6 @@ func _on_LevelTransitionTimer_timeout() -> void:
 	Global.replace_scene(self, self.next_level_to_load, self.get_parent(), self.get_index())
 
 
-
 func _initialize() -> void:
 	self.set_lives(self.current_lives)
 	self.set_score(0)
