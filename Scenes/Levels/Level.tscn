@@ -144,7 +144,7 @@ current_speed = 650
 script = ExtResource( 3 )
 
 [node name="Ball" parent="Balls" instance=ExtResource( 12 )]
-position = Vector2( 997.47, 889.838 )
+position = Vector2( 900, 820 )
 
 [node name="LevelTransitionTimer" type="Timer" parent="."]
 wait_time = 2.5

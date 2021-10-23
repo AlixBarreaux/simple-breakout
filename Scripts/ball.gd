@@ -29,12 +29,39 @@ func _physics_process(delta: float) -> void:
 	
 	var collision: KinematicCollision2D = self.move_and_collide(self.velocity * delta * self.current_speed)
 	if collision:
-		var reflect = collision.remainder.bounce(collision.normal)
-		self.direction = self.direction.bounce(collision.normal)
-		reflect = self.move_and_collide(reflect)
+		# TEST
+		if collision.collider is Paddle:
+			self.direction = get_bounce_direction(collision)
+			self.direction.bounce(collision.normal)
+#			var reflect = collision.remainder.bounce(collision.normal)
+		else:
+		# END TEST
+			self.direction = self.direction.bounce(collision.normal)
+#			var reflect = collision.remainder.bounce(collision.normal)
+#			reflect = self.move_and_collide(reflect)
+		
 		
 		if collision.collider.is_in_group("bricks"):
 			collision.collider._receive_ball_collision()
+
+
+# TEST
+func get_bounce_direction(collision: KinematicCollision2D):
+	var ball_collision_position: Vector2 = collision.position
+	# Paddle or anything else
+	var collider_global_position: Vector2 = collision.collider.global_position
+	
+	var vector_between_both: Vector2 = ball_collision_position - collider_global_position
+	
+	
+#	print(collider_global_position, ball_collision_position)
+#	print("RETURN: " + str(vector_between_both))
+	
+	vector_between_both = vector_between_both.normalized()
+#	print("NORMALIZED: " + str(vector_between_both))
+	return vector_between_both
+
+# END TEST
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
