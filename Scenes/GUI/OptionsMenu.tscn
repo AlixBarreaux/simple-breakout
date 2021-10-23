@@ -65,7 +65,7 @@ focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
-text = "BACK"
+text = "back"
 
 [connection signal="visibility_changed" from="." to="." method="_on_OptionsMenu_visibility_changed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

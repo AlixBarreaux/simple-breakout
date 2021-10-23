@@ -26,6 +26,14 @@ anchor_right = 0.99786
 margin_top = -2.37842
 margin_bottom = -2.37842
 
+[node name="LivesGUI" parent="InGameGUICanvasLayer/InGameGUI/HBoxContainer" index="0"]
+margin_left = 1.0
+margin_right = 150.0
+
+[node name="ScoreGUI" parent="InGameGUICanvasLayer/InGameGUI/HBoxContainer" index="1"]
+margin_left = 250.0
+margin_right = 412.0
+
 [node name="PauseMenu" parent="InGameGUICanvasLayer" instance=ExtResource( 3 )]
 visible = false
 

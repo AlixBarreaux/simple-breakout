@@ -25,6 +25,9 @@ msgstr ""
 msgid "hello"
 msgstr ""
 
+msgid "lives"
+msgstr ""
+
 msgid "new game"
 msgstr ""
 
@@ -37,6 +40,11 @@ msgstr ""
 msgid "quit to main menu"
 msgstr ""
 
-msgid "select level"
+msgid "resume"
 msgstr ""
 
+msgid "select a level"
+msgstr ""
+
+msgid "score"
+msgstr ""

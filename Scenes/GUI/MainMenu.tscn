@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/GUI/OptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/LevelSelectionMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/GUI/main_menu.gd" type="Script" id=7]
-[ext_resource path="res://Level.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/GUI/VersionLabel.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
@@ -22,7 +22,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 new_game_scene_to_load = ExtResource( 8 )
-new_game_level_to_load_path = "res://Level.tscn"
+new_game_level_to_load_path = "res://Scenes/Levels/Level.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -84,7 +84,7 @@ focus_neighbour_bottom = NodePath("../OptionsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 1 )
-text = "select level"
+text = "select a level"
 
 [node name="OptionsButton" type="Button" parent="ColorRect/ButtonsContainer"]
 margin_top = 261.0

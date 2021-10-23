@@ -14,11 +14,11 @@ __meta__ = {
 }
 
 [node name="ScoreLabel" type="Label" parent="."]
-margin_left = 36.0
+margin_left = 39.0
 margin_top = 13.0
-margin_right = 81.0
+margin_right = 78.0
 margin_bottom = 27.0
-text = "SCORE:"
+text = "score:"
 align = 1
 valign = 1
 __meta__ = {
@@ -26,9 +26,9 @@ __meta__ = {
 }
 
 [node name="ScoreCounterLabel" type="Label" parent="."]
-margin_left = 101.0
+margin_left = 98.0
 margin_top = 13.0
-margin_right = 125.0
+margin_right = 122.0
 margin_bottom = 27.0
 text = "000"
 align = 1
