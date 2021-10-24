@@ -153,9 +153,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Simple Breakout"
-run/main_scene="res://Scenes/Levels/LevelTest.tscn"
+run/main_scene="res://Scenes/GUI/MainMenu.tscn"
 config/icon="res://Miscellaneous/icon.png"
 config/version=1
+
+[audio]
+
+default_bus_layout="res://Resources/Audio_Bus_Layouts/default_bus_layout.tres"
 
 [autoload]
 

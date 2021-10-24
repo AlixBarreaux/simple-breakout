@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/chiptune_roller_derby.ogg-483d130ae65b29836244cdeb382c7ec1.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/chiptune_roller_derby.ogg"
+dest_files=[ "res://.import/chiptune_roller_derby.ogg-483d130ae65b29836244cdeb382c7ec1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

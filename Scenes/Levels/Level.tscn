@@ -6,10 +6,10 @@
 [ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=12]
 [ext_resource path="res://level.gd" type="Script" id=16]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25, 540 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 25, 940 )
 
 [node name="Level" type="Node2D"]
@@ -35,7 +35,7 @@ polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1080, 0, 1080 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/WallLeft"]
 position = Vector2( 25, 540 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="WallRight" type="StaticBody2D" parent="Terrain/Borders"]
 position = Vector2( 1930, 0 )
@@ -48,7 +48,7 @@ polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1080, 0, 1080 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/WallRight"]
 position = Vector2( 25, 540 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="Ceiling" type="StaticBody2D" parent="Terrain/Borders"]
 position = Vector2( 2070, 0 )
@@ -63,7 +63,7 @@ polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1880, 0, 1880 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/Ceiling"]
 position = Vector2( 25, 1080 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Floor" type="StaticBody2D" parent="Terrain/Borders"]
 position = Vector2( 2070, 1030 )
@@ -78,7 +78,7 @@ polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1880, 0, 1880 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/Floor"]
 position = Vector2( 25, 1080 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Paddles" type="Node2D" parent="."]
 
@@ -91,6 +91,7 @@ script = ExtResource( 3 )
 
 [node name="Ball" parent="Balls" instance=ExtResource( 12 )]
 position = Vector2( 991.326, 690 )
+current_speed = 30
 
 [node name="LevelTransitionTimer" type="Timer" parent="."]
 wait_time = 2.5
@@ -106,5 +107,7 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
 
 [connection signal="timeout" from="LevelTransitionTimer" to="." method="_on_LevelTransitionTimer_timeout"]

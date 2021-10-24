@@ -60,6 +60,7 @@ func _on_LevelTransitionTimer_timeout() -> void:
 	if not self.load_next_level:
 		Global.replace_scene(self, self.next_level_to_load, self.get_parent(), self.get_index())
 	else:
+		Global.set_load_next_level(false)
 		get_tree().change_scene(menu_to_load_at_end_path)
 
 
