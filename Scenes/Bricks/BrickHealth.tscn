@@ -2,10 +2,13 @@
 
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/HealthManager.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/brick_health.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Bricks_Attributes/brick_health.gd" type="Script" id=4]
 
 [node name="BrickHealth" instance=ExtResource( 2 )]
 script = ExtResource( 4 )
 
 [node name="HealthManager" parent="." index="0" instance=ExtResource( 3 )]
 current_health = 2
+
+[node name="Polygon2D" parent="." index="1"]
+color = Color( 0.831373, 0, 0, 1 )

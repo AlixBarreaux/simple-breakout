@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Bricks_Attributes/invisibility_manager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=2]
+
+[node name="BrickInvisible" instance=ExtResource( 2 )]
+
+[node name="InvisibilityManager" type="Node" parent="." index="3"]
+script = ExtResource( 1 )
+
+[connection signal="health_decreased" from="HealthManager" to="InvisibilityManager" method="_on_HealthManager_health_decreased"]

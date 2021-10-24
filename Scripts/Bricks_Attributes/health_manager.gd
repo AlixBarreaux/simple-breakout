@@ -18,9 +18,9 @@ signal health_decreased
 
 func decrease_current_health(amount: int) -> void:
 	self.current_health -= amount
+	self.emit_signal("health_decreased")
 	if self.current_health < 1:
 		self.current_health = 0
-#		self.emit_signal("health_decreased")
 		die()
 
 

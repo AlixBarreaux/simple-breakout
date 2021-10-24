@@ -18,7 +18,7 @@ var menu_to_load_at_end_path: String = "res://Scenes/GUI/MainMenu.tscn"
 # Node References
 onready var level_transition_timer: Timer = $LevelTransitionTimer
 
-onready var load_next_level: bool = Global.load_next_level
+onready var load_next_level: bool = Global.get_load_next_level()
 
 var current_score: int = 0
 
@@ -46,6 +46,7 @@ func _ready() -> void:
 
 func _initialize_asserts() -> void:
 	assert(self.next_level_to_load != null)
+
 
 func _initialize_signals() -> void:
 	Events.connect("level_finished", self, "on_level_finished")
