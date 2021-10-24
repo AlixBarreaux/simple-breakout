@@ -6,13 +6,19 @@ extends Node
 
 var level_to_load_path: String = "" setget set_level_to_load_path, get_level_to_load_path
 
+# Level Selection Button sets it in order to make sure
+# when the Level is finished it doesn't load the next one
+# and comes back to the LevelSelectionMenu
+var load_next_level: bool = false setget set_load_next_level, get_load_next_level
 
-func set_level_to_load_path(path: String) -> void:
-	level_to_load_path = path
+
+func set_load_next_level(value: bool) -> void:
+	load_next_level = value
 
 
-func get_level_to_load_path() -> String:
-	return level_to_load_path
+func get_load_next_level() -> bool:
+	return load_next_level
+
 
 
 # ---------------------------------- RUN CODE ----------------------------------
@@ -30,6 +36,19 @@ func replace_scene(scene_to_delete: Node, scene_to_load: PackedScene, node_to_at
 #
 	var scene_to_load_instance: Node = scene_to_load.instance()
 	
-	node_to_attach_to.add_child(scene_to_load_instance)
-	node_to_attach_to.move_child(scene_to_load_instance, node_to_attach_to_child_index)
+#	node_to_attach_to.add_child(scene_to_load_instance)
+#	node_to_attach_to.move_child(scene_to_load_instance, node_to_attach_to_child_index)
+	
+	node_to_attach_to.call_deferred("add_child", scene_to_load_instance)
+	node_to_attach_to.call_deferred("move_child", scene_to_load_instance, node_to_attach_to_child_index)
  
+
+
+# Keep the path of the level to load in memory (from LevelSelectionButton)
+# to the Level node
+func set_level_to_load_path(path: String) -> void:
+	level_to_load_path = path
+
+
+func get_level_to_load_path() -> String:
+	return level_to_load_path

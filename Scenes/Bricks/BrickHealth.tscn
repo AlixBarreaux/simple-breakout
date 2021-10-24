@@ -8,4 +8,4 @@
 script = ExtResource( 4 )
 
 [node name="HealthManager" parent="." index="0" instance=ExtResource( 3 )]
-current_health = 3
+current_health = 2

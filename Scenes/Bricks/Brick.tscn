@@ -6,6 +6,7 @@
 "bricks",
 ]]
 script = ExtResource( 1 )
+score_value = 1
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60, 180, 0 )

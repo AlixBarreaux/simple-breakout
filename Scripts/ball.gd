@@ -14,13 +14,16 @@ signal died
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
-	# Initialize
-	self.velocity.x = [-1, 1] [randi() % 2]
-	# 0.8 is the angle which is orienting the ball
-	self.velocity.y = [-0.8, 8] [randi() % 2]
-	
-	self.direction.x = [-1, 1] [randi() % 2]
-	self.direction.y = [-0.8, 8] [randi() % 2]
+#	# Initialize
+#	self.velocity.x = [-1, 1] [randi() % 2]
+#	# 0.8 is the angle which is orienting the ball
+#	self.velocity.y = [-0.8, 8] [randi() % 2]
+#
+#	self.direction.x = [-1, 1] [randi() % 2]
+#	self.direction.y = [-0.8, 8] [randi() % 2]
+
+	# Initialize the starting direction
+	self.direction.y = 1
 
 
 func _physics_process(delta: float) -> void:

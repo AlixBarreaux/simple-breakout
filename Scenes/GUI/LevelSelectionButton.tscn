@@ -2,18 +2,18 @@
 
 [ext_resource path="res://Scripts/GUI/level_selection_button.gd" type="Script" id=1]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.501961, 0.501961, 0.501961, 1 )
 
 [node name="LevelSelectionButton" type="Button"]
 margin_top = 315.0
 margin_right = 619.0
 margin_bottom = 690.0
-custom_styles/focus = SubResource( 2 )
-custom_styles/normal = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -34,6 +34,7 @@ __meta__ = {
 }
 
 [node name="NameLabel" type="Label" parent="VBoxContainer"]
+self_modulate = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
 margin_bottom = 14.0
 align = 1
 valign = 1

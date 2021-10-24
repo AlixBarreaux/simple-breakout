@@ -67,6 +67,7 @@ func _on_LevelSelectionButton_pressed() -> void:
 	# TEST
 	error_code = self.get_tree().change_scene(self.game_scene_path)
 	Global.set_level_to_load_path(self.level_to_load_path)
+	Global.set_load_next_level(true)
 	# END TEST
 	
 	

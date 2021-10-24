@@ -22,7 +22,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 new_game_scene_to_load = ExtResource( 8 )
-new_game_level_to_load_path = "res://Scenes/Levels/Level.tscn"
+new_game_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
