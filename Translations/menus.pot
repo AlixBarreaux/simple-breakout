@@ -28,6 +28,12 @@ msgstr ""
 msgid "lives"
 msgstr ""
 
+msgid master"
+msgstr ""
+
+msgid "music"
+msgstr ""
+
 msgid "new game"
 msgstr ""
 
@@ -47,4 +53,7 @@ msgid "select a level"
 msgstr ""
 
 msgid "score"
+msgstr ""
+
+msgid sound effects"
 msgstr ""

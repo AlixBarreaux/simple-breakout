@@ -67,5 +67,27 @@ focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath(".")
 text = "back"
 
+[node name="MusicContainer" type="HBoxContainer" parent="."]
+margin_right = 525.0
+margin_bottom = 126.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicLabel" type="Label" parent="MusicContainer"]
+margin_top = 42.0
+margin_right = 409.0
+margin_bottom = 83.0
+text = "music master sound effects"
+
+[node name="MusicHSlider" type="HSlider" parent="MusicContainer"]
+margin_left = 439.0
+margin_right = 525.0
+margin_bottom = 126.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
 [connection signal="visibility_changed" from="." to="." method="_on_OptionsMenu_visibility_changed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

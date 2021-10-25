@@ -25,3 +25,4 @@ func _initialize_signals() -> void:
 func on_ball_died() -> void:
 	print(str(self.name) + " : A ball died!")
 	Events.emit_signal("all_balls_died")
+	$Ball.respawn()

@@ -66,6 +66,7 @@ position = Vector2( 25, 1080 )
 shape = SubResource( 2 )
 
 [node name="Floor" type="StaticBody2D" parent="Terrain/Borders"]
+visible = false
 position = Vector2( 2070, 1030 )
 rotation = 1.57079
 collision_layer = 4
@@ -79,6 +80,7 @@ polygon = PoolVector2Array( 0, 0, 50, 0, 50, 1880, 0, 1880 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Borders/Floor"]
 position = Vector2( 25, 1080 )
 shape = SubResource( 2 )
+disabled = true
 
 [node name="Paddles" type="Node2D" parent="."]
 

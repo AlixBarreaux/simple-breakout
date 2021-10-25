@@ -6,6 +6,8 @@ extends KinematicBody2D
 
 export var current_speed: int = 20
 
+onready var spawn_position: Vector2 = self.get_global_position()
+
 var velocity: Vector2 = Vector2(0.0, 0.0)
 var direction: Vector2 = Vector2(0.0, 0.0)
 
@@ -22,6 +24,9 @@ func _ready() -> void:
 #	self.direction.x = [-1, 1] [randi() % 2]
 #	self.direction.y = [-0.8, 8] [randi() % 2]
 
+	# Prevent the ball from moving until the player
+	# Presses launch_ball key
+	self.set_physics_process(false)
 	# Initialize the starting direction
 	self.direction.y = 1
 
@@ -46,6 +51,11 @@ func _physics_process(delta: float) -> void:
 		
 		if collision.collider.is_in_group("bricks"):
 			collision.collider._receive_ball_collision()
+
+
+func _unhandled_key_input(_event: InputEventKey) -> void:
+	if Input.is_action_just_pressed("launch_ball"):
+		self.set_physics_process(true)
 
 
 # TEST
@@ -76,4 +86,10 @@ func _on_VisibilityNotifier2D_screen_exited() -> void:
 
 func die() -> void:
 	print(self.name, " : Dying!")
+	self.set_physics_process(false)
 	self.emit_signal("died")
+
+
+func respawn() -> void:
+	print(self.name, " : Respawning!")
+	self.set_global_position(self.spawn_position)

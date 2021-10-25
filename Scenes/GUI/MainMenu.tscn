@@ -140,6 +140,8 @@ visible = false
 [node name="CreditsMenu" parent="MenusToDisplay" instance=ExtResource( 4 )]
 visible = false
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="ColorRect/ButtonsContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="ColorRect/ButtonsContainer/SelectLevelButton" to="." method="_on_SelectLevelButton_pressed"]
 [connection signal="pressed" from="ColorRect/ButtonsContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
