@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://game.gd"
 }, {
+"base": "Control",
+"class": "GameOverMenu",
+"language": "GDScript",
+"path": "res://game_over_menu.gd"
+}, {
 "base": "Node",
 "class": "HealthManager",
 "language": "GDScript",
@@ -132,6 +137,7 @@ _global_script_class_icons={
 "BricksManager": "",
 "CreditsMenu": "",
 "Game": "",
+"GameOverMenu": "",
 "HealthManager": "",
 "InvisibilityManager": "",
 "Level": "",

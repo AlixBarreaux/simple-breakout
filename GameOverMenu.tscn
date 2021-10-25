@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://game_over_menu.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scenes/GUI/QuitToMainMenuButton.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[node name="GameOverMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.24487
+margin_right = 2.24487
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 247.0
+margin_top = 135.0
+margin_right = -247.0
+margin_bottom = -134.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -126.0
+margin_top = 80.0
+margin_right = 126.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 1 )
+text = "game over"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 108.0
+margin_top = -106.5
+margin_right = -108.0
+margin_bottom = 106.5
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="TryAgainButton" type="Button" parent="ColorRect/HBoxContainer"]
+margin_right = 620.0
+margin_bottom = 213.0
+focus_neighbour_left = NodePath("../QuitToMainMenuButton")
+focus_neighbour_top = NodePath("../QuitToMainMenuButton")
+focus_neighbour_right = NodePath("../QuitToMainMenuButton")
+focus_neighbour_bottom = NodePath("../QuitToMainMenuButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "try again"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="QuitToMainMenuButton" parent="ColorRect/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 650.0
+margin_top = 0.0
+margin_right = 1270.0
+margin_bottom = 213.0
+focus_neighbour_left = NodePath("../TryAgainButton")
+focus_neighbour_top = NodePath("../TryAgainButton")
+focus_neighbour_right = NodePath("../TryAgainButton")
+focus_neighbour_bottom = NodePath("../TryAgainButton")
+
+[connection signal="visibility_changed" from="." to="." method="_on_GameOverMenu_visibility_changed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/TryAgainButton" to="." method="_on_TryAgainButton_pressed"]

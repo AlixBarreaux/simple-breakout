@@ -47,3 +47,5 @@ position = Vector2( 1500, 512 )
 [node name="Music" parent="." index="6"]
 stream = ExtResource( 5 )
 autoplay = true
+
+[editable path="Balls"]

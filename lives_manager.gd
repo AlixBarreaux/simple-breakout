@@ -5,6 +5,7 @@ extends Node
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 export var current_lives: int = 0
+export var max_lives: int = 6
 
 # Node Paths
 export (NodePath) onready var lives_gui_node_path = null
@@ -53,11 +54,20 @@ func set_current_lives(value: int) -> void:
 
 func decrease_current_lives(value: int) -> void:
 	self.current_lives -= value
+	
+	if self.current_lives < 1:
+		print(self.name + " : The game is supposed to be over!")
+		Events.emit_signal("player_defeated")
+	
 	self.set_current_lives(self.current_lives)
 
 
 func increase_current_lives(value: int) -> void:
 	self.current_lives += value
+	
+	if self.current_lives > self.max_lives:
+		self.current_lives = self.max_lives
+	
 	self.set_current_lives(self.current_lives)
 
 

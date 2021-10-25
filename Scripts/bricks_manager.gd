@@ -19,6 +19,17 @@ func _initialize_signals() -> void:
 		child.connect("brick_destroyed", self, "on_brick_destroyed")
 		self.bricks_counter += 1
 #		print(str(child) + " | " + str(self.bricks_counter))
+	
+	# TEST
+	Events.connect("level_restarted", self, "reset")
+	# END TEST
+
+
+# TEST
+func reset() -> void:
+	for child in self.get_children():
+		child._enable()
+# END TEST
 
 
 func on_brick_destroyed() -> void:
@@ -26,6 +37,3 @@ func on_brick_destroyed() -> void:
 	
 	if self.bricks_counter < 1:
 		Events.emit_signal("level_finished")
-#		print(str(self.name) + ": There is no brick left!")
-#	else:
-#		print(str(self.name) + "There is at least one brick remaining!")

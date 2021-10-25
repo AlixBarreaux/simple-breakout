@@ -48,6 +48,8 @@ func _on_NewGameButton_pressed() -> void:
 
 
 	# TEST
+	Global.set_load_next_level(false)
+	
 	error_code = self.get_tree().change_scene(self.game_scene_path)
 	Global.set_level_to_load_path(self.new_game_level_to_load_path)
 	# END TEST

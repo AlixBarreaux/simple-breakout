@@ -40,6 +40,9 @@ msgstr ""
 msgid "options"
 msgstr ""
 
+msgid "pause"
+msgstr ""
+
 msgid "quit to desktop"
 msgstr ""
 

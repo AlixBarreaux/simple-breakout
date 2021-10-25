@@ -4,6 +4,7 @@ extends Control
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+onready var first_button_to_focus: Button = $ColorRect/LevelSelectionButton
 onready var back_button_pressed: Button = $BackButton
 
 

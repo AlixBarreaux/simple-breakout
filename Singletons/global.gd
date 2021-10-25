@@ -12,15 +12,6 @@ var level_to_load_path: String = "" setget set_level_to_load_path, get_level_to_
 var load_next_level: bool = false setget set_load_next_level, get_load_next_level
 
 
-func set_load_next_level(value: bool) -> void:
-	load_next_level = value
-
-
-func get_load_next_level() -> bool:
-	return load_next_level
-
-
-
 # ---------------------------------- RUN CODE ----------------------------------
 
 
@@ -52,3 +43,11 @@ func set_level_to_load_path(path: String) -> void:
 
 func get_level_to_load_path() -> String:
 	return level_to_load_path
+
+
+func set_load_next_level(value: bool) -> void:
+	load_next_level = value
+
+
+func get_load_next_level() -> bool:
+	return load_next_level

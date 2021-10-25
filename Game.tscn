@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://GameOverMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GUI/InGameGUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/GUI/PauseMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://LivesManager.tscn" type="PackedScene" id=4]
@@ -34,6 +35,9 @@ margin_right = 150.0
 margin_left = 250.0
 margin_right = 412.0
 
+[node name="GameOverMenu" parent="InGameGUICanvasLayer" instance=ExtResource( 1 )]
+visible = false
+
 [node name="PauseMenu" parent="InGameGUICanvasLayer" instance=ExtResource( 3 )]
 visible = false
 
@@ -43,3 +47,4 @@ visible = false
 [connection signal="tree_entered" from="InGameGUICanvasLayer/InGameGUI/HBoxContainer/ScoreGUI" to="ScoreManager" method="_on_ScoreGUI_tree_entered"]
 
 [editable path="InGameGUICanvasLayer/InGameGUI"]
+[editable path="InGameGUICanvasLayer/GameOverMenu"]

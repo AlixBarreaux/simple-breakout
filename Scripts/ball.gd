@@ -6,7 +6,12 @@ extends KinematicBody2D
 
 export var current_speed: int = 20
 
+# Node References
+onready var collision_shape_2D: CollisionShape2D = $CollisionShape2D
+
 onready var spawn_position: Vector2 = self.get_global_position()
+
+var initial_direction: Vector2 = Vector2(0.0, 1.0)
 
 var velocity: Vector2 = Vector2(0.0, 0.0)
 var direction: Vector2 = Vector2(0.0, 0.0)
@@ -15,20 +20,16 @@ signal died
 
 # ---------------------------------- RUN CODE ----------------------------------
 
-func _ready() -> void:
-#	# Initialize
-#	self.velocity.x = [-1, 1] [randi() % 2]
-#	# 0.8 is the angle which is orienting the ball
-#	self.velocity.y = [-0.8, 8] [randi() % 2]
-#
-#	self.direction.x = [-1, 1] [randi() % 2]
-#	self.direction.y = [-0.8, 8] [randi() % 2]
 
+
+func _ready() -> void:
 	# Prevent the ball from moving until the player
 	# Presses launch_ball key
 	self.set_physics_process(false)
+	self._initialize_signals()
+	
 	# Initialize the starting direction
-	self.direction.y = 1
+	self.direction = self.initial_direction
 
 
 func _physics_process(delta: float) -> void:
@@ -58,8 +59,20 @@ func _unhandled_key_input(_event: InputEventKey) -> void:
 		self.set_physics_process(true)
 
 
-# TEST
-func get_bounce_direction(collision: KinematicCollision2D):
+# ------------------------------ DECLARE FUNCTIONS -----------------------------
+
+
+func _initialize_signals() -> void:
+	Events.connect("player_defeated", self, "_disable")
+	Events.connect("level_restarted", self, "on_level_restarted")
+
+
+#func randomize_ball_direction() -> void:
+	#	self.direction.x = [-1, 1] [randi() % 2]
+	#	self.direction.y = [-0.8, 8] [randi() % 2]
+
+
+func get_bounce_direction(collision: KinematicCollision2D) -> Vector2:
 	var ball_collision_position: Vector2 = collision.position
 	# Paddle or anything else
 	var collider_global_position: Vector2 = collision.collider.global_position
@@ -74,22 +87,43 @@ func get_bounce_direction(collision: KinematicCollision2D):
 #	print("NORMALIZED: " + str(vector_between_both))
 	return vector_between_both
 
-# END TEST
-
-
-# ------------------------------ DECLARE FUNCTIONS -----------------------------
-
 
 func _on_VisibilityNotifier2D_screen_exited() -> void:
 	die()
 
 
 func die() -> void:
-	print(self.name, " : Dying!")
 	self.set_physics_process(false)
+	self.direction = self.initial_direction
 	self.emit_signal("died")
 
 
 func respawn() -> void:
-	print(self.name, " : Respawning!")
 	self.set_global_position(self.spawn_position)
+
+
+
+# TEST
+func _enable() -> void:
+	print(self.name + " _enable() !")
+	self.set_physics_process(true)
+	self.collision_shape_2D.disabled = false
+	set_process_unhandled_key_input(true)
+	self.show()
+
+
+func _disable() -> void:
+	print(self.name + " _disable() !")
+	self.set_physics_process(false)
+	self.collision_shape_2D.disabled = true
+	set_process_unhandled_key_input(false)
+	self.hide()
+
+
+func on_level_restarted() -> void:
+	self.respawn()
+	self.collision_shape_2D.disabled = false
+	set_process_unhandled_key_input(true)
+	self.show()
+
+# END TEST

@@ -9,7 +9,10 @@ signal all_balls_died
 
 
 signal level_finished
-signal game_over
+signal player_defeated
+
+signal level_started
+signal level_restarted
 # DO SOMETHING SO THAT GUI UPDATES AND WORLD ELEMENTS RESET OR SOMETHING
 
 # ---------------------------------- RUN CODE ----------------------------------
