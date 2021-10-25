@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-25 11:40+0200\n"
+"PO-Revision-Date: 2021-10-25 16:59+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -19,6 +19,9 @@ msgstr "retour"
 # Keywords for Strings
 msgid "credits"
 msgstr "credits"
+
+msgid "fullscreen"
+msgstr "plein ecran"
 
 msgid "game over"
 msgstr "partie terminee"

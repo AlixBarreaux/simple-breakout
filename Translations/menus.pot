@@ -19,6 +19,9 @@ msgstr ""
 msgid "credits"
 msgstr ""
 
+msgid "fullscreen"
+msgstr ""
+
 msgid "game over"
 msgstr ""
 

@@ -4,7 +4,7 @@ extends Control
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-onready var back_button: Button = $ColorRect/VBoxContainer/BackButton
+onready var back_button: Button = $ColorRect/BackButton
 
 # ---------------------------------- RUN CODE ----------------------------------
 

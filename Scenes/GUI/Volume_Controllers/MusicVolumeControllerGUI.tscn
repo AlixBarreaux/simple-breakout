@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/GUI/Volume_Controllers/VolumeControllerGUI.tscn" type="PackedScene" id=1]
+
+[node name="MusicVolumeControllerGUI" instance=ExtResource( 1 )]
+audio_bus_name = "Music"
+
+[node name="Label" parent="." index="0"]
+margin_right = 79.0
+text = "music"
+
+[node name="HSlider" parent="." index="1"]
+margin_left = 109.0
