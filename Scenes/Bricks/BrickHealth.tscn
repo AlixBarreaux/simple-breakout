@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/HealthManager.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/Bricks_Attributes/brick_health.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/brick_health.gd" type="Script" id=4]
 
 [node name="BrickHealth" instance=ExtResource( 2 )]
 script = ExtResource( 4 )
