@@ -13,6 +13,9 @@ msgstr ""
 
 # Keywords for Strings
 
+msgid "apply"
+msgstr ""
+
 msgid "back"
 msgstr ""
 
@@ -28,10 +31,13 @@ msgstr ""
 msgid "hello"
 msgstr ""
 
+msgid "language"
+msgstr ""
+
 msgid "lives"
 msgstr ""
 
-msgid master"
+msgid "master volume"
 msgstr ""
 
 msgid "music"
@@ -61,5 +67,11 @@ msgstr ""
 msgid "score"
 msgstr ""
 
-msgid sound effects"
+msgid "Some language translations may be innaccurate."
+msgstr ""
+
+msgid "sound effects"
+msgstr ""
+
+msgid "volume"
 msgstr ""

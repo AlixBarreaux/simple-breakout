@@ -42,7 +42,7 @@ _global_script_classes=[ {
 "base": "HBoxContainer",
 "class": "FullScreenController",
 "language": "GDScript",
-"path": "res://full_screen_controller.gd"
+"path": "res://Scripts/GUI/full_screen_controller.gd"
 }, {
 "base": "Reference",
 "class": "Game",
@@ -63,6 +63,16 @@ _global_script_classes=[ {
 "class": "InvisibilityManager",
 "language": "GDScript",
 "path": "res://Scripts/Bricks_Attributes/invisibility_manager.gd"
+}, {
+"base": "Button",
+"class": "LanguageButton",
+"language": "GDScript",
+"path": "res://language_button.gd"
+}, {
+"base": "Control",
+"class": "LanguageSelectionMenu",
+"language": "GDScript",
+"path": "res://language_selection_menu.gd"
 }, {
 "base": "Node2D",
 "class": "Level",
@@ -151,6 +161,8 @@ _global_script_class_icons={
 "GameOverMenu": "",
 "HealthManager": "",
 "InvisibilityManager": "",
+"LanguageButton": "",
+"LanguageSelectionMenu": "",
 "Level": "",
 "LevelSelectionButton": "",
 "LevelSelectionMenu": "",

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-25 16:59+0200\n"
+"PO-Revision-Date: 2021-10-26 15:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -11,6 +11,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# Keywords for Strings
+msgid "apply"
+msgstr "appliquer"
 
 # Keywords for Strings
 msgid "back"
@@ -29,8 +33,14 @@ msgstr "partie terminee"
 msgid "hello"
 msgstr "bonjour"
 
+msgid "language"
+msgstr "langue"
+
 msgid "lives"
 msgstr "vies"
+
+msgid "master volume"
+msgstr "volume principal"
 
 msgid "music"
 msgstr "musique"
@@ -58,3 +68,12 @@ msgstr "selectionnez un niveau"
 
 msgid "score"
 msgstr "score"
+
+msgid "Some language translations may be innaccurate."
+msgstr "Certaines traductions peuvent être inexactes."
+
+msgid "sound effects"
+msgstr "effets sonores"
+
+msgid "volume"
+msgstr "volume"

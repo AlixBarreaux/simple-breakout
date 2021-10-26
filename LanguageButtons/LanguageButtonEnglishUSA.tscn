@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LanguageButtons/LanguageButton.tscn" type="PackedScene" id=1]
+
+[node name="LanguageButtonEnglishUSA" instance=ExtResource( 1 )]
+language_name = "English"
+country_name = "USA"
+locale = "en_US"

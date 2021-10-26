@@ -6,8 +6,8 @@
 audio_bus_name = "Master"
 
 [node name="Label" parent="." index="0"]
-margin_right = 106.0
-text = "master"
+margin_right = 218.0
+text = "master volume"
 
 [node name="HSlider" parent="." index="1"]
-margin_left = 136.0
+margin_left = 248.0
