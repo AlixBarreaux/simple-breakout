@@ -33,12 +33,12 @@ __meta__ = {
 [node name="TitleLabel" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -94.0
+margin_left = -117.0
 margin_top = 40.0
-margin_right = 96.0
+margin_right = 117.0
 margin_bottom = 110.0
 custom_fonts/font = SubResource( 1 )
-text = "OPTIONS"
+text = "language"
 align = 1
 valign = 1
 __meta__ = {

@@ -23,6 +23,7 @@ __meta__ = {
 }
 language_selection_menu_node_path = NodePath("LanguageSelectionMenu")
 back_button_node_path = NodePath("ColorRect/BackButton")
+language_button_node_path = NodePath("ColorRect/ScrollContainer/VBoxContainer/LanguageButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -83,19 +84,19 @@ valign = 1
 margin_top = 111.0
 margin_right = 1328.0
 margin_bottom = 152.0
-audio_bus_name = "master"
+audio_bus_name = ""
 
 [node name="MusicVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
 margin_top = 222.0
 margin_right = 1328.0
 margin_bottom = 263.0
-audio_bus_name = "music"
+audio_bus_name = ""
 
 [node name="SoundEffectsVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
 margin_top = 333.0
 margin_right = 1328.0
 margin_bottom = 374.0
-audio_bus_name = "sound effects"
+audio_bus_name = ""
 
 [node name="FullScreenController" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 444.0
@@ -128,3 +129,4 @@ visible = false
 [connection signal="visibility_changed" from="." to="." method="_on_OptionsMenu_visibility_changed"]
 [connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/LanguageButton" to="." method="_on_LanguageButton_pressed"]
 [connection signal="pressed" from="ColorRect/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="visibility_changed" from="LanguageSelectionMenu" to="." method="_on_LanguageSelectionMenu_visibility_changed"]

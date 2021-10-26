@@ -39,7 +39,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/credits_menu.gd"
 }, {
-"base": "HBoxContainer",
+"base": "Reference",
 "class": "FullScreenController",
 "language": "GDScript",
 "path": "res://Scripts/GUI/full_screen_controller.gd"
