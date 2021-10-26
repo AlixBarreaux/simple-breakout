@@ -71,13 +71,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LanguageButtonFrenchFrance" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 4 )]
+[node name="LanguageButtonEnglishUSA" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 6 )]
 margin_top = 166.0
 margin_bottom = 213.0
 
-[node name="LanguageButtonGermanGermany" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 5 )]
+[node name="LanguageButtonFrenchFrance" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 4 )]
 
-[node name="LanguageButtonEnglishUSA" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 6 )]
+[node name="LanguageButtonGermanGermany" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 5 )]
 margin_top = 400.0
 margin_bottom = 447.0
 
