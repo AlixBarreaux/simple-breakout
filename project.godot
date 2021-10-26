@@ -39,6 +39,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/credits_menu.gd"
 }, {
+"base": "HBoxContainer",
+"class": "FullScreenController",
+"language": "GDScript",
+"path": "res://full_screen_controller.gd"
+}, {
 "base": "Reference",
 "class": "Game",
 "language": "GDScript",
@@ -129,7 +134,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/version_label.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "VolumeController",
 "language": "GDScript",
 "path": "res://Scripts/GUI/volume_controller.gd"
@@ -141,6 +146,7 @@ _global_script_class_icons={
 "BrickHealth": "",
 "BricksManager": "",
 "CreditsMenu": "",
+"FullScreenController": "",
 "Game": "",
 "GameOverMenu": "",
 "HealthManager": "",
