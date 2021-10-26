@@ -1,0 +1,166 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Scenes/GUI/Volume_Controllers/MasterVolumeControllerGUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GUI/Volume_Controllers/MusicVolumeControllerGUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GUI/Volume_Controllers/SoundEffectsVolumeControllerGUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/GUI/sound_control_menu.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[node name="SoundOptionsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+back_button_node_path = NodePath("ColorRect/BackButton")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="TitleLabel" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -171.5
+margin_top = 40.0
+margin_right = 171.5
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 1 )
+text = "sound options"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -505.0
+margin_top = -356.0
+margin_right = 505.0
+margin_bottom = 216.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+margin_right = 1010.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 70
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VolumeLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_right = 1010.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "volume"
+align = 1
+valign = 1
+
+[node name="MasterVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 160.0
+margin_right = 1010.0
+margin_bottom = 251.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+audio_bus_name = ""
+
+[node name="Label" parent="ColorRect/ScrollContainer/VBoxContainer/MasterVolumeControllerGUI" index="0"]
+margin_top = 25.0
+margin_bottom = 66.0
+
+[node name="HSlider" parent="ColorRect/ScrollContainer/VBoxContainer/MasterVolumeControllerGUI" index="1"]
+margin_right = 1010.0
+margin_bottom = 91.0
+focus_neighbour_left = NodePath("../../../../BackButton")
+focus_neighbour_top = NodePath("../../../../BackButton")
+focus_neighbour_right = NodePath("../../MusicVolumeControllerGUI/HSlider")
+focus_neighbour_bottom = NodePath("../../MusicVolumeControllerGUI/HSlider")
+
+[node name="MusicVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 321.0
+margin_right = 1010.0
+margin_bottom = 411.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+audio_bus_name = ""
+
+[node name="Label" parent="ColorRect/ScrollContainer/VBoxContainer/MusicVolumeControllerGUI" index="0"]
+margin_top = 24.0
+margin_bottom = 65.0
+
+[node name="HSlider" parent="ColorRect/ScrollContainer/VBoxContainer/MusicVolumeControllerGUI" index="1"]
+margin_right = 1010.0
+margin_bottom = 90.0
+focus_neighbour_left = NodePath("../../MasterVolumeControllerGUI/HSlider")
+focus_neighbour_top = NodePath("../../MasterVolumeControllerGUI/HSlider")
+focus_neighbour_right = NodePath("../../SoundEffectsVolumeControllerGUI/HSlider")
+focus_neighbour_bottom = NodePath("../../SoundEffectsVolumeControllerGUI/HSlider")
+
+[node name="SoundEffectsVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 481.0
+margin_right = 1010.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+audio_bus_name = ""
+
+[node name="Label" parent="ColorRect/ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI" index="0"]
+margin_top = 25.0
+margin_bottom = 66.0
+
+[node name="HSlider" parent="ColorRect/ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI" index="1"]
+margin_right = 1010.0
+margin_bottom = 91.0
+focus_neighbour_left = NodePath("../../MusicVolumeControllerGUI/HSlider")
+focus_neighbour_top = NodePath("../../MusicVolumeControllerGUI/HSlider")
+focus_neighbour_right = NodePath("../../../../BackButton")
+focus_neighbour_bottom = NodePath("../../../../BackButton")
+
+[node name="BackButton" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -525.5
+margin_top = -100.0
+margin_right = 525.5
+margin_bottom = -50.0
+focus_neighbour_left = NodePath("../ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI/HSlider")
+focus_neighbour_top = NodePath("../ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI/HSlider")
+focus_neighbour_right = NodePath("../ScrollContainer/VBoxContainer/MasterVolumeControllerGUI/HSlider")
+focus_neighbour_bottom = NodePath("../ScrollContainer/VBoxContainer/MasterVolumeControllerGUI/HSlider")
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="visibility_changed" from="." to="." method="_on_SoundControlMenu_visibility_changed"]
+[connection signal="pressed" from="ColorRect/BackButton" to="." method="_on_BackButton_pressed"]
+
+[editable path="ColorRect/ScrollContainer/VBoxContainer/MasterVolumeControllerGUI"]
+[editable path="ColorRect/ScrollContainer/VBoxContainer/MusicVolumeControllerGUI"]
+[editable path="ColorRect/ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI"]

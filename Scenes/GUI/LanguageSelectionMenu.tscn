@@ -1,0 +1,148 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Scripts/GUI/language_selection_menu.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/GUI/Language_Buttons/LanguageButtonFrenchFrance.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GUI/Language_Buttons/LanguageButtonGermanGermany.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/GUI/Language_Buttons/LanguageButtonEnglishUSA.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[node name="LanguageSelectionMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+language_buttons_container_node_path = NodePath("ColorRect/ScrollContainer/LanguageButtonsContainer")
+back_button_node_path = NodePath("ColorRect/BottomContainer/HBoxContainer/BackButton")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -243.0
+margin_top = 40.0
+margin_right = 243.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 1 )
+text = "language selection"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -505.0
+margin_top = -356.0
+margin_right = 505.0
+margin_bottom = 216.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LanguageButtonsContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+margin_right = 1010.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 70
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LanguageButtonEnglishUSA" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 6 )]
+margin_top = 145.0
+margin_right = 1010.0
+margin_bottom = 192.0
+
+[node name="LanguageButtonFrenchFrance" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 4 )]
+margin_top = 262.0
+margin_right = 1010.0
+margin_bottom = 309.0
+
+[node name="LanguageButtonGermanGermany" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 5 )]
+margin_top = 379.0
+margin_right = 1010.0
+margin_bottom = 426.0
+
+[node name="BottomContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 141.0
+margin_top = -259.0
+margin_right = -141.0
+margin_bottom = -60.0
+custom_constants/separation = 60
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="WarningLabel" type="Label" parent="ColorRect/BottomContainer"]
+margin_right = 1698.0
+margin_bottom = 41.0
+text = "Some language translations may be innaccurate."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/BottomContainer"]
+margin_top = 101.0
+margin_right = 1698.0
+margin_bottom = 199.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 200
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="ColorRect/BottomContainer/HBoxContainer"]
+margin_right = 749.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ApplyButton" type="Button" parent="ColorRect/BottomContainer/HBoxContainer"]
+margin_left = 949.0
+margin_right = 1698.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "apply"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="visibility_changed" from="." to="." method="_on_LanguageSelectionMenu_visibility_changed"]
+[connection signal="pressed" from="ColorRect/BottomContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="ColorRect/BottomContainer/HBoxContainer/ApplyButton" to="." method="_on_ApplyButton_pressed"]

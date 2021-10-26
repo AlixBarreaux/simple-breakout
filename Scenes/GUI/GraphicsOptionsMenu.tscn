@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/GUI/graphics_options_menu.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=2]
+[ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=3]
+[ext_resource path="res://Scenes/GUI/FullScreenController.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[node name="GraphicsOptionsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+back_button_node_path = NodePath("ColorRect/BackButton")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="TitleLabel" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -208.0
+margin_top = 40.0
+margin_right = 208.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 1 )
+text = "graphics options"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -505.0
+margin_top = -356.0
+margin_right = 505.0
+margin_bottom = 216.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+margin_right = 1010.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 70
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullScreenController" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 261.0
+margin_right = 1010.0
+margin_bottom = 310.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Label" parent="ColorRect/ScrollContainer/VBoxContainer/FullScreenController" index="0"]
+margin_left = 358.0
+margin_right = 525.0
+
+[node name="CheckButton" parent="ColorRect/ScrollContainer/VBoxContainer/FullScreenController" index="1"]
+margin_left = 575.0
+margin_right = 651.0
+focus_neighbour_left = NodePath("../../../../BackButton")
+focus_neighbour_top = NodePath("../../../../BackButton")
+focus_neighbour_right = NodePath("../../../../BackButton")
+focus_neighbour_bottom = NodePath("../../../../BackButton")
+
+[node name="BackButton" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -525.5
+margin_top = -100.0
+margin_right = 525.5
+margin_bottom = -50.0
+focus_neighbour_left = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+focus_neighbour_top = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+focus_neighbour_right = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+focus_neighbour_bottom = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="visibility_changed" from="." to="." method="_on_GraphicsOptionsMenu_visibility_changed"]
+[connection signal="pressed" from="ColorRect/BackButton" to="." method="_on_BackButton_pressed"]
+
+[editable path="ColorRect/ScrollContainer/VBoxContainer/FullScreenController"]

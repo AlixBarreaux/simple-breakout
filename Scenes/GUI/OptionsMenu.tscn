@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=2]
 [ext_resource path="res://Scripts/GUI/options_menu.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/GUI/Volume_Controllers/MasterVolumeControllerGUI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/GUI/Volume_Controllers/MusicVolumeControllerGUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/GUI/Volume_Controllers/SoundEffectsVolumeControllerGUI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/GUI/FullScreenController.tscn" type="PackedScene" id=7]
-[ext_resource path="res://LanguageSelectionMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/GUI/SoundOptionsMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GUI/GraphicsOptionsMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/GUI/LanguageSelectionMenu.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -21,9 +19,13 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-language_selection_menu_node_path = NodePath("LanguageSelectionMenu")
-back_button_node_path = NodePath("ColorRect/BackButton")
+sound_options_button_node_path = NodePath("ColorRect/ScrollContainer/VBoxContainer/SoundOptionsButton")
+graphics_options_button_node_path = NodePath("ColorRect/ScrollContainer/VBoxContainer/GraphicsOptionsButton")
 language_button_node_path = NodePath("ColorRect/ScrollContainer/VBoxContainer/LanguageButton")
+back_button_node_path = NodePath("ColorRect/BackButton")
+sound_options_menu_node_path = NodePath("MenusToDisplay/SoundOptionsMenu")
+graphics_options_menu_node_path = NodePath("MenusToDisplay/GraphicsOptionsMenu")
+language_selection_menu_node_path = NodePath("MenusToDisplay/LanguageSelectionMenu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -69,64 +71,80 @@ margin_bottom = 614.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 70
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VolumeLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
+[node name="SoundOptionsButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_top = 166.0
 margin_right = 1328.0
-margin_bottom = 41.0
-text = "volume"
-align = 1
-valign = 1
+margin_bottom = 213.0
+focus_neighbour_left = NodePath("../../../BackButton")
+focus_neighbour_top = NodePath("../../../BackButton")
+focus_neighbour_right = NodePath("../GraphicsOptionsButton")
+focus_neighbour_bottom = NodePath("../GraphicsOptionsButton")
+text = "sound options"
 
-[node name="MasterVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
-margin_top = 111.0
+[node name="GraphicsOptionsButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_top = 283.0
 margin_right = 1328.0
-margin_bottom = 152.0
-audio_bus_name = ""
-
-[node name="MusicVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
-margin_top = 222.0
-margin_right = 1328.0
-margin_bottom = 263.0
-audio_bus_name = ""
-
-[node name="SoundEffectsVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 6 )]
-margin_top = 333.0
-margin_right = 1328.0
-margin_bottom = 374.0
-audio_bus_name = ""
-
-[node name="FullScreenController" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
-margin_top = 444.0
-margin_right = 1328.0
-margin_bottom = 493.0
+margin_bottom = 330.0
+focus_neighbour_left = NodePath("../SoundOptionsButton")
+focus_neighbour_top = NodePath("../SoundOptionsButton")
+focus_neighbour_right = NodePath("../LanguageButton")
+focus_neighbour_bottom = NodePath("../LanguageButton")
+text = "graphics options"
 
 [node name="LanguageButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 563.0
+margin_top = 400.0
 margin_right = 1328.0
-margin_bottom = 610.0
-text = "language"
+margin_bottom = 447.0
+focus_neighbour_left = NodePath("../GraphicsOptionsButton")
+focus_neighbour_top = NodePath("../GraphicsOptionsButton")
+focus_neighbour_right = NodePath("../../../BackButton")
+focus_neighbour_bottom = NodePath("../../../BackButton")
+text = "language selection"
 
 [node name="BackButton" type="Button" parent="ColorRect"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -445.319
+margin_left = -525.5
 margin_top = -100.0
-margin_right = 605.681
+margin_right = 525.5
 margin_bottom = -50.0
+focus_neighbour_left = NodePath("../ScrollContainer/VBoxContainer/LanguageButton")
+focus_neighbour_top = NodePath("../ScrollContainer/VBoxContainer/LanguageButton")
+focus_neighbour_right = NodePath("../ScrollContainer/VBoxContainer/SoundOptionsButton")
+focus_neighbour_bottom = NodePath("../ScrollContainer/VBoxContainer/SoundOptionsButton")
 text = "back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LanguageSelectionMenu" parent="." instance=ExtResource( 8 )]
+[node name="MenusToDisplay" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundOptionsMenu" parent="MenusToDisplay" instance=ExtResource( 4 )]
+visible = false
+
+[node name="GraphicsOptionsMenu" parent="MenusToDisplay" instance=ExtResource( 5 )]
+visible = false
+
+[node name="LanguageSelectionMenu" parent="MenusToDisplay" instance=ExtResource( 8 )]
 visible = false
 
 [connection signal="visibility_changed" from="." to="." method="_on_OptionsMenu_visibility_changed"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/SoundOptionsButton" to="." method="_on_SoundOptionsButton_pressed"]
+[connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/GraphicsOptionsButton" to="." method="_on_GraphicsOptionsButton_pressed"]
 [connection signal="pressed" from="ColorRect/ScrollContainer/VBoxContainer/LanguageButton" to="." method="_on_LanguageButton_pressed"]
 [connection signal="pressed" from="ColorRect/BackButton" to="." method="_on_BackButton_pressed"]
-[connection signal="visibility_changed" from="LanguageSelectionMenu" to="." method="_on_LanguageSelectionMenu_visibility_changed"]
+[connection signal="visibility_changed" from="MenusToDisplay/SoundOptionsMenu" to="." method="_on_SoundOptionsMenu_visibility_changed"]
+[connection signal="visibility_changed" from="MenusToDisplay/GraphicsOptionsMenu" to="." method="_on_GraphicsOptionsMenu_visibility_changed"]
+[connection signal="visibility_changed" from="MenusToDisplay/LanguageSelectionMenu" to="." method="_on_LanguageSelectionMenu_visibility_changed"]

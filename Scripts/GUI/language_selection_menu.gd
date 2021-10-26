@@ -6,18 +6,19 @@ extends Control
 
 # Node Paths
 export (NodePath) var language_buttons_container_node_path = null
+export (NodePath) var back_button_node_path = null
 
 # Node References
 onready var language_buttons_container: Control = get_node(self.language_buttons_container_node_path)
-onready var back_button: Button = $ColorRect/BackButton
+onready var back_button: Button = get_node(back_button_node_path)
 
+# Keep it null!
 onready var language_button_to_focus: Button = null
 
 # ---------------------------------- RUN CODE ----------------------------------
 
 
 func _ready() -> void:
-#	self.hide()
 	self._initialize_asserts()
 	self._initialize_signals()
 	self._initialize()
@@ -31,6 +32,9 @@ func _initialize_asserts() -> void:
 	assert(language_buttons_container_node_path != null)
 	# The LanguageButtonsContainer node must have at least one LanguageButton!
 	assert(self.language_buttons_container.get_child_count() != 0)
+	
+	# Buttons
+	assert(back_button_node_path != null)
 
 
 func _initialize_signals() -> void:
@@ -41,7 +45,9 @@ func _initialize_signals() -> void:
 func _initialize() -> void:
 	# Initialize language button to focus
 	for language_button in self.language_buttons_container.get_children():
-		assert(language_button is LanguageButton)
+		# Make sure each nodes under the LanguageButtonsContainer is
+		# a LanguageButton
+		assert(language_button is Button)
 		if language_button.locale == TranslationServer.get_locale():
 			language_button.grab_focus()
 			self.language_button_to_focus = language_button
@@ -50,7 +56,6 @@ func _initialize() -> void:
 func _on_LanguageSelectionMenu_visibility_changed() -> void:
 	if self.visible:
 		self.language_button_to_focus.grab_focus()
-
 
 
 func on_language_button_selected(language_button_node_reference: Button) -> void:

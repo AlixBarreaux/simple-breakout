@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-26 15:06+0200\n"
+"PO-Revision-Date: 2021-10-26 21:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -30,11 +30,14 @@ msgstr "plein ecran"
 msgid "game over"
 msgstr "partie terminee"
 
+msgid "graphics options"
+msgstr "options graphiques"
+
 msgid "hello"
 msgstr "bonjour"
 
-msgid "language"
-msgstr "langue"
+msgid "language selection"
+msgstr "sélection du langage"
 
 msgid "lives"
 msgstr "vies"
@@ -72,8 +75,16 @@ msgstr "score"
 msgid "Some language translations may be innaccurate."
 msgstr "Certaines traductions peuvent être inexactes."
 
+msgid "sound options"
+msgstr "options sonores"
+
 msgid "sound effects"
 msgstr "effets sonores"
 
-msgid "volume"
-msgstr "volume"
+#, fuzzy
+#~| msgid "sound options"
+#~ msgid "sound control"
+#~ msgstr "options sonores"
+
+#~ msgid "volume"
+#~ msgstr "volume"

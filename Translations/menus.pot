@@ -28,10 +28,13 @@ msgstr ""
 msgid "game over"
 msgstr ""
 
+msgid "graphics options"
+msgstr ""
+
 msgid "hello"
 msgstr ""
 
-msgid "language"
+msgid "language selection"
 msgstr ""
 
 msgid "lives"
@@ -70,8 +73,8 @@ msgstr ""
 msgid "Some language translations may be innaccurate."
 msgstr ""
 
-msgid "sound effects"
+msgid "sound options"
 msgstr ""
 
-msgid "volume"
+msgid "sound effects"
 msgstr ""

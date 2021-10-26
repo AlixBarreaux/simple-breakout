@@ -54,6 +54,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/game_over_menu.gd"
 }, {
+"base": "Reference",
+"class": "GraphicsOptionsMenu",
+"language": "GDScript",
+"path": "res://Scripts/GUI/graphics_options_menu.gd"
+}, {
 "base": "Node",
 "class": "HealthManager",
 "language": "GDScript",
@@ -67,12 +72,12 @@ _global_script_classes=[ {
 "base": "Button",
 "class": "LanguageButton",
 "language": "GDScript",
-"path": "res://language_button.gd"
+"path": "res://Scripts/GUI/language_button.gd"
 }, {
 "base": "Control",
 "class": "LanguageSelectionMenu",
 "language": "GDScript",
-"path": "res://language_selection_menu.gd"
+"path": "res://Scripts/GUI/language_selection_menu.gd"
 }, {
 "base": "Node2D",
 "class": "Level",
@@ -139,6 +144,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Sub_Game_Managers/score_manager.gd"
 }, {
+"base": "Reference",
+"class": "SoundControlMenu",
+"language": "GDScript",
+"path": "res://Scripts/GUI/sound_control_menu.gd"
+}, {
 "base": "Label",
 "class": "VersionLabel",
 "language": "GDScript",
@@ -159,6 +169,7 @@ _global_script_class_icons={
 "FullScreenController": "",
 "Game": "",
 "GameOverMenu": "",
+"GraphicsOptionsMenu": "",
 "HealthManager": "",
 "InvisibilityManager": "",
 "LanguageButton": "",
@@ -176,6 +187,7 @@ _global_script_class_icons={
 "QuitToMainMenuButton": "",
 "ScoreGUI": "",
 "ScoreManager": "",
+"SoundControlMenu": "",
 "VersionLabel": "",
 "VolumeController": ""
 }
