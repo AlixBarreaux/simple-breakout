@@ -33,6 +33,8 @@ func _ready() -> void:
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 func _initialize_asserts() -> void:
+	# The Text property will be set automatically, please clear it!
+	assert(self.text == "")
 	# A Language Name must be seet in the inspector! EG: Deitsch
 	assert(self.language_name != "")
 	# A Country Name must be seet in the inspector! EG: Österreich
