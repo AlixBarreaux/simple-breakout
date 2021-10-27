@@ -4,10 +4,10 @@ extends Control
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-export var new_game_scene_to_load: PackedScene = null
+#export var new_game_scene_to_load: PackedScene = null
 
 # TEST
-var game_scene_path: String = "res://Game.tscn"
+var game_scene_path: String = "res://Scenes/Game.tscn"
 export var new_game_level_to_load_path: String = ""
 # CHECK FOR BOTH NOT EMPTY !!!!
 # END TEST
@@ -34,7 +34,8 @@ func _ready() -> void:
 
 
 func _initialize_asserts() -> void:
-	assert(self.new_game_scene_to_load != null)
+#	assert(self.new_game_scene_to_load != null)
+	pass
 
 
 # Buttons Signals
@@ -48,6 +49,9 @@ func _on_NewGameButton_pressed() -> void:
 
 
 	# TEST
+	# ENABLE LIVES
+	Global.set_enable_lives(true)
+	
 	Global.set_load_next_level(false)
 	
 	error_code = self.get_tree().change_scene(self.game_scene_path)

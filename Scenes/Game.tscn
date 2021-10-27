@@ -12,7 +12,6 @@
 script = ExtResource( 7 )
 
 [node name="LivesManager" parent="." instance=ExtResource( 4 )]
-current_lives = 3
 lives_gui_node_path = NodePath("../InGameGUICanvasLayer/InGameGUI/HBoxContainer/LivesGUI")
 
 [node name="ScoreManager" parent="." instance=ExtResource( 5 )]

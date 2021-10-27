@@ -5,22 +5,20 @@ extends Node2D
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 # Exports
-#export var current_lives: int = 0
 # Level to load when the level is finished
 # (If launched from NewGame into the MainMenu)
-export var next_level_to_load: PackedScene = null
+export var next_level_to_load_path: String = ""
+onready var next_level_to_load = load(next_level_to_load_path)
 
 # Menu to load when the level is finished
 # (If launched from LevelSelectionMenu)
 var menu_to_load_at_end_path: String = "res://Scenes/GUI/MainMenu.tscn"
-#var menu_to_load_at_end: PackedScene = load(menu_to_load_at_end_path)
 
 # Node References
 onready var level_transition_timer: Timer = $LevelTransitionTimer
 
+# Other Variables
 onready var load_next_level: bool = Global.get_load_next_level()
-
-var current_score: int = 0
 
 
 # ---------------------------------- RUN CODE ----------------------------------
@@ -45,33 +43,15 @@ func _ready() -> void:
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 func _initialize_asserts() -> void:
-	assert(self.next_level_to_load != null)
+	assert(self.next_level_to_load_path != null)
 
 
 func _initialize_signals() -> void:
 	Events.connect("level_finished", self, "on_level_finished")
-#	Events.connect("player_defeated", self, "on_player_defeated")
-	
-#	Events.connect("level_restarted", self, "on_level_restarted")
 
 
 func on_level_finished() -> void:
 	level_transition_timer.start()
-
-
-# TEST
-#func on_player_defeated() -> void:
-#	reset()
-#
-#
-#func on_level_restarted() -> void:
-#	self.reset
-#
-#
-#func reset() -> void:
-#	pass
-
-# END TEST
 
 
 func _on_LevelTransitionTimer_timeout() -> void:

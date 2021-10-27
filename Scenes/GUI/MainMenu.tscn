@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Scenes/GUI/OptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/LevelSelectionMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/GUI/main_menu.gd" type="Script" id=7]
-[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/GUI/VersionLabel.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Sound/Music/chiptune_roller_derby.ogg" type="AudioStream" id=10]
 
@@ -22,7 +21,6 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-new_game_scene_to_load = ExtResource( 8 )
 new_game_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]

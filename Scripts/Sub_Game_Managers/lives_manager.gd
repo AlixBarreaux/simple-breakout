@@ -4,7 +4,8 @@ extends Node
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-export var current_lives: int = 0
+export var starting_lives: int = 3
+var current_lives: int = starting_lives
 export var max_lives: int = 6
 
 # Node Paths
@@ -19,8 +20,16 @@ signal lives_set
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
+	# Enable itself or disable by not executing the initializations
+	# LivesGUI will be affected too, see its ready function
+	if not Global.get_enable_lives():
+		return
+	
 	self._initialize_asserts()
 	self._initialize_signals()
+	
+	
+
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 

@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/GUI/MainMenu.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 928.202, 78.0024 )
@@ -11,7 +10,7 @@ extents = Vector2( 928.202, 78.0024 )
 extents = Vector2( 25, 940 )
 
 [node name="LevelTest" instance=ExtResource( 1 )]
-next_level_to_load = ExtResource( 3 )
+next_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 position = Vector2( 1010.26, 240.496 )
@@ -41,3 +40,5 @@ disabled = true
 
 [node name="Ball" parent="Balls" index="0"]
 position = Vector2( 1000, 870 )
+
+[editable path="Balls"]

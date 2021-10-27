@@ -12,6 +12,17 @@ var level_to_load_path: String = "" setget set_level_to_load_path, get_level_to_
 var load_next_level: bool = false setget set_load_next_level, get_load_next_level
 
 
+# TEST
+var enable_lives: bool = false setget set_enable_lives, get_enable_lives
+
+func set_enable_lives(value: bool) -> void:
+	enable_lives = value
+
+
+func get_enable_lives() -> bool:
+	return enable_lives
+# END TEST
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 

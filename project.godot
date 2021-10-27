@@ -39,12 +39,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/credits_menu.gd"
 }, {
-"base": "Reference",
+"base": "HBoxContainer",
 "class": "FullScreenController",
 "language": "GDScript",
 "path": "res://Scripts/GUI/full_screen_controller.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "Game",
 "language": "GDScript",
 "path": "res://Scripts/game.gd"
@@ -54,7 +54,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/game_over_menu.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "GraphicsOptionsMenu",
 "language": "GDScript",
 "path": "res://Scripts/GUI/graphics_options_menu.gd"
@@ -99,7 +99,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/lives_gui.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "LivesManager",
 "language": "GDScript",
 "path": "res://Scripts/Sub_Game_Managers/lives_manager.gd"
@@ -144,7 +144,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Sub_Game_Managers/score_manager.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "SoundControlMenu",
 "language": "GDScript",
 "path": "res://Scripts/GUI/sound_control_menu.gd"

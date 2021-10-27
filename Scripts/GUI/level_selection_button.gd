@@ -5,16 +5,13 @@ extends Button
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
-export var level_to_load: PackedScene = null
+#export var level_to_load: PackedScene = null
 export var level_name: String = ""
 export var preview_image_stream_texture: StreamTexture = null
 
 
-# TEST
-var game_scene_path: String = "res://Game.tscn"
+var game_scene_path: String = "res://Scenes/Game.tscn"
 export var level_to_load_path: String = ""
-# CHECK FOR BOTH NOT EMPTY !!!!
-# END TEST
 
 
 onready var name_label: Label = $VBoxContainer/NameLabel
@@ -33,18 +30,18 @@ func _ready() -> void:
 
 
 func _initialize_asserts() -> void:
-#	# A Packed Scene must be provided in the inspector!
-#	assert(self.level_to_load != null)
 #	# The Level Name must be provided in the inspector!
-#	assert(self.level_name != "")
+	assert(self.level_name != "")
 #	# A preview Image must be provided in the inspector!
-#	assert(self.preview_image_stream_texture != null)
+	assert(self.preview_image_stream_texture != null)
 	
 	
-	# TEST
+	# The Button's text will be set by the script.
+	# Please clear it in the insepctor.
+	assert(self.text == "")
 	assert(game_scene_path != "")
 	assert(self.level_to_load_path != "")
-	# END TEST
+	
 
 
 
@@ -65,6 +62,9 @@ func _on_LevelSelectionButton_pressed() -> void:
 	
 	
 	# TEST
+	# DISABLE LIVES
+	Global.set_enable_lives(false)
+	
 	error_code = self.get_tree().change_scene(self.game_scene_path)
 	Global.set_level_to_load_path(self.level_to_load_path)
 	Global.set_load_next_level(true)
