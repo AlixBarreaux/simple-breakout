@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Bricks/BrickTeleporting.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 928.202, 78.0024 )
@@ -13,7 +14,7 @@ extents = Vector2( 25, 940 )
 next_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
-position = Vector2( 1010.26, 240.496 )
+position = Vector2( 1020, -140 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2( -22.2236, 0 )
@@ -21,6 +22,15 @@ shape = SubResource( 1 )
 
 [node name="Brick2" parent="Bricks" index="0" instance=ExtResource( 2 )]
 position = Vector2( 960, 740 )
+
+[node name="BrickTeleporting" parent="Bricks" index="1" instance=ExtResource( 3 )]
+position = Vector2( 570, 470 )
+
+[node name="Position2D" parent="Bricks/BrickTeleporting/TeleportingManager/TeleportLocations" index="0"]
+position = Vector2( 320, 460 )
+
+[node name="Position2D2" parent="Bricks/BrickTeleporting/TeleportingManager/TeleportLocations" index="1"]
+position = Vector2( 1590, 470 )
 
 [node name="Floor" type="StaticBody2D" parent="Terrain" index="1"]
 position = Vector2( 2070, 1030 )
@@ -41,4 +51,6 @@ disabled = true
 [node name="Ball" parent="Balls" index="0"]
 position = Vector2( 1000, 870 )
 
+[editable path="Bricks/BrickTeleporting"]
+[editable path="Bricks/BrickTeleporting/TeleportingManager"]
 [editable path="Balls"]

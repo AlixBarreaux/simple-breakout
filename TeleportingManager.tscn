@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://teleporting_manager.gd" type="Script" id=1]
+
+[node name="TeleportingManager" type="Node"]
+script = ExtResource( 1 )
+
+[node name="TeleportLocations" type="Node2D" parent="."]
+
+[node name="Position2D" type="Position2D" parent="TeleportLocations"]
+__meta__ = {
+"_gizmo_extents_": 50.0
+}
+
+[node name="Position2D2" type="Position2D" parent="TeleportLocations"]
+position = Vector2( 20, 0 )
+__meta__ = {
+"_gizmo_extents_": 50.0
+}
+
+[node name="NextTeleportationTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="NextTeleportationTimer" to="." method="_on_NextTeleportationTimer_timeout"]
