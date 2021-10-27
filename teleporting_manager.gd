@@ -35,7 +35,7 @@ func _initialize_asserts() -> void:
 	# This scene must be attached to another node
 	assert(self.get_parent() != null)
 	# This scene's parent must be a Brick
-	assert(self.get_parent() is StaticBody2D)
+	assert(self.get_parent() is KinematicBody2D)
 	# TeleportLocations must have at least 2 children (see also the next assert)
 	assert(self.teleport_locations.get_child_count() > 1)
 	# TeleportLocations children must all be a node of type Position2D

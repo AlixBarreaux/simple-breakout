@@ -36,7 +36,6 @@ func _enable() -> void:
 
 
 func on_died() -> void:
-#	print(self.name, " : I died.")
 	self._disable()
 	self.emit_signal("brick_destroyed")
 
