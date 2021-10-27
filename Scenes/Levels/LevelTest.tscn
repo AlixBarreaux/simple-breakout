@@ -15,6 +15,9 @@ next_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 position = Vector2( 1020, -140 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2( -22.2236, 0 )
@@ -24,13 +27,20 @@ shape = SubResource( 1 )
 position = Vector2( 960, 740 )
 
 [node name="BrickTeleporting" parent="Bricks" index="1" instance=ExtResource( 3 )]
-position = Vector2( 570, 470 )
+position = Vector2( 80, 80 )
+
+[node name="HealthManager" parent="Bricks/BrickTeleporting" index="0"]
+current_health = 5
+max_health = 5
+
+[node name="TeleportingManager" parent="Bricks/BrickTeleporting" index="3"]
+teleport_randomly = false
 
 [node name="Position2D" parent="Bricks/BrickTeleporting/TeleportingManager/TeleportLocations" index="0"]
-position = Vector2( 320, 460 )
+position = Vector2( 80, 80 )
 
 [node name="Position2D2" parent="Bricks/BrickTeleporting/TeleportingManager/TeleportLocations" index="1"]
-position = Vector2( 1590, 470 )
+position = Vector2( 1680, 80 )
 
 [node name="Floor" type="StaticBody2D" parent="Terrain" index="1"]
 position = Vector2( 2070, 1030 )

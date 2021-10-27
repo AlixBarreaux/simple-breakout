@@ -12,9 +12,16 @@ signal health_decreased
 
 # ---------------------------------- RUN CODE ----------------------------------
 
+func _ready() -> void:
+	self._initialize_asserts()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
+func _initialize_asserts() -> void:
+	assert(self.current_health > 0)
+	assert(self.current_health <= max_health)
+
 
 func decrease_current_health(amount: int) -> void:
 	self.current_health -= amount
