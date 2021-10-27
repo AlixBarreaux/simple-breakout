@@ -9,6 +9,7 @@ script = ExtResource( 4 )
 
 [node name="HealthManager" parent="." index="0" instance=ExtResource( 3 )]
 current_health = 2
+max_health = 2
 
 [node name="Polygon2D" parent="." index="1"]
 color = Color( 0.831373, 0, 0, 1 )

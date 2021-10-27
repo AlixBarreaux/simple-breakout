@@ -4,7 +4,7 @@ extends KinematicBody2D
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-export var current_speed: int = 200
+export var current_speed: int = 1200
 
 var velocity: Vector2 = Vector2(0.0, 0.0)
 

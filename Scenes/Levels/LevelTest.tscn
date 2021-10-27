@@ -26,12 +26,17 @@ shape = SubResource( 1 )
 [node name="Brick2" parent="Bricks" index="0" instance=ExtResource( 2 )]
 position = Vector2( 960, 740 )
 
-[node name="BrickTeleporting" parent="Bricks" index="1" instance=ExtResource( 3 )]
+[node name="BrickTeleporting" parent="Bricks" index="1" groups=[
+"bricks",
+] instance=ExtResource( 3 )]
 position = Vector2( 80, 80 )
 
 [node name="HealthManager" parent="Bricks/BrickTeleporting" index="0"]
 current_health = 5
 max_health = 5
+
+[node name="Polygon2D" parent="Bricks/BrickTeleporting" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60, 180, 0 )
 
 [node name="TeleportingManager" parent="Bricks/BrickTeleporting" index="3"]
 teleport_randomly = false
