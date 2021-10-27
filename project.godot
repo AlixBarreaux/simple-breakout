@@ -152,7 +152,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "TeleportingManager",
 "language": "GDScript",
-"path": "res://teleporting_manager.gd"
+"path": "res://Scripts/Bricks_Attributes/teleporting_manager.gd"
 }, {
 "base": "Label",
 "class": "VersionLabel",

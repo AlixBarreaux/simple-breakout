@@ -12,8 +12,7 @@ var velocity: Vector2 = Vector2(0.0, 0.0)
 onready var paddle_width: int = $CollisionShape2D.shape.get_extents().x setget , get_paddle_width
 # END TEST
 
-func get_paddle_width() -> int:
-	return paddle_width
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _physics_process(_delta: float) -> void:
@@ -30,3 +29,7 @@ func _physics_process(_delta: float) -> void:
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
+# TEST
+func get_paddle_width() -> int:
+	return paddle_width
+# END TEST

@@ -19,6 +19,7 @@ func _ready() -> void:
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
+
 func _initialize_asserts() -> void:
 	# The Score Value must be set in the inspector!
 	assert(self.score_value > -1)

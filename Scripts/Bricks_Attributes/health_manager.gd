@@ -12,8 +12,10 @@ signal health_decreased
 
 # ---------------------------------- RUN CODE ----------------------------------
 
+
 func _ready() -> void:
 	self._initialize_asserts()
+#	self.get_parent().modulate.a = 0.5
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
@@ -25,6 +27,9 @@ func _initialize_asserts() -> void:
 
 func decrease_current_health(amount: int) -> void:
 	self.current_health -= amount
+	
+	
+	
 	self.emit_signal("health_decreased")
 	if self.current_health < 1:
 		self.current_health = 0

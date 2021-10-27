@@ -37,8 +37,5 @@ position = Vector2( 1700, 160 )
 [node name="BrickHealth" parent="Bricks" index="9" instance=ExtResource( 2 )]
 position = Vector2( 900, 510 )
 
-[node name="HealthManager" parent="Bricks/BrickHealth" index="0"]
-max_health = 2
-
 [editable path="Bricks/BrickHealth"]
 [editable path="Balls"]

@@ -37,38 +37,30 @@ position = Vector2( 1280, 420 )
 [node name="Brick8" parent="Bricks" index="9" instance=ExtResource( 2 )]
 position = Vector2( 1460, 360 )
 
-[node name="Brick11" parent="Bricks" index="10" instance=ExtResource( 2 )]
+[node name="TriangleBrick19" parent="Bricks" index="10" instance=ExtResource( 2 )]
+position = Vector2( 300, 480 )
+rotation = -1.5708
+
+[node name="Polygon2D" parent="Bricks/TriangleBrick19" index="0"]
+polygon = PoolVector2Array( 0, 60, 180, 60, 90, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/TriangleBrick19" index="1"]
+polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
+
+[node name="TriangleBrick20" parent="Bricks" index="11" instance=ExtResource( 2 )]
 position = Vector2( 1720, 300 )
 rotation = 1.5708
 
-[node name="Brick12" parent="Bricks" index="11" instance=ExtResource( 2 )]
-position = Vector2( 360, 300 )
-rotation = 1.5708
-
-[node name="TriangleBrick13" parent="Bricks" index="12" instance=ExtResource( 2 )]
-position = Vector2( 1100, 560 )
-rotation = -3.14159
-
-[node name="Polygon2D" parent="Bricks/TriangleBrick13" index="0"]
+[node name="Polygon2D" parent="Bricks/TriangleBrick20" index="0"]
 polygon = PoolVector2Array( 0, 60, 180, 60, 90, 0 )
 
-[node name="CollisionPolygon2D" parent="Bricks/TriangleBrick13" index="1"]
-polygon = PoolVector2Array( 90, 0, 0, 60, 180, 60 )
-
-[node name="TriangleBrick14" parent="Bricks" index="13" instance=ExtResource( 2 )]
-position = Vector2( 920, 220 )
-rotation = -6.28319
-
-[node name="Polygon2D" parent="Bricks/TriangleBrick14" index="0"]
-polygon = PoolVector2Array( 0, 60, 180, 60, 90, 0 )
-
-[node name="CollisionPolygon2D" parent="Bricks/TriangleBrick14" index="1"]
-polygon = PoolVector2Array( 90, 0, 0, 60, 180, 60 )
+[node name="CollisionPolygon2D" parent="Bricks/TriangleBrick20" index="1"]
+polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
 
 [node name="Music" parent="." index="6"]
 stream = ExtResource( 5 )
 autoplay = true
 
-[editable path="Bricks/TriangleBrick13"]
-[editable path="Bricks/TriangleBrick14"]
+[editable path="Bricks/TriangleBrick19"]
+[editable path="Bricks/TriangleBrick20"]
 [editable path="Balls"]

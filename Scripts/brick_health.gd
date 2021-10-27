@@ -16,9 +16,8 @@ func _ready() -> void:
 
 
 func _initialize_signals() -> void:
-	# warning-ignore: return_value_discarded
+	# warning-ignore: return_value_discardedddddd
 	health_manager.connect("died", self, "on_died")
-#	health_manager.connect("health_decreased", self, "on_health_decreased")
 
 
 func _receive_ball_collision() -> void:

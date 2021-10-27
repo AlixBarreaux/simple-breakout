@@ -16,15 +16,8 @@ func _ready() -> void:
 		self.hide()
 		return
 
-#	self._initialize_signals()
-	pass
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
-
-
-func _initialize_signals() -> void:
-#	Events.connect("level_restarted", self, "reset")
-	pass
 
 
 func _on_LivesManager_lives_set(value: int) -> void:

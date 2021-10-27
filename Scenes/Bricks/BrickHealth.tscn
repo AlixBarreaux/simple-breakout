@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/HealthManager.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Bricks_Attributes/HealthManager.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/brick_health.gd" type="Script" id=4]
 
 [node name="BrickHealth" instance=ExtResource( 2 )]
