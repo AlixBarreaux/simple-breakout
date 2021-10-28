@@ -1,41 +1,183 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Bricks/BrickInvisible.tscn" type="PackedScene" id=4]
 
 [node name="Level3" instance=ExtResource( 1 )]
 next_level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
 
 [node name="Brick" parent="Bricks" index="0" instance=ExtResource( 3 )]
-position = Vector2( 100, 160 )
+position = Vector2( 100, 400 )
 
 [node name="Brick2" parent="Bricks" index="1" instance=ExtResource( 3 )]
-position = Vector2( 300, 160 )
+position = Vector2( 300, 400 )
 
 [node name="Brick3" parent="Bricks" index="2" instance=ExtResource( 3 )]
-position = Vector2( 500, 160 )
+position = Vector2( 500, 400 )
 
 [node name="Brick4" parent="Bricks" index="3" instance=ExtResource( 3 )]
-position = Vector2( 700, 160 )
+position = Vector2( 700, 400 )
 
 [node name="Brick5" parent="Bricks" index="4" instance=ExtResource( 3 )]
-position = Vector2( 900, 160 )
+position = Vector2( 900, 400 )
 
 [node name="Brick6" parent="Bricks" index="5" instance=ExtResource( 3 )]
-position = Vector2( 1100, 160 )
+position = Vector2( 1100, 400 )
 
 [node name="Brick7" parent="Bricks" index="6" instance=ExtResource( 3 )]
-position = Vector2( 1300, 160 )
+position = Vector2( 1300, 400 )
 
 [node name="Brick8" parent="Bricks" index="7" instance=ExtResource( 3 )]
-position = Vector2( 1500, 160 )
+position = Vector2( 1500, 400 )
 
 [node name="Brick9" parent="Bricks" index="8" instance=ExtResource( 3 )]
-position = Vector2( 1700, 160 )
+position = Vector2( 1700, 400 )
 
-[node name="BrickHealth" parent="Bricks" index="9" instance=ExtResource( 2 )]
-position = Vector2( 900, 510 )
+[node name="Brick11" parent="Bricks" index="9" instance=ExtResource( 3 )]
+position = Vector2( 246, 480 )
+rotation = 1.57079
 
+[node name="Polygon2D" parent="Bricks/Brick11" index="0"]
+polygon = PoolVector2Array( 6.10352e-05, -34, -0.000335693, 146, 29.9999, 56.0001 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick11" index="1"]
+polygon = PoolVector2Array( 6.10352e-05, -34, -0.000335693, 146, 29.9999, 56.0001 )
+
+[node name="Brick13" parent="Bricks" index="10" instance=ExtResource( 3 )]
+position = Vector2( 1850, 480 )
+rotation = 1.57079
+
+[node name="Polygon2D" parent="Bricks/Brick13" index="0"]
+polygon = PoolVector2Array( 6.10352e-05, -34, -0.000335693, 146, 29.9999, 56.0001 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick13" index="1"]
+polygon = PoolVector2Array( 6.10352e-05, -34, -0.000335693, 146, 29.9999, 56.0001 )
+
+[node name="Brick12" parent="Bricks" index="11" instance=ExtResource( 3 )]
+position = Vector2( 1100, 480 )
+
+[node name="Polygon2D" parent="Bricks/Brick12" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick12" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60 )
+
+[node name="Brick14" parent="Bricks" index="12" instance=ExtResource( 3 )]
+position = Vector2( 900, 480 )
+
+[node name="Brick16" parent="Bricks" index="13" instance=ExtResource( 3 )]
+position = Vector2( 700, 480 )
+
+[node name="Polygon2D" parent="Bricks/Brick16" index="0"]
+polygon = PoolVector2Array( 0, 60, 180, 60, 180, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick16" index="1"]
+polygon = PoolVector2Array( 0, 60, 180, 60, 180, 0 )
+
+[node name="Brick15" parent="Bricks" index="14" instance=ExtResource( 3 )]
+position = Vector2( 1080, 620 )
+rotation = -3.14159
+
+[node name="Polygon2D" parent="Bricks/Brick15" index="0"]
+polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick15" index="1"]
+polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
+
+[node name="BrickInvisible2" parent="Bricks" index="15" instance=ExtResource( 4 )]
+position = Vector2( 300, 320 )
+
+[node name="BrickInvisible3" parent="Bricks" index="16" instance=ExtResource( 4 )]
+position = Vector2( 500, 320 )
+
+[node name="BrickInvisible4" parent="Bricks" index="17" instance=ExtResource( 4 )]
+position = Vector2( 700, 320 )
+
+[node name="BrickInvisible5" parent="Bricks" index="18" instance=ExtResource( 4 )]
+position = Vector2( 900, 320 )
+
+[node name="BrickInvisible6" parent="Bricks" index="19" instance=ExtResource( 4 )]
+position = Vector2( 1100, 320 )
+
+[node name="BrickInvisible7" parent="Bricks" index="20" instance=ExtResource( 4 )]
+position = Vector2( 1300, 320 )
+
+[node name="BrickInvisible9" parent="Bricks" index="21" instance=ExtResource( 4 )]
+position = Vector2( 500, 240 )
+
+[node name="BrickInvisible10" parent="Bricks" index="22" instance=ExtResource( 4 )]
+position = Vector2( 700, 240 )
+
+[node name="BrickInvisible11" parent="Bricks" index="23" instance=ExtResource( 4 )]
+position = Vector2( 900, 240 )
+
+[node name="BrickInvisible12" parent="Bricks" index="24" instance=ExtResource( 4 )]
+position = Vector2( 1100, 240 )
+
+[node name="BrickInvisible14" parent="Bricks" index="25" instance=ExtResource( 4 )]
+position = Vector2( 700, 160 )
+
+[node name="BrickInvisible15" parent="Bricks" index="26" instance=ExtResource( 4 )]
+position = Vector2( 900, 160 )
+
+[node name="BrickInvisible16" parent="Bricks" index="27" instance=ExtResource( 4 )]
+position = Vector2( 1100, 160 )
+
+[node name="BrickInvisible13" parent="Bricks" index="28" instance=ExtResource( 4 )]
+position = Vector2( 1300, 240 )
+
+[node name="BrickInvisible8" parent="Bricks" index="29" instance=ExtResource( 4 )]
+position = Vector2( 1500, 320 )
+
+[node name="BrickHealth" parent="Bricks" index="30" instance=ExtResource( 2 )]
+position = Vector2( 900, 80 )
+
+[node name="HealthManager" parent="Bricks/BrickHealth" index="0"]
+max_health = 4
+
+[node name="Polygon2D" parent="Bricks/BrickHealth" index="1"]
+polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
+
+[node name="CollisionPolygon2D" parent="Bricks/BrickHealth" index="2"]
+polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
+
+[connection signal="health_decreased" from="Bricks/BrickInvisible2/HealthManager" to="Bricks/BrickInvisible2/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible3/HealthManager" to="Bricks/BrickInvisible3/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible4/HealthManager" to="Bricks/BrickInvisible4/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible5/HealthManager" to="Bricks/BrickInvisible5/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible6/HealthManager" to="Bricks/BrickInvisible6/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible7/HealthManager" to="Bricks/BrickInvisible7/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible9/HealthManager" to="Bricks/BrickInvisible9/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible10/HealthManager" to="Bricks/BrickInvisible10/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible11/HealthManager" to="Bricks/BrickInvisible11/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible12/HealthManager" to="Bricks/BrickInvisible12/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible14/HealthManager" to="Bricks/BrickInvisible14/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible15/HealthManager" to="Bricks/BrickInvisible15/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible16/HealthManager" to="Bricks/BrickInvisible16/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible13/HealthManager" to="Bricks/BrickInvisible13/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+[connection signal="health_decreased" from="Bricks/BrickInvisible8/HealthManager" to="Bricks/BrickInvisible8/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+
+[editable path="Bricks/Brick11"]
+[editable path="Bricks/Brick13"]
+[editable path="Bricks/Brick12"]
+[editable path="Bricks/Brick16"]
+[editable path="Bricks/Brick15"]
+[editable path="Bricks/BrickInvisible2"]
+[editable path="Bricks/BrickInvisible3"]
+[editable path="Bricks/BrickInvisible4"]
+[editable path="Bricks/BrickInvisible5"]
+[editable path="Bricks/BrickInvisible6"]
+[editable path="Bricks/BrickInvisible7"]
+[editable path="Bricks/BrickInvisible9"]
+[editable path="Bricks/BrickInvisible10"]
+[editable path="Bricks/BrickInvisible11"]
+[editable path="Bricks/BrickInvisible12"]
+[editable path="Bricks/BrickInvisible14"]
+[editable path="Bricks/BrickInvisible15"]
+[editable path="Bricks/BrickInvisible16"]
+[editable path="Bricks/BrickInvisible13"]
+[editable path="Bricks/BrickInvisible8"]
 [editable path="Bricks/BrickHealth"]
 [editable path="Balls"]

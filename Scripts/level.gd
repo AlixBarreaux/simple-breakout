@@ -32,7 +32,7 @@ func _ready() -> void:
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 func _initialize_asserts() -> void:
-	assert(self.next_level_to_load_path != null)
+	assert(self.next_level_to_load_path != "")
 
 
 func _initialize_signals() -> void:

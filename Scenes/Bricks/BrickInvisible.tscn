@@ -5,6 +5,9 @@
 
 [node name="BrickInvisible" instance=ExtResource( 2 )]
 
+[node name="Polygon2D" parent="." index="1"]
+color = Color( 0.784314, 0.784314, 0, 1 )
+
 [node name="InvisibilityManager" type="Node" parent="." index="3"]
 script = ExtResource( 1 )
 

@@ -1,0 +1,143 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=2]
+
+[node name="Level12" instance=ExtResource( 2 )]
+next_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
+
+[node name="Brick2" parent="Bricks" index="0" instance=ExtResource( 1 )]
+position = Vector2( 1290, 350 )
+rotation = -0.261799
+
+[node name="Brick3" parent="Bricks" index="1" instance=ExtResource( 1 )]
+position = Vector2( 1290, 210 )
+rotation = -0.261799
+
+[node name="Brick4" parent="Bricks" index="2" instance=ExtResource( 1 )]
+position = Vector2( 1290, 140 )
+rotation = -0.261799
+
+[node name="Brick5" parent="Bricks" index="3" instance=ExtResource( 1 )]
+position = Vector2( 1290, 420 )
+rotation = -0.261799
+
+[node name="Brick6" parent="Bricks" index="4" instance=ExtResource( 1 )]
+position = Vector2( 1480, 350 )
+rotation = -0.261799
+
+[node name="Brick9" parent="Bricks" index="5" instance=ExtResource( 1 )]
+position = Vector2( 1100, 210 )
+rotation = -0.261799
+
+[node name="Brick10" parent="Bricks" index="6" instance=ExtResource( 1 )]
+position = Vector2( 910, 280 )
+rotation = -0.261799
+
+[node name="Brick12" parent="Bricks" index="7" instance=ExtResource( 1 )]
+position = Vector2( 1480, 210 )
+rotation = -0.261799
+
+[node name="Brick13" parent="Bricks" index="8" instance=ExtResource( 1 )]
+position = Vector2( 1670, 280 )
+rotation = -0.261799
+
+[node name="Brick14" parent="Bricks" index="9" instance=ExtResource( 1 )]
+position = Vector2( 290, 210 )
+rotation = 0.261799
+
+[node name="Brick17" parent="Bricks" index="10" instance=ExtResource( 1 )]
+position = Vector2( 290, 70 )
+rotation = 0.261799
+
+[node name="Brick22" parent="Bricks" index="11" instance=ExtResource( 1 )]
+position = Vector2( 100, 140 )
+rotation = 0.261799
+
+[node name="Brick24" parent="Bricks" index="12" instance=ExtResource( 1 )]
+position = Vector2( 480, 210 )
+rotation = 0.261799
+
+[node name="Brick27" parent="Bricks" index="13" instance=ExtResource( 1 )]
+position = Vector2( 320, 310 )
+rotation = 0.261799
+
+[node name="Brick28" parent="Bricks" index="14" instance=ExtResource( 1 )]
+position = Vector2( 790, 360 )
+
+[node name="Brick26" parent="Bricks" index="15" instance=ExtResource( 1 )]
+position = Vector2( 670, 210 )
+rotation = 0.261799
+
+[node name="Brick29" parent="Bricks" index="16" instance=ExtResource( 1 )]
+position = Vector2( 50, 660 )
+
+[node name="Brick30" parent="Bricks" index="17" instance=ExtResource( 1 )]
+position = Vector2( 50, 590 )
+
+[node name="Brick31" parent="Bricks" index="18" instance=ExtResource( 1 )]
+position = Vector2( 50, 520 )
+
+[node name="Brick32" parent="Bricks" index="19" instance=ExtResource( 1 )]
+position = Vector2( 50, 450 )
+
+[node name="Brick33" parent="Bricks" index="20" instance=ExtResource( 1 )]
+position = Vector2( 50, 380 )
+
+[node name="Brick34" parent="Bricks" index="21" instance=ExtResource( 1 )]
+position = Vector2( 1750, 660 )
+
+[node name="Brick35" parent="Bricks" index="22" instance=ExtResource( 1 )]
+position = Vector2( 1750, 590 )
+
+[node name="Brick36" parent="Bricks" index="23" instance=ExtResource( 1 )]
+position = Vector2( 1750, 520 )
+
+[node name="Brick37" parent="Bricks" index="24" instance=ExtResource( 1 )]
+position = Vector2( 1750, 450 )
+
+[node name="Brick38" parent="Bricks" index="25" instance=ExtResource( 1 )]
+position = Vector2( 1750, 380 )
+
+[node name="Brick39" parent="Bricks" index="26" instance=ExtResource( 1 )]
+position = Vector2( 1410, 560 )
+rotation = -0.523598
+
+[node name="Brick40" parent="Bricks" index="27" instance=ExtResource( 1 )]
+position = Vector2( 490, 490 )
+rotation = 1.0472
+
+[node name="Brick41" parent="Bricks" index="28" instance=ExtResource( 1 )]
+position = Vector2( 790, 490 )
+rotation = 2.09439
+
+[node name="Polygon2D" parent="Bricks/Brick41" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick41" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60 )
+
+[node name="Brick42" parent="Bricks" index="29" instance=ExtResource( 1 )]
+position = Vector2( 1060, 500 )
+rotation = -0.261799
+
+[node name="Polygon2D" parent="Bricks/Brick42" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick42" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 180, 60 )
+
+[node name="Brick43" parent="Bricks" index="30" instance=ExtResource( 1 )]
+position = Vector2( 870, 550 )
+rotation = -0.261799
+
+[node name="Polygon2D" parent="Bricks/Brick43" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 43.1199, 32.2594 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick43" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 43.1199, 32.2594 )
+
+[editable path="Bricks/Brick41"]
+[editable path="Bricks/Brick42"]
+[editable path="Bricks/Brick43"]
+[editable path="Balls"]

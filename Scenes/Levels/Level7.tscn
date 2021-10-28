@@ -1,0 +1,204 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Bricks/BrickTeleporting.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Bricks/BrickInvisible.tscn" type="PackedScene" id=5]
+
+[node name="Level7" instance=ExtResource( 2 )]
+next_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
+
+[node name="Brick" parent="Bricks" index="0" instance=ExtResource( 3 )]
+position = Vector2( 1740, 650 )
+
+[node name="Brick2" parent="Bricks" index="1" instance=ExtResource( 3 )]
+position = Vector2( 1550, 650 )
+
+[node name="Brick3" parent="Bricks" index="2" instance=ExtResource( 3 )]
+position = Vector2( 1740, 720 )
+
+[node name="Brick4" parent="Bricks" index="3" instance=ExtResource( 3 )]
+position = Vector2( 1550, 720 )
+
+[node name="Brick6" parent="Bricks" index="4" instance=ExtResource( 3 )]
+position = Vector2( 1220, 510 )
+
+[node name="Brick7" parent="Bricks" index="5" instance=ExtResource( 3 )]
+position = Vector2( 1030, 510 )
+
+[node name="Brick8" parent="Bricks" index="6" instance=ExtResource( 3 )]
+position = Vector2( 840, 510 )
+
+[node name="Brick9" parent="Bricks" index="7" instance=ExtResource( 3 )]
+position = Vector2( 650, 510 )
+
+[node name="Brick10" parent="Bricks" index="8" instance=ExtResource( 3 )]
+position = Vector2( 460, 510 )
+
+[node name="Brick11" parent="Bricks" index="9" instance=ExtResource( 3 )]
+position = Vector2( 270, 510 )
+
+[node name="Brick12" parent="Bricks" index="10" instance=ExtResource( 3 )]
+position = Vector2( 80, 510 )
+
+[node name="Brick14" parent="Bricks" index="11" instance=ExtResource( 3 )]
+position = Vector2( 1220, 440 )
+
+[node name="Brick15" parent="Bricks" index="12" instance=ExtResource( 3 )]
+position = Vector2( 1030, 440 )
+
+[node name="Brick16" parent="Bricks" index="13" instance=ExtResource( 3 )]
+position = Vector2( 840, 440 )
+
+[node name="Brick17" parent="Bricks" index="14" instance=ExtResource( 3 )]
+position = Vector2( 650, 440 )
+
+[node name="Brick18" parent="Bricks" index="15" instance=ExtResource( 3 )]
+position = Vector2( 460, 440 )
+
+[node name="Brick19" parent="Bricks" index="16" instance=ExtResource( 3 )]
+position = Vector2( 270, 440 )
+
+[node name="Brick20" parent="Bricks" index="17" instance=ExtResource( 3 )]
+position = Vector2( 80, 440 )
+
+[node name="Brick22" parent="Bricks" index="18" instance=ExtResource( 3 )]
+position = Vector2( 1220, 370 )
+
+[node name="Brick23" parent="Bricks" index="19" instance=ExtResource( 3 )]
+position = Vector2( 1030, 370 )
+
+[node name="Brick24" parent="Bricks" index="20" instance=ExtResource( 3 )]
+position = Vector2( 840, 370 )
+
+[node name="Brick25" parent="Bricks" index="21" instance=ExtResource( 3 )]
+position = Vector2( 650, 370 )
+
+[node name="Brick26" parent="Bricks" index="22" instance=ExtResource( 3 )]
+position = Vector2( 460, 370 )
+
+[node name="Brick27" parent="Bricks" index="23" instance=ExtResource( 3 )]
+position = Vector2( 270, 370 )
+
+[node name="Brick28" parent="Bricks" index="24" instance=ExtResource( 3 )]
+position = Vector2( 80, 370 )
+
+[node name="Brick30" parent="Bricks" index="25" instance=ExtResource( 3 )]
+position = Vector2( 1220, 300 )
+
+[node name="Brick31" parent="Bricks" index="26" instance=ExtResource( 3 )]
+position = Vector2( 1030, 300 )
+
+[node name="Brick32" parent="Bricks" index="27" instance=ExtResource( 3 )]
+position = Vector2( 840, 300 )
+
+[node name="Brick33" parent="Bricks" index="28" instance=ExtResource( 3 )]
+position = Vector2( 650, 300 )
+
+[node name="Brick34" parent="Bricks" index="29" instance=ExtResource( 3 )]
+position = Vector2( 460, 300 )
+
+[node name="Brick35" parent="Bricks" index="30" instance=ExtResource( 3 )]
+position = Vector2( 270, 300 )
+
+[node name="Brick36" parent="Bricks" index="31" instance=ExtResource( 3 )]
+position = Vector2( 80, 300 )
+
+[node name="BrickTeleporting" parent="Bricks" index="32" instance=ExtResource( 1 )]
+position = Vector2( -240, 60 )
+
+[node name="TeleportingManager" parent="Bricks/BrickTeleporting" index="3"]
+teleport_randomly = true
+
+[node name="Position2D" parent="Bricks/BrickTeleporting/TeleportingManager/TeleportLocations" index="0"]
+position = Vector2( 80, 80 )
+
+[node name="Position2D2" parent="Bricks/BrickTeleporting/TeleportingManager/TeleportLocations" index="1"]
+position = Vector2( 650, 80 )
+
+[node name="Position2D3" type="Position2D" parent="Bricks/BrickTeleporting/TeleportingManager/TeleportLocations" index="2"]
+position = Vector2( 1680, 80 )
+__meta__ = {
+"_editor_description_": "",
+"_gizmo_extents_": 50.0
+}
+
+[node name="NextTeleportationTimer" parent="Bricks/BrickTeleporting/TeleportingManager" index="1"]
+wait_time = 2.0
+
+[node name="BrickTeleporting2" parent="Bricks" index="33" instance=ExtResource( 1 )]
+position = Vector2( -240, 400 )
+
+[node name="Position2D" parent="Bricks/BrickTeleporting2/TeleportingManager/TeleportLocations" index="0"]
+position = Vector2( 320, 800 )
+
+[node name="Position2D2" parent="Bricks/BrickTeleporting2/TeleportingManager/TeleportLocations" index="1"]
+position = Vector2( 1600, 560 )
+
+[node name="NextTeleportationTimer" parent="Bricks/BrickTeleporting2/TeleportingManager" index="1"]
+wait_time = 2.5
+
+[node name="BrickHealth" parent="Bricks" index="34" instance=ExtResource( 4 )]
+position = Vector2( 80, 580 )
+
+[node name="BrickHealth2" parent="Bricks" index="35" instance=ExtResource( 4 )]
+position = Vector2( 270, 580 )
+
+[node name="BrickHealth3" parent="Bricks" index="36" instance=ExtResource( 4 )]
+position = Vector2( 460, 580 )
+
+[node name="BrickHealth4" parent="Bricks" index="37" instance=ExtResource( 4 )]
+position = Vector2( 650, 580 )
+
+[node name="BrickHealth5" parent="Bricks" index="38" instance=ExtResource( 4 )]
+position = Vector2( 840, 580 )
+
+[node name="BrickHealth6" parent="Bricks" index="39" instance=ExtResource( 4 )]
+position = Vector2( 1030, 580 )
+
+[node name="BrickHealth7" parent="Bricks" index="40" instance=ExtResource( 4 )]
+position = Vector2( 1220, 580 )
+
+[node name="BrickHealth9" parent="Bricks" index="41" instance=ExtResource( 4 )]
+position = Vector2( 80, 650 )
+
+[node name="BrickHealth10" parent="Bricks" index="42" instance=ExtResource( 4 )]
+position = Vector2( 270, 650 )
+
+[node name="BrickHealth11" parent="Bricks" index="43" instance=ExtResource( 4 )]
+position = Vector2( 460, 650 )
+
+[node name="BrickHealth12" parent="Bricks" index="44" instance=ExtResource( 4 )]
+position = Vector2( 650, 650 )
+
+[node name="BrickHealth15" parent="Bricks" index="45" instance=ExtResource( 4 )]
+position = Vector2( 1220, 650 )
+
+[node name="BrickHealth8" parent="Bricks" index="46" instance=ExtResource( 4 )]
+position = Vector2( 1410, 580 )
+
+[node name="BrickInvisible" parent="Bricks" index="47" instance=ExtResource( 5 )]
+position = Vector2( 1410, 510 )
+
+[node name="BrickInvisible2" parent="Bricks" index="48" instance=ExtResource( 5 )]
+position = Vector2( 1410, 440 )
+
+[node name="BrickInvisible3" parent="Bricks" index="49" instance=ExtResource( 5 )]
+position = Vector2( 1410, 370 )
+
+[node name="BrickInvisible4" parent="Bricks" index="50" instance=ExtResource( 5 )]
+position = Vector2( 1410, 300 )
+
+[node name="BrickInvisible5" parent="Bricks" index="51" instance=ExtResource( 5 )]
+position = Vector2( 1600, 300 )
+
+[node name="BrickInvisible6" parent="Bricks" index="52" instance=ExtResource( 5 )]
+position = Vector2( 1730, 230 )
+rotation = -0.261799
+
+[editable path="Bricks/BrickTeleporting"]
+[editable path="Bricks/BrickTeleporting/TeleportingManager"]
+[editable path="Bricks/BrickTeleporting2"]
+[editable path="Bricks/BrickTeleporting2/TeleportingManager"]
+[editable path="Balls"]

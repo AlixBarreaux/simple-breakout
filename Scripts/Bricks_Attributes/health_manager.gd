@@ -15,8 +15,11 @@ signal health_decreased
 
 func _ready() -> void:
 	self._initialize_asserts()
-#	self.get_parent().modulate.a = 0.5
+	
+#	self.get_parent().modulate.a = health_percentage
 
+
+	
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
@@ -40,7 +43,6 @@ func increase_current_health(amount: int) -> void:
 	self.current_health += amount
 	if self.current_health > self.max_health:
 		self.current_health = self.max_health
-
 
 
 func die() -> void:

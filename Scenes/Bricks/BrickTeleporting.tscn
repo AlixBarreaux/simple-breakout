@@ -10,7 +10,6 @@ score_value = 50
 color = Color( 0, 0.482353, 1, 1 )
 
 [node name="TeleportingManager" parent="." index="3" instance=ExtResource( 2 )]
-teleport_randomly = true
 
 [node name="Position2D2" parent="TeleportingManager/TeleportLocations" index="1"]
 position = Vector2( 303.482, 0 )

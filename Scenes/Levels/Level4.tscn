@@ -1,0 +1,123 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Bricks/BrickInvisible.tscn" type="PackedScene" id=4]
+
+[node name="Level4" instance=ExtResource( 1 )]
+next_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
+
+[node name="BrickInvisible" parent="Bricks" index="0" instance=ExtResource( 4 )]
+position = Vector2( 780, 420 )
+
+[node name="Polygon2D" parent="Bricks/BrickInvisible" index="1"]
+position = Vector2( 0, -2 )
+polygon = PoolVector2Array( 110, 70, -10, 108, 230, 160, 160, 90, 240, 20, 160, 40, 120, -32 )
+
+[node name="CollisionPolygon2D" parent="Bricks/BrickInvisible" index="2"]
+polygon = PoolVector2Array( 120, -32, 110, 70, -10, 108, 230, 158, 160, 88, 240, 18, 160, 38 )
+
+[node name="BrickHealth" parent="Bricks" index="1" instance=ExtResource( 3 )]
+position = Vector2( 470, 300 )
+
+[node name="BrickHealth2" parent="Bricks" index="2" instance=ExtResource( 3 )]
+position = Vector2( 470, 220 )
+
+[node name="BrickHealth3" parent="Bricks" index="3" instance=ExtResource( 3 )]
+position = Vector2( 670, 220 )
+
+[node name="BrickHealth4" parent="Bricks" index="4" instance=ExtResource( 3 )]
+position = Vector2( 670, 300 )
+
+[node name="BrickHealth5" parent="Bricks" index="5" instance=ExtResource( 3 )]
+position = Vector2( 870, 220 )
+
+[node name="BrickHealth6" parent="Bricks" index="6" instance=ExtResource( 3 )]
+position = Vector2( 270, 220 )
+
+[node name="BrickHealth7" parent="Bricks" index="7" instance=ExtResource( 3 )]
+position = Vector2( 470, 140 )
+
+[node name="BrickHealth8" parent="Bricks" index="8" instance=ExtResource( 3 )]
+position = Vector2( 670, 140 )
+
+[node name="BrickHealth9" parent="Bricks" index="9" instance=ExtResource( 3 )]
+position = Vector2( 1350, 560 )
+
+[node name="BrickHealth10" parent="Bricks" index="10" instance=ExtResource( 3 )]
+position = Vector2( 1350, 480 )
+
+[node name="BrickHealth11" parent="Bricks" index="11" instance=ExtResource( 3 )]
+position = Vector2( 1550, 480 )
+
+[node name="BrickHealth12" parent="Bricks" index="12" instance=ExtResource( 3 )]
+position = Vector2( 1550, 560 )
+
+[node name="BrickHealth13" parent="Bricks" index="13" instance=ExtResource( 3 )]
+position = Vector2( 1750, 480 )
+
+[node name="BrickHealth14" parent="Bricks" index="14" instance=ExtResource( 3 )]
+position = Vector2( 1150, 480 )
+
+[node name="BrickHealth15" parent="Bricks" index="15" instance=ExtResource( 3 )]
+position = Vector2( 1350, 400 )
+
+[node name="BrickHealth16" parent="Bricks" index="16" instance=ExtResource( 3 )]
+position = Vector2( 1550, 400 )
+
+[node name="BrickHealth17" parent="Bricks" index="17" instance=ExtResource( 3 )]
+position = Vector2( 310, 730 )
+
+[node name="BrickHealth18" parent="Bricks" index="18" instance=ExtResource( 3 )]
+position = Vector2( 310, 650 )
+
+[node name="BrickHealth19" parent="Bricks" index="19" instance=ExtResource( 3 )]
+position = Vector2( 510, 650 )
+
+[node name="BrickHealth20" parent="Bricks" index="20" instance=ExtResource( 3 )]
+position = Vector2( 510, 730 )
+
+[node name="HealthManager" parent="Bricks/BrickHealth20" index="0"]
+current_health = 4
+max_health = 4
+
+[node name="BrickHealth21" parent="Bricks" index="21" instance=ExtResource( 3 )]
+position = Vector2( 710, 650 )
+
+[node name="BrickHealth22" parent="Bricks" index="22" instance=ExtResource( 3 )]
+position = Vector2( 110, 650 )
+
+[node name="BrickHealth23" parent="Bricks" index="23" instance=ExtResource( 3 )]
+position = Vector2( 310, 570 )
+
+[node name="BrickHealth24" parent="Bricks" index="24" instance=ExtResource( 3 )]
+position = Vector2( 510, 570 )
+
+[connection signal="health_decreased" from="Bricks/BrickInvisible/HealthManager" to="Bricks/BrickInvisible/InvisibilityManager" method="_on_HealthManager_health_decreased"]
+
+[editable path="Bricks/BrickInvisible"]
+[editable path="Bricks/BrickHealth"]
+[editable path="Bricks/BrickHealth2"]
+[editable path="Bricks/BrickHealth3"]
+[editable path="Bricks/BrickHealth4"]
+[editable path="Bricks/BrickHealth5"]
+[editable path="Bricks/BrickHealth6"]
+[editable path="Bricks/BrickHealth7"]
+[editable path="Bricks/BrickHealth8"]
+[editable path="Bricks/BrickHealth9"]
+[editable path="Bricks/BrickHealth10"]
+[editable path="Bricks/BrickHealth11"]
+[editable path="Bricks/BrickHealth12"]
+[editable path="Bricks/BrickHealth13"]
+[editable path="Bricks/BrickHealth14"]
+[editable path="Bricks/BrickHealth15"]
+[editable path="Bricks/BrickHealth16"]
+[editable path="Bricks/BrickHealth17"]
+[editable path="Bricks/BrickHealth18"]
+[editable path="Bricks/BrickHealth19"]
+[editable path="Bricks/BrickHealth20"]
+[editable path="Bricks/BrickHealth21"]
+[editable path="Bricks/BrickHealth22"]
+[editable path="Bricks/BrickHealth23"]
+[editable path="Bricks/BrickHealth24"]
+[editable path="Balls"]
