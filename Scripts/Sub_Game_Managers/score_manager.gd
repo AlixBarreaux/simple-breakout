@@ -18,6 +18,10 @@ signal score_set
 # ---------------------------------- RUN CODE ----------------------------------
 
 
+func _ready() -> void:
+	self._initialize_signals()
+
+
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 
@@ -30,9 +34,16 @@ func _on_ScoreGUI_tree_entered() -> void:
 	self._initialize()
 
 
+func _initialize_signals() -> void:
+	Events.connect("score_changed", self, "on_score_changed")
+
+
 func _initialize() -> void:
 	self.set_current_score(self.current_score)
 
+
+func on_score_changed(value: int) -> void:
+	self.increase_current_score(value)
 
 
 func set_current_score(value: int) -> void:

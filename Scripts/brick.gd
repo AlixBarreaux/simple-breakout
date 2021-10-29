@@ -29,6 +29,7 @@ func _initialize_asserts() -> void:
 func _disable() -> void:
 	collision_polygon_2D.set_deferred("disabled", true)
 	self.hide()
+	Events.emit_signal("score_changed", self.score_value)
 
 
 func _enable() -> void:
