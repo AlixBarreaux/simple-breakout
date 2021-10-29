@@ -82,30 +82,42 @@ __meta__ = {
 margin_top = 0.0
 margin_right = 409.0
 margin_bottom = 158.0
+focus_neighbour_left = NodePath("../LevelSelectionButton3")
+focus_neighbour_top = NodePath("../../../../../BackButton")
+focus_neighbour_right = NodePath("../LevelSelectionButton2")
+focus_neighbour_bottom = NodePath("../../HBoxContainer2/LevelSelectionButton4")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level Test"
-level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+level_name = "Level 1"
+level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
 margin_left = 459.0
 margin_top = 0.0
 margin_right = 868.0
 margin_bottom = 158.0
+focus_neighbour_left = NodePath("../LevelSelectionButton")
+focus_neighbour_top = NodePath("../../../../../BackButton")
+focus_neighbour_right = NodePath("../LevelSelectionButton3")
+focus_neighbour_bottom = NodePath("../../HBoxContainer2/LevelSelectionButton5")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "First Steps"
-level_to_load_path = "res://Scenes/Levels/Level1.tscn"
+level_name = "Level 2"
+level_to_load_path = "res://Scenes/Levels/Level2.tscn"
 
 [node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
 margin_left = 918.0
 margin_top = 0.0
 margin_right = 1328.0
 margin_bottom = 158.0
+focus_neighbour_left = NodePath("../LevelSelectionButton2")
+focus_neighbour_top = NodePath("../../../../../BackButton")
+focus_neighbour_right = NodePath("../LevelSelectionButton")
+focus_neighbour_bottom = NodePath("../../HBoxContainer2/LevelSelectionButton6")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 2"
-level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+level_name = "Level 3"
+level_to_load_path = "res://Scenes/Levels/Level3.tscn"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
 margin_top = 228.0
@@ -119,34 +131,46 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="LevelSelectionButton" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+[node name="LevelSelectionButton4" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
 margin_top = 0.0
 margin_right = 409.0
 margin_bottom = 158.0
+focus_neighbour_left = NodePath("../LevelSelectionButton6")
+focus_neighbour_top = NodePath("../../HBoxContainer/LevelSelectionButton")
+focus_neighbour_right = NodePath("../LevelSelectionButton5")
+focus_neighbour_bottom = NodePath("../../HBoxContainer3/LevelSelectionButton7")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level Test"
-level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+level_name = "Level 4"
+level_to_load_path = "res://Scenes/Levels/Level4.tscn"
 
-[node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+[node name="LevelSelectionButton5" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
 margin_left = 459.0
 margin_top = 0.0
 margin_right = 868.0
 margin_bottom = 158.0
+focus_neighbour_left = NodePath("../LevelSelectionButton4")
+focus_neighbour_top = NodePath("../../HBoxContainer/LevelSelectionButton2")
+focus_neighbour_right = NodePath("../LevelSelectionButton6")
+focus_neighbour_bottom = NodePath("../../HBoxContainer3/LevelSelectionButton7")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "First Steps"
-level_to_load_path = "res://Scenes/Levels/Level1.tscn"
+level_name = "Level 5"
+level_to_load_path = "res://Scenes/Levels/Level5.tscn"
 
-[node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+[node name="LevelSelectionButton6" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
 margin_left = 918.0
 margin_top = 0.0
 margin_right = 1328.0
 margin_bottom = 158.0
+focus_neighbour_left = NodePath("../LevelSelectionButton5")
+focus_neighbour_top = NodePath("../../HBoxContainer/LevelSelectionButton3")
+focus_neighbour_right = NodePath("../LevelSelectionButton4")
+focus_neighbour_bottom = NodePath("../../HBoxContainer3/LevelSelectionButton7")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 2"
-level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+level_name = "Level 6"
+level_to_load_path = "res://Scenes/Levels/Level6.tscn"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
 margin_top = 456.0
@@ -160,34 +184,18 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="LevelSelectionButton" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
-margin_top = 0.0
-margin_right = 409.0
-margin_bottom = 158.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-level_name = "Level Test"
-level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
-
-[node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
-margin_left = 459.0
-margin_top = 0.0
-margin_right = 868.0
-margin_bottom = 158.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-level_name = "First Steps"
-level_to_load_path = "res://Scenes/Levels/Level1.tscn"
-
-[node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
-margin_left = 918.0
+[node name="LevelSelectionButton7" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
 margin_top = 0.0
 margin_right = 1328.0
 margin_bottom = 158.0
+focus_neighbour_left = NodePath("../../HBoxContainer2/LevelSelectionButton6")
+focus_neighbour_top = NodePath("../../HBoxContainer2/LevelSelectionButton5")
+focus_neighbour_right = NodePath("../../../../../BackButton")
+focus_neighbour_bottom = NodePath("../../../../../BackButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 2"
-level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+level_name = "Level 7"
+level_to_load_path = "res://Scenes/Levels/Level7.tscn"
 
 [node name="BackButton" type="Button" parent="."]
 anchor_left = 0.5
@@ -198,10 +206,10 @@ margin_left = -143.5
 margin_top = -146.735
 margin_right = 143.5
 margin_bottom = -48.7352
-focus_neighbour_left = NodePath("../LevelSelectionButton")
-focus_neighbour_top = NodePath("../LevelSelectionButton")
-focus_neighbour_right = NodePath("../LevelSelectionButton")
-focus_neighbour_bottom = NodePath("../LevelSelectionButton")
+focus_neighbour_left = NodePath("../ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/LevelSelectionButton7")
+focus_neighbour_top = NodePath("../ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/LevelSelectionButton7")
+focus_neighbour_right = NodePath("../ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/LevelSelectionButton")
+focus_neighbour_bottom = NodePath("../ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/LevelSelectionButton")
 text = "back"
 __meta__ = {
 "_edit_use_anchors_": false
