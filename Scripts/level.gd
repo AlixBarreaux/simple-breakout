@@ -27,7 +27,9 @@ onready var load_next_level: bool = Global.get_load_next_level()
 func _ready() -> void:
 	self._initialize_asserts()
 	self._initialize_signals()
+	
 	self.show()
+	Events.emit_signal("level_started")
 	
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------

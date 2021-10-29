@@ -63,7 +63,15 @@ func _unhandled_key_input(_event: InputEventKey) -> void:
 func _initialize_signals() -> void:
 	Events.connect("player_defeated", self, "_disable")
 	Events.connect("level_restarted", self, "on_level_restarted")
+	Events.connect("level_finished", self, "on_level_finished")
 
+
+# Stop making the Ball die just by disappearing and trigger die()
+# via VisibilityNotifier2D. The Level scene will be reloaded and the
+# VisibilityNotifier2D screen_exited signal will be connected again.
+func on_level_finished() -> void:
+	$VisibilityNotifier2D.disconnect("screen_exited", self, "_on_VisibilityNotifier2D_screen_exited")
+	_disable()
 
 #func randomize_ball_direction() -> void:
 	#	self.direction.x = [-1, 1] [randi() % 2]

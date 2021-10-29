@@ -40,16 +40,18 @@ func _ready() -> void:
 
 func _initialize_signals() -> void:
 	Events.connect("player_defeated", self, "_disable")
+	Events.connect("level_finished", self, "_disable")
+	Events.connect("level_started", self, "_enable")
 
 
 func _disable() -> void:
-	collision_shape_2d.disabled = false
+	collision_shape_2d.disabled = true
 	self.set_physics_process(false)
 	self.hide()
 
 
 func _enable() -> void:
-	collision_shape_2d.disabled = true
+	collision_shape_2d.disabled = false
 	self.set_physics_process(true)
 	self.show()
 
