@@ -24,6 +24,8 @@ onready var credits_menu: Control = $MenusToDisplay/CreditsMenu
 func _ready() -> void:
 	self._initialize_asserts()
 	self.new_game_button.grab_focus()
+	
+	MusicPlayer.stop_playing()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
@@ -35,6 +37,8 @@ func _initialize_asserts() -> void:
 
 # Buttons Signals
 func _on_NewGameButton_pressed() -> void:	
+	MusicPlayer.start()
+	
 	# warning-ignore: return_value_discarded
 	var error_code: int = 0
 	

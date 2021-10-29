@@ -43,6 +43,9 @@ func _initialize() -> void:
 
 
 func _on_LevelSelectionButton_pressed() -> void:
+	MusicPlayer.start()
+	
+	
 	var error_code: int = 0
 #	error_code = self.get_tree().change_scene_to(self.level_to_load)
 

@@ -27,6 +27,7 @@ func _on_GameOverMenu_visibility_changed() -> void:
 			self.try_again_button.grab_focus()
 		else:
 			self.quit_to_main_menu_button.grab_focus()
+			MusicPlayer.stop_playing()
 
 
 func _on_TryAgainButton_pressed() -> void:

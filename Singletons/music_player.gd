@@ -28,15 +28,22 @@ func _initialize() -> void:
 
 
 func start() -> void:
-	pass
+	print(self.name, " : Starting!")
+	is_stopped = false
+	self.play_next_track()
 
 
-func stop() -> void:
-	pass
+var is_stopped: bool = true
+func stop_playing() -> void:
+	print(self.name, " : Stopping!")
+	is_stopped = true
+	self.stop()
+	self.current_track_index = -1
 
 
 func _on_MusicPlayer_finished() -> void:
-	self.play_next_track()
+	if not is_stopped:
+		self.play_next_track()
 
 
 func play_next_track() -> void:
