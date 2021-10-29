@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-26 21:22+0200\n"
+"PO-Revision-Date: 2021-10-29 11:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -11,6 +11,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# Keywords for Strings
+msgid "all levels in one run"
+msgstr "tous les niveaux en une partie"
 
 # Keywords for Strings
 msgid "apply"
@@ -48,9 +52,6 @@ msgstr "volume principal"
 msgid "music"
 msgstr "musique"
 
-msgid "new game"
-msgstr "nouvelle partie"
-
 msgid "options"
 msgstr "options"
 
@@ -80,6 +81,9 @@ msgstr "options sonores"
 
 msgid "sound effects"
 msgstr "effets sonores"
+
+#~ msgid "new game"
+#~ msgstr "nouvelle partie"
 
 #, fuzzy
 #~| msgid "sound options"

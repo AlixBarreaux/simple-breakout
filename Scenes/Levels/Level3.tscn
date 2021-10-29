@@ -143,22 +143,6 @@ polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
 [node name="CollisionPolygon2D" parent="Bricks/BrickHealth" index="2"]
 polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
 
-[connection signal="health_decreased" from="Bricks/BrickInvisible2/HealthManager" to="Bricks/BrickInvisible2/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible3/HealthManager" to="Bricks/BrickInvisible3/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible4/HealthManager" to="Bricks/BrickInvisible4/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible5/HealthManager" to="Bricks/BrickInvisible5/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible6/HealthManager" to="Bricks/BrickInvisible6/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible7/HealthManager" to="Bricks/BrickInvisible7/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible9/HealthManager" to="Bricks/BrickInvisible9/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible10/HealthManager" to="Bricks/BrickInvisible10/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible11/HealthManager" to="Bricks/BrickInvisible11/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible12/HealthManager" to="Bricks/BrickInvisible12/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible14/HealthManager" to="Bricks/BrickInvisible14/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible15/HealthManager" to="Bricks/BrickInvisible15/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible16/HealthManager" to="Bricks/BrickInvisible16/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible13/HealthManager" to="Bricks/BrickInvisible13/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-[connection signal="health_decreased" from="Bricks/BrickInvisible8/HealthManager" to="Bricks/BrickInvisible8/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-
 [editable path="Bricks/Brick11"]
 [editable path="Bricks/Brick13"]
 [editable path="Bricks/Brick12"]

@@ -14,6 +14,7 @@ onready var audio_bus_index: int = AudioServer.get_bus_index(self.audio_bus_name
 
 # ---------------------------------- RUN CODE ----------------------------------
 
+
 func _ready() -> void:
 #	self._initialize_asserts()
 	self._initialize()

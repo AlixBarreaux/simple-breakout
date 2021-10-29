@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Sound/Music/chiptune_roller_derby.ogg" type="AudioStream" id=5]
 
 [node name="Level1" instance=ExtResource( 1 )]
 next_level_to_load_path = "res://Scenes/Levels/Level2.tscn"
@@ -56,10 +55,6 @@ polygon = PoolVector2Array( 0, 60, 180, 60, 90, 0 )
 
 [node name="CollisionPolygon2D" parent="Bricks/TriangleBrick20" index="1"]
 polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
-
-[node name="Music" parent="." index="6"]
-stream = ExtResource( 5 )
-autoplay = true
 
 [editable path="Bricks/TriangleBrick19"]
 [editable path="Bricks/TriangleBrick20"]

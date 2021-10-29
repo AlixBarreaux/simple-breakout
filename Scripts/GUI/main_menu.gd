@@ -34,7 +34,7 @@ func _initialize_asserts() -> void:
 
 
 # Buttons Signals
-func _on_NewGameButton_pressed() -> void:
+func _on_NewGameButton_pressed() -> void:	
 	# warning-ignore: return_value_discarded
 	var error_code: int = 0
 	

@@ -93,8 +93,6 @@ position = Vector2( 310, 570 )
 [node name="BrickHealth24" parent="Bricks" index="24" instance=ExtResource( 3 )]
 position = Vector2( 510, 570 )
 
-[connection signal="health_decreased" from="Bricks/BrickInvisible/HealthManager" to="Bricks/BrickInvisible/InvisibilityManager" method="_on_HealthManager_health_decreased"]
-
 [editable path="Bricks/BrickInvisible"]
 [editable path="Bricks/BrickHealth"]
 [editable path="Bricks/BrickHealth2"]

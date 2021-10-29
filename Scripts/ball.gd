@@ -20,8 +20,6 @@ signal died
 
 # ---------------------------------- RUN CODE ----------------------------------
 
-
-
 func _ready() -> void:
 	# Prevent the ball from moving until the player
 	# Presses launch_ball key
@@ -38,13 +36,13 @@ func _physics_process(delta: float) -> void:
 	
 	var collision: KinematicCollision2D = self.move_and_collide(self.velocity * delta * self.current_speed)
 	if collision:
-		# TEST
+		
 		if collision.collider is Paddle:
 			self.direction = get_bounce_direction(collision)
 			self.direction.bounce(collision.normal)
 #			var reflect = collision.remainder.bounce(collision.normal)
 		else:
-		# END TEST
+		
 			self.direction = self.direction.bounce(collision.normal)
 #			var reflect = collision.remainder.bounce(collision.normal)
 #			reflect = self.move_and_collide(reflect)
@@ -102,8 +100,6 @@ func respawn() -> void:
 	self.set_global_position(self.spawn_position)
 
 
-
-# TEST
 func _enable() -> void:
 	print(self.name + " _enable() !")
 	self.set_physics_process(true)
@@ -113,7 +109,6 @@ func _enable() -> void:
 
 
 func _disable() -> void:
-	print(self.name + " _disable() !")
 	self.set_physics_process(false)
 	self.collision_shape_2D.disabled = true
 	set_process_unhandled_key_input(false)
@@ -125,5 +120,3 @@ func on_level_restarted() -> void:
 	self.collision_shape_2D.disabled = false
 	set_process_unhandled_key_input(true)
 	self.show()
-
-# END TEST

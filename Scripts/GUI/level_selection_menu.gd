@@ -4,7 +4,7 @@ extends Control
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-onready var first_button_to_focus: Button = $ColorRect/LevelSelectionButton
+onready var first_button_to_focus: Button = $ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/LevelSelectionButton
 onready var back_button_pressed: Button = $BackButton
 
 
@@ -17,9 +17,9 @@ onready var back_button_pressed: Button = $BackButton
 
 func _on_LevelSelectionMenu_visibility_changed() -> void:
 	if self.visible:
-		$ColorRect/LevelSelectionButton.grab_focus()
+		$ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/LevelSelectionButton.grab_focus()
 
 
 func _on_BackButton_pressed() -> void:
-	$ColorRect/LevelSelectionButton.release_focus()
+	$ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/LevelSelectionButton.release_focus()
 	self.hide()

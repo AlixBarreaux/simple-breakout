@@ -10,6 +10,7 @@ extends Node2D
 export var next_level_to_load_path: String = ""
 onready var next_level_to_load = load(next_level_to_load_path)
 
+
 # Menu to load when the level is finished
 # (If launched from LevelSelectionMenu)
 var menu_to_load_at_end_path: String = "res://Scenes/GUI/MainMenu.tscn"

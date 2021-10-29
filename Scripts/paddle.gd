@@ -8,6 +8,10 @@ export var current_speed: int = 1200
 
 var velocity: Vector2 = Vector2(0.0, 0.0)
 
+
+# Node References
+onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+
 # TEST
 onready var paddle_width: int = $CollisionShape2D.shape.get_extents().x setget , get_paddle_width
 # END TEST
@@ -29,6 +33,28 @@ func _physics_process(_delta: float) -> void:
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
+
+func _ready() -> void:
+	self._initialize_signals()
+
+
+func _initialize_signals() -> void:
+	Events.connect("player_defeated", self, "_disable")
+
+
+func _disable() -> void:
+	collision_shape_2d.disabled = false
+	self.set_physics_process(false)
+	self.hide()
+
+
+func _enable() -> void:
+	collision_shape_2d.disabled = true
+	self.set_physics_process(true)
+	self.show()
+
+
+# NOT REQUIRED?
 # TEST
 func get_paddle_width() -> int:
 	return paddle_width

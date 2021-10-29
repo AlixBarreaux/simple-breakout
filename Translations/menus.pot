@@ -13,6 +13,9 @@ msgstr ""
 
 # Keywords for Strings
 
+msgid "all levels in one run"
+msgstr ""
+
 msgid "apply"
 msgstr ""
 
@@ -44,9 +47,6 @@ msgid "master volume"
 msgstr ""
 
 msgid "music"
-msgstr ""
-
-msgid "new game"
 msgstr ""
 
 msgid "options"

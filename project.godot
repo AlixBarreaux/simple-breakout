@@ -213,9 +213,10 @@ default_bus_layout="res://Resources/Audio_Bus_Layouts/default_bus_layout.tres"
 
 [autoload]
 
-Events="*res://Singletons/events.gd"
 Settings="*res://Singletons/settings.gd"
 Global="*res://Singletons/global.gd"
+Events="*res://Singletons/events.gd"
+MusicPlayer="*res://Singletons/MusicPlayer.tscn"
 
 [display]
 

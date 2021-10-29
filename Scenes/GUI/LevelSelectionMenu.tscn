@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/GUI/LevelSelectionButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=3]
-[ext_resource path="res://Miscellaneous/game_icon.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/GUI/level_selection_menu.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
@@ -43,25 +42,151 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="LevelSelectionButton" parent="ColorRect" instance=ExtResource( 2 )]
-margin_left = 40.2596
-margin_right = 659.26
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -664.0
+margin_top = -307.0
+margin_right = 664.0
+margin_bottom = 307.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+margin_right = 1328.0
+margin_bottom = 614.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 70
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_right = 1328.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LevelSelectionButton" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_right = 409.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 level_name = "Level Test"
-preview_image_stream_texture = ExtResource( 4 )
 level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
 
-[node name="LevelSelectionButton2" parent="ColorRect" instance=ExtResource( 2 )]
-margin_left = 690.77
-margin_right = 1309.77
+[node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+margin_left = 459.0
+margin_top = 0.0
+margin_right = 868.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 level_name = "First Steps"
-preview_image_stream_texture = ExtResource( 4 )
 level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
-[node name="LevelSelectionButton3" parent="ColorRect" instance=ExtResource( 2 )]
-margin_left = 1334.92
-margin_right = 1953.92
+[node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+margin_left = 918.0
+margin_top = 0.0
+margin_right = 1328.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 level_name = "Level 2"
-preview_image_stream_texture = ExtResource( 4 )
+level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_top = 228.0
+margin_right = 1328.0
+margin_bottom = 386.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LevelSelectionButton" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_right = 409.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+level_name = "Level Test"
+level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+
+[node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+margin_left = 459.0
+margin_top = 0.0
+margin_right = 868.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+level_name = "First Steps"
+level_to_load_path = "res://Scenes/Levels/Level1.tscn"
+
+[node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
+margin_left = 918.0
+margin_top = 0.0
+margin_right = 1328.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+level_name = "Level 2"
+level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_top = 456.0
+margin_right = 1328.0
+margin_bottom = 614.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="LevelSelectionButton" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_right = 409.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+level_name = "Level Test"
+level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
+
+[node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
+margin_left = 459.0
+margin_top = 0.0
+margin_right = 868.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+level_name = "First Steps"
+level_to_load_path = "res://Scenes/Levels/Level1.tscn"
+
+[node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
+margin_left = 918.0
+margin_top = 0.0
+margin_right = 1328.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+level_name = "Level 2"
 level_to_load_path = "res://Scenes/Levels/LevelTest.tscn"
 
 [node name="BackButton" type="Button" parent="."]
