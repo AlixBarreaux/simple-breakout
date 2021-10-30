@@ -28,8 +28,8 @@ __meta__ = {
 position = Vector2( -22.2236, 0 )
 shape = SubResource( 1 )
 
-[node name="Brick2" parent="Bricks" index="0" instance=ExtResource( 2 )]
-position = Vector2( 1960, 580 )
+[node name="Brick" parent="Bricks" index="0" instance=ExtResource( 2 )]
+position = Vector2( 980, 700 )
 
 [node name="Floor" type="StaticBody2D" parent="Terrain" index="1"]
 position = Vector2( 2070, 1030 )
