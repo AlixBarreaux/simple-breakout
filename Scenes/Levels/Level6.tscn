@@ -1,0 +1,164 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Bricks/Brick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Bricks/BrickHealth.tscn" type="PackedScene" id=3]
+
+[node name="Level4" instance=ExtResource( 1 )]
+next_level_to_load_path = "res://Scenes/Levels/Level7.tscn"
+
+[node name="BrickHealth" parent="Bricks" index="0" instance=ExtResource( 3 )]
+position = Vector2( 910, 460 )
+
+[node name="BrickHealth2" parent="Bricks" index="1" instance=ExtResource( 3 )]
+position = Vector2( 620, 590 )
+
+[node name="BrickHealth3" parent="Bricks" index="2" instance=ExtResource( 3 )]
+position = Vector2( 1210, 590 )
+
+[node name="BrickHealth4" parent="Bricks" index="3" instance=ExtResource( 3 )]
+position = Vector2( 1210, 520 )
+
+[node name="BrickHealth5" parent="Bricks" index="4" instance=ExtResource( 3 )]
+position = Vector2( 620, 520 )
+
+[node name="BrickHealth6" parent="Bricks" index="5" instance=ExtResource( 3 )]
+position = Vector2( 1210, 450 )
+
+[node name="BrickHealth9" parent="Bricks" index="6" instance=ExtResource( 3 )]
+position = Vector2( 1570, 520 )
+
+[node name="BrickHealth10" parent="Bricks" index="7" instance=ExtResource( 3 )]
+position = Vector2( 1570, 450 )
+
+[node name="BrickHealth11" parent="Bricks" index="8" instance=ExtResource( 3 )]
+position = Vector2( 260, 590 )
+
+[node name="Polygon2D" parent="Bricks/BrickHealth11" index="1"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/BrickHealth11" index="2"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="BrickHealth20" parent="Bricks" index="9" instance=ExtResource( 3 )]
+position = Vector2( 1570, 590 )
+
+[node name="Polygon2D" parent="Bricks/BrickHealth20" index="1"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/BrickHealth20" index="2"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="BrickHealth21" parent="Bricks" index="10" instance=ExtResource( 3 )]
+position = Vector2( 1750, 230 )
+rotation = -3.14159
+
+[node name="Polygon2D" parent="Bricks/BrickHealth21" index="1"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/BrickHealth21" index="2"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="BrickHealth22" parent="Bricks" index="11" instance=ExtResource( 3 )]
+position = Vector2( 440, 230 )
+rotation = -3.14159
+
+[node name="Polygon2D" parent="Bricks/BrickHealth22" index="1"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/BrickHealth22" index="2"]
+polygon = PoolVector2Array( -20, 0, -40, 60, 220, 60, 200, 0 )
+
+[node name="BrickHealth12" parent="Bricks" index="12" instance=ExtResource( 3 )]
+position = Vector2( 260, 520 )
+
+[node name="BrickHealth13" parent="Bricks" index="13" instance=ExtResource( 3 )]
+position = Vector2( 260, 450 )
+
+[node name="BrickHealth14" parent="Bricks" index="14" instance=ExtResource( 3 )]
+position = Vector2( 260, 380 )
+
+[node name="BrickHealth15" parent="Bricks" index="15" instance=ExtResource( 3 )]
+position = Vector2( 260, 310 )
+
+[node name="BrickHealth16" parent="Bricks" index="16" instance=ExtResource( 3 )]
+position = Vector2( 260, 240 )
+
+[node name="BrickHealth17" parent="Bricks" index="17" instance=ExtResource( 3 )]
+position = Vector2( 1570, 380 )
+
+[node name="BrickHealth18" parent="Bricks" index="18" instance=ExtResource( 3 )]
+position = Vector2( 1570, 310 )
+
+[node name="BrickHealth19" parent="Bricks" index="19" instance=ExtResource( 3 )]
+position = Vector2( 1570, 240 )
+
+[node name="BrickHealth7" parent="Bricks" index="20" instance=ExtResource( 3 )]
+position = Vector2( 620, 450 )
+
+[node name="Brick5" parent="Bricks" index="21" instance=ExtResource( 2 )]
+position = Vector2( 620, 380 )
+
+[node name="Brick6" parent="Bricks" index="22" instance=ExtResource( 2 )]
+position = Vector2( 1210, 380 )
+
+[node name="Brick7" parent="Bricks" index="23" instance=ExtResource( 2 )]
+position = Vector2( 650, 260 )
+rotation = 0.261799
+
+[node name="Brick9" parent="Bricks" index="24" instance=ExtResource( 2 )]
+position = Vector2( 720, 150 )
+rotation = 0.523598
+
+[node name="Brick12" parent="Bricks" index="25" instance=ExtResource( 2 )]
+position = Vector2( 860, 60 )
+rotation = 1.0472
+
+[node name="Brick15" parent="Bricks" index="26" instance=ExtResource( 2 )]
+position = Vector2( 1040, 60 )
+rotation = 1.57079
+
+[node name="Polygon2D" parent="Bricks/Brick15" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 130, 60.0003, 130, 0.000244141 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick15" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 60, 130, 60.0003, 130, 0.000244141 )
+
+[node name="Brick8" parent="Bricks" index="27" instance=ExtResource( 2 )]
+position = Vector2( 1190, 310 )
+rotation = -0.261799
+
+[node name="Brick10" parent="Bricks" index="28" instance=ExtResource( 2 )]
+position = Vector2( 1150, 250 )
+rotation = -0.523598
+
+[node name="Brick11" parent="Bricks" index="29" instance=ExtResource( 2 )]
+position = Vector2( 1070, 220 )
+rotation = -1.0472
+
+[node name="Brick13" parent="Bricks" index="30" instance=ExtResource( 2 )]
+position = Vector2( 860, 320 )
+
+[node name="Polygon2D" parent="Bricks/Brick13" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, 30, 90, 30, 90, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick13" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 30, 90, 30, 90, 0 )
+
+[node name="Brick14" parent="Bricks" index="31" instance=ExtResource( 2 )]
+position = Vector2( 1070, 320 )
+
+[node name="Polygon2D" parent="Bricks/Brick14" index="0"]
+polygon = PoolVector2Array( 0, 0, 0, 30, 90, 30, 90, 0 )
+
+[node name="CollisionPolygon2D" parent="Bricks/Brick14" index="1"]
+polygon = PoolVector2Array( 0, 0, 0, 30, 90, 30, 90, 0 )
+
+[editable path="Bricks/BrickHealth11"]
+[editable path="Bricks/BrickHealth20"]
+[editable path="Bricks/BrickHealth21"]
+[editable path="Bricks/BrickHealth22"]
+[editable path="Bricks/Brick15"]
+[editable path="Bricks/Brick13"]
+[editable path="Bricks/Brick14"]
+[editable path="Balls"]

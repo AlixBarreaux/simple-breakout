@@ -114,7 +114,6 @@ focus_neighbour_left = NodePath("../CreditsButton")
 focus_neighbour_top = NodePath("../CreditsButton")
 focus_neighbour_right = NodePath("../NewGameButton")
 focus_neighbour_bottom = NodePath("../NewGameButton")
-text = "quit to desktop"
 
 [node name="VersionLabel" parent="ColorRect" instance=ExtResource( 9 )]
 margin_top = -85.0
