@@ -31,12 +31,14 @@ func _initialize_asserts() -> void:
 func decrease_current_health(amount: int) -> void:
 	self.current_health -= amount
 	
-	
-	
 	self.emit_signal("health_decreased")
 	if self.current_health < 1:
 		self.current_health = 0
 		die()
+		self.get_parent().modulate.a = 0.0
+	else:
+		var _health_percentage: float = float(self.current_health) / float(self.max_health)
+		self.get_parent().modulate.a = _health_percentage
 
 
 func increase_current_health(amount: int) -> void:

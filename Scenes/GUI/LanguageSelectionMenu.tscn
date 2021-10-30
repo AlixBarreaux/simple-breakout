@@ -73,16 +73,28 @@ __meta__ = {
 margin_top = 138.0
 margin_right = 1010.0
 margin_bottom = 190.0
+focus_neighbour_left = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
+focus_neighbour_top = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
+focus_neighbour_right = NodePath("../LanguageButtonFrenchFrance")
+focus_neighbour_bottom = NodePath("../LanguageButtonFrenchFrance")
 
 [node name="LanguageButtonFrenchFrance" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 4 )]
 margin_top = 260.0
 margin_right = 1010.0
 margin_bottom = 312.0
+focus_neighbour_left = NodePath("../LanguageButtonEnglishUSA")
+focus_neighbour_top = NodePath("../LanguageButtonEnglishUSA")
+focus_neighbour_right = NodePath("../LanguageButtonGermanGermany")
+focus_neighbour_bottom = NodePath("../LanguageButtonGermanGermany")
 
 [node name="LanguageButtonGermanGermany" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 5 )]
 margin_top = 382.0
 margin_right = 1010.0
 margin_bottom = 434.0
+focus_neighbour_left = NodePath("../LanguageButtonFrenchFrance")
+focus_neighbour_top = NodePath("../LanguageButtonFrenchFrance")
+focus_neighbour_right = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
+focus_neighbour_bottom = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
 
 [node name="BottomContainer" type="VBoxContainer" parent="ColorRect"]
 anchor_top = 1.0
@@ -122,6 +134,10 @@ __meta__ = {
 [node name="BackButton" type="Button" parent="ColorRect/BottomContainer/HBoxContainer"]
 margin_right = 749.0
 margin_bottom = 93.0
+focus_neighbour_left = NodePath("../ApplyButton")
+focus_neighbour_top = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonGermanGermany")
+focus_neighbour_right = NodePath("../ApplyButton")
+focus_neighbour_bottom = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonEnglishUSA")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "back"
@@ -133,6 +149,10 @@ __meta__ = {
 margin_left = 949.0
 margin_right = 1698.0
 margin_bottom = 93.0
+focus_neighbour_left = NodePath("../BackButton")
+focus_neighbour_top = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonGermanGermany")
+focus_neighbour_right = NodePath("../BackButton")
+focus_neighbour_bottom = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonEnglishUSA")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "apply"

@@ -15,9 +15,9 @@ __meta__ = {
 }
 
 [node name="LivesLabel" type="Label" parent="."]
-margin_right = 103.0
+margin_right = 94.0
 margin_bottom = 46.0
-text = "lives:"
+text = "lives"
 align = 1
 valign = 1
 __meta__ = {
@@ -25,8 +25,8 @@ __meta__ = {
 }
 
 [node name="LivesCounterLabel" type="Label" parent="."]
-margin_left = 123.0
-margin_right = 195.0
+margin_left = 114.0
+margin_right = 186.0
 margin_bottom = 46.0
 text = "000"
 align = 1
