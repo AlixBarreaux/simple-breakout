@@ -16,6 +16,9 @@ var initial_direction: Vector2 = Vector2(0.0, 1.0)
 var velocity: Vector2 = Vector2(0.0, 0.0)
 var direction: Vector2 = Vector2(0.0, 0.0)
 
+# Vertical angle to give to the ball when it's stuck going from left to right
+var free_ball_vertical_angle: float = -0.3
+
 signal died
 
 # ---------------------------------- RUN CODE ----------------------------------
@@ -39,13 +42,15 @@ func _physics_process(delta: float) -> void:
 		
 		if collision.collider is Paddle:
 			self.direction = get_bounce_direction(collision)
+			
+			# Prevent the ball from bouncing from left to right and not
+			# being able to go up or down anymore
+			if self.direction == Vector2(1.0, 0.0) or self.direction == Vector2(-1.0, 0.0):
+				self.direction.y = self.free_ball_vertical_angle
+				
 			self.direction.bounce(collision.normal)
-#			var reflect = collision.remainder.bounce(collision.normal)
 		else:
-		
 			self.direction = self.direction.bounce(collision.normal)
-#			var reflect = collision.remainder.bounce(collision.normal)
-#			reflect = self.move_and_collide(reflect)
 		
 		
 		if collision.collider.is_in_group("bricks"):
@@ -86,11 +91,7 @@ func get_bounce_direction(collision: KinematicCollision2D) -> Vector2:
 	var vector_between_both: Vector2 = ball_collision_position - collider_global_position
 	
 	
-#	print(collider_global_position, ball_collision_position)
-#	print("RETURN: " + str(vector_between_both))
-	
 	vector_between_both = vector_between_both.normalized()
-#	print("NORMALIZED: " + str(vector_between_both))
 	return vector_between_both
 
 
@@ -109,7 +110,6 @@ func respawn() -> void:
 
 
 func _enable() -> void:
-	print(self.name + " _enable() !")
 	self.set_physics_process(true)
 	self.collision_shape_2D.disabled = false
 	set_process_unhandled_key_input(true)
@@ -117,9 +117,9 @@ func _enable() -> void:
 
 
 func _disable() -> void:
+	set_process_unhandled_key_input(false)
 	self.set_physics_process(false)
 	self.collision_shape_2D.disabled = true
-	set_process_unhandled_key_input(false)
 	self.hide()
 
 

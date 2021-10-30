@@ -12,7 +12,13 @@ extents = Vector2( 25, 940 )
 [node name="LevelTest" instance=ExtResource( 1 )]
 next_level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+[node name="TEMPBallPosition" type="Position2D" parent="." index="0"]
+position = Vector2( 1000, 870 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
 position = Vector2( 1020, -140 )
 __meta__ = {
 "_edit_group_": true
@@ -23,7 +29,7 @@ position = Vector2( -22.2236, 0 )
 shape = SubResource( 1 )
 
 [node name="Brick2" parent="Bricks" index="0" instance=ExtResource( 2 )]
-position = Vector2( 960, 740 )
+position = Vector2( 1960, 580 )
 
 [node name="Floor" type="StaticBody2D" parent="Terrain" index="1"]
 position = Vector2( 2070, 1030 )
@@ -42,6 +48,6 @@ shape = SubResource( 2 )
 disabled = true
 
 [node name="Ball" parent="Balls" index="0"]
-position = Vector2( 1000, 870 )
+position = Vector2( 1050, 840 )
 
 [editable path="Balls"]
