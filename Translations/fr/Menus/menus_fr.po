@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-29 11:19+0200\n"
+"PO-Revision-Date: 2021-10-30 11:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -26,19 +26,16 @@ msgstr "retour"
 
 # Keywords for Strings
 msgid "credits"
-msgstr "credits"
+msgstr "crédits"
 
 msgid "fullscreen"
-msgstr "plein ecran"
+msgstr "plein écran"
 
 msgid "game over"
-msgstr "partie terminee"
+msgstr "partie terminée"
 
 msgid "graphics options"
 msgstr "options graphiques"
-
-msgid "hello"
-msgstr "bonjour"
 
 msgid "language selection"
 msgstr "sélection du langage"
@@ -68,7 +65,7 @@ msgid "resume"
 msgstr "continuer"
 
 msgid "select a level"
-msgstr "selectionnez un niveau"
+msgstr "sélectionnez un niveau"
 
 msgid "score"
 msgstr "score"
@@ -81,6 +78,9 @@ msgstr "options sonores"
 
 msgid "sound effects"
 msgstr "effets sonores"
+
+#~ msgid "hello"
+#~ msgstr "bonjour"
 
 #~ msgid "new game"
 #~ msgstr "nouvelle partie"

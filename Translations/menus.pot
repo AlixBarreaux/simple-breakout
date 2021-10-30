@@ -34,9 +34,6 @@ msgstr ""
 msgid "graphics options"
 msgstr ""
 
-msgid "hello"
-msgstr ""
-
 msgid "language selection"
 msgstr ""
 

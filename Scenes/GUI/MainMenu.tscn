@@ -35,10 +35,11 @@ anchor_right = 0.5
 margin_left = -250.5
 margin_top = 40.0
 margin_right = 250.5
-margin_bottom = 70.0
+margin_bottom = 71.0
 theme = ExtResource( 2 )
 text = "Simple Breakout"
 align = 1
+valign = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
