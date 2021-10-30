@@ -75,7 +75,6 @@ __meta__ = {
 }
 
 [node name="LevelSelectionButton" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
-margin_top = 0.0
 margin_right = 409.0
 margin_bottom = 158.0
 focus_neighbour_left = NodePath("../LevelSelectionButton3")
@@ -89,7 +88,6 @@ level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
 margin_left = 459.0
-margin_top = 0.0
 margin_right = 868.0
 margin_bottom = 158.0
 focus_neighbour_left = NodePath("../LevelSelectionButton")
@@ -103,7 +101,6 @@ level_to_load_path = "res://Scenes/Levels/Level2.tscn"
 
 [node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
 margin_left = 918.0
-margin_top = 0.0
 margin_right = 1328.0
 margin_bottom = 158.0
 focus_neighbour_left = NodePath("../LevelSelectionButton2")
@@ -128,7 +125,6 @@ __meta__ = {
 }
 
 [node name="LevelSelectionButton4" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
-margin_top = 0.0
 margin_right = 409.0
 margin_bottom = 158.0
 focus_neighbour_left = NodePath("../LevelSelectionButton6")
@@ -142,7 +138,6 @@ level_to_load_path = "res://Scenes/Levels/Level4.tscn"
 
 [node name="LevelSelectionButton5" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
 margin_left = 459.0
-margin_top = 0.0
 margin_right = 868.0
 margin_bottom = 158.0
 focus_neighbour_left = NodePath("../LevelSelectionButton4")
@@ -156,7 +151,6 @@ level_to_load_path = "res://Scenes/Levels/Level5.tscn"
 
 [node name="LevelSelectionButton6" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
 margin_left = 918.0
-margin_top = 0.0
 margin_right = 1328.0
 margin_bottom = 158.0
 focus_neighbour_left = NodePath("../LevelSelectionButton5")
@@ -181,7 +175,6 @@ __meta__ = {
 }
 
 [node name="LevelSelectionButton7" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 2 )]
-margin_top = 0.0
 margin_right = 1328.0
 margin_bottom = 158.0
 focus_neighbour_left = NodePath("../../HBoxContainer2/LevelSelectionButton6")
@@ -198,9 +191,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -143.5
+margin_left = -320.0
 margin_top = -146.735
-margin_right = 143.5
+margin_right = 320.0
 margin_bottom = -48.7352
 focus_neighbour_left = NodePath("../ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/LevelSelectionButton7")
 focus_neighbour_top = NodePath("../ColorRect/ScrollContainer/VBoxContainer/HBoxContainer3/LevelSelectionButton7")

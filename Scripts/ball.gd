@@ -21,6 +21,12 @@ var free_ball_vertical_angle: float = -0.3
 
 signal died
 
+
+# Signals to initialize
+var signals_connections_list: PoolIntArray = [Events.connect("player_defeated", self, "_disable"),
+	Events.connect("level_restarted", self, "on_level_restarted"),
+	Events.connect("level_finished", self, "on_level_finished")]
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
@@ -66,9 +72,7 @@ func _unhandled_key_input(_event: InputEventKey) -> void:
 
 
 func _initialize_signals() -> void:
-	Events.connect("player_defeated", self, "_disable")
-	Events.connect("level_restarted", self, "on_level_restarted")
-	Events.connect("level_finished", self, "on_level_finished")
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 # Stop making the Ball die just by disappearing and trigger die()

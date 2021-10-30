@@ -12,6 +12,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+back_button_node_path = NodePath("ColorRect/BackButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -29,7 +30,7 @@ margin_top = 40.0
 margin_right = 426.0
 margin_bottom = 110.0
 theme = ExtResource( 4 )
-text = "Credits"
+text = "credits"
 align = 1
 valign = 1
 __meta__ = {
@@ -37,27 +38,74 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+[node name="BackButton" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_top = -146.0
+margin_right = 320.0
+margin_bottom = -48.0
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -525.5
-margin_top = -312.0
-margin_right = 525.5
-margin_bottom = 312.0
-custom_constants/separation = 30
-alignment = 1
+margin_left = -505.0
+margin_top = -356.0
+margin_right = 505.0
+margin_bottom = 216.0
+follow_focus = true
+scroll_horizontal_enabled = false
 __meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
+"_edit_use_anchors_": false
 }
 
-[node name="BackButton" type="Button" parent="ColorRect/VBoxContainer"]
-margin_top = 286.0
-margin_right = 1051.0
-margin_bottom = 338.0
-text = "BACK"
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+margin_right = 998.0
+margin_bottom = 2056.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 200
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PastiFontLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_right = 998.0
+margin_bottom = 242.0
+text = "Assets acquired from external sources and used in the game:
+
+Pasti Fonts (no license):
+https://www.fontspace.com/pasti-font-f62804"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="GodotLicenseLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_top = 442.0
+margin_right = 998.0
+margin_bottom = 2056.0
+text = "This game uses Godot Engine, available under the following license:
+
+Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2021 Godot Engine contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+"
+align = 1
+valign = 1
+autowrap = true
 
 [connection signal="visibility_changed" from="." to="." method="_on_CreditsMenu_visibility_changed"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="ColorRect/BackButton" to="." method="_on_BackButton_pressed"]

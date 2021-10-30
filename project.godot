@@ -62,7 +62,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "GeneralHelpers",
 "language": "GDScript",
-"path": "res://general_helpers.gd"
+"path": "res://Scripts/Other/general_helpers.gd"
 }, {
 "base": "Control",
 "class": "GraphicsOptionsMenu",

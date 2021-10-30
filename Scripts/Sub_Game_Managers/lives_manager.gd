@@ -50,7 +50,6 @@ func _initialize_asserts() -> void:
 func _initialize_signals() -> void:
 	Events.connect("all_balls_died", self, "on_all_balls_died")
 
-
 func _initialize() -> void:
 	self.set_current_lives(self.current_lives)
 
