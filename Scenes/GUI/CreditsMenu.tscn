@@ -1,12 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/GUI/credits_menu.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=2]
 [ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-size = 60
-font_data = ExtResource( 2 )
+[ext_resource path="res://Resources/Themes/pasti_title_label.tres" type="Theme" id=4]
 
 [node name="CreditsMenu" type="Control"]
 anchor_right = 1.0
@@ -28,11 +24,11 @@ __meta__ = {
 [node name="TitleLabel" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -94.0
+margin_left = -425.0
 margin_top = 40.0
-margin_right = 96.0
+margin_right = 426.0
 margin_bottom = 110.0
-custom_fonts/font = SubResource( 1 )
+theme = ExtResource( 4 )
 text = "Credits"
 align = 1
 valign = 1
@@ -58,9 +54,9 @@ __meta__ = {
 }
 
 [node name="BackButton" type="Button" parent="ColorRect/VBoxContainer"]
-margin_top = 288.0
+margin_top = 286.0
 margin_right = 1051.0
-margin_bottom = 335.0
+margin_bottom = 338.0
 text = "BACK"
 
 [connection signal="visibility_changed" from="." to="." method="_on_CreditsMenu_visibility_changed"]

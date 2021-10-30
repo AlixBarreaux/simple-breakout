@@ -9,9 +9,8 @@ bg_color = Color( 1, 1, 1, 1 )
 bg_color = Color( 0.501961, 0.501961, 0.501961, 1 )
 
 [node name="LevelSelectionButton" type="Button"]
-margin_top = 315.0
 margin_right = 619.0
-margin_bottom = 690.0
+margin_bottom = 375.0
 custom_styles/focus = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
 script = ExtResource( 1 )

@@ -1,14 +1,32 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
-[ext_resource path="res://Scripts/GUI/version_label.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/pasti_dynamicfontdata.tres" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
-size = 40
+size = 45
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "Fade In Out"
+[sub_resource type="GDScript" id=2]
+script/source = "class_name VersionLabel
+extends Label
+
+
+# ----------------------------- DECLARE VARIABLES ------------------------------
+
+
+
+# ---------------------------------- RUN CODE ----------------------------------
+
+func _ready() -> void:
+	self._initialize()
+
+# ------------------------------ DECLARE FUNCTIONS -----------------------------
+
+func _initialize() -> void:
+	self.text = \"V \" + str(ProjectSettings.get_setting(\"application/config/version\"))
+"
+
+[sub_resource type="Animation" id=3]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -36,11 +54,11 @@ margin_bottom = -38.1406
 custom_fonts/font = SubResource( 1 )
 text = "V 0"
 align = 1
-script = ExtResource( 2 )
+script = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Fade In Out"
-"anims/Fade In Out" = SubResource( 2 )
+"anims/Fade In Out" = SubResource( 3 )

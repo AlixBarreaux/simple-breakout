@@ -54,6 +54,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/game_over_menu.gd"
 }, {
+"base": "Reference",
+"class": "GameTitleLabel",
+"language": "GDScript",
+"path": "res://Scripts/GUI/game_title.gd"
+}, {
 "base": "Control",
 "class": "GraphicsOptionsMenu",
 "language": "GDScript",
@@ -174,6 +179,7 @@ _global_script_class_icons={
 "FullScreenController": "",
 "Game": "",
 "GameOverMenu": "",
+"GameTitleLabel": "",
 "GraphicsOptionsMenu": "",
 "HealthManager": "",
 "InvisibilityManager": "",

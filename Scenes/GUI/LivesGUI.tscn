@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/GUI/lives_gui.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Themes/pasti_score_lives_theme.tres" type="Theme" id=2]
 
 [node name="LivesGUI" type="HBoxContainer"]
 margin_right = 153.0
 margin_bottom = 41.0
+theme = ExtResource( 2 )
 custom_constants/separation = 20
 alignment = 1
 script = ExtResource( 1 )
@@ -13,10 +15,8 @@ __meta__ = {
 }
 
 [node name="LivesLabel" type="Label" parent="."]
-margin_left = 37.0
-margin_top = 13.0
-margin_right = 71.0
-margin_bottom = 27.0
+margin_right = 103.0
+margin_bottom = 46.0
 text = "lives:"
 align = 1
 valign = 1
@@ -25,10 +25,9 @@ __meta__ = {
 }
 
 [node name="LivesCounterLabel" type="Label" parent="."]
-margin_left = 91.0
-margin_top = 13.0
-margin_right = 115.0
-margin_bottom = 27.0
+margin_left = 123.0
+margin_right = 195.0
+margin_bottom = 46.0
 text = "000"
 align = 1
 valign = 1

@@ -1,15 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://Resources/Themes/pasti_title_label.tres" type="Theme" id=1]
 [ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=2]
 [ext_resource path="res://Scripts/GUI/options_menu.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/GUI/SoundOptionsMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/GUI/GraphicsOptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/LanguageSelectionMenu.tscn" type="PackedScene" id=8]
-
-[sub_resource type="DynamicFont" id=1]
-size = 60
-font_data = ExtResource( 1 )
 
 [node name="OptionsMenu" type="Control"]
 anchor_right = 1.0
@@ -38,12 +34,12 @@ __meta__ = {
 [node name="TitleLabel" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -94.0
+margin_left = -631.0
 margin_top = 40.0
-margin_right = 96.0
+margin_right = 632.0
 margin_bottom = 110.0
-custom_fonts/font = SubResource( 1 )
-text = "OPTIONS"
+theme = ExtResource( 1 )
+text = "options"
 align = 1
 valign = 1
 __meta__ = {
@@ -77,9 +73,9 @@ __meta__ = {
 }
 
 [node name="SoundOptionsButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 166.0
+margin_top = 159.0
 margin_right = 1328.0
-margin_bottom = 213.0
+margin_bottom = 211.0
 focus_neighbour_left = NodePath("../../../BackButton")
 focus_neighbour_top = NodePath("../../../BackButton")
 focus_neighbour_right = NodePath("../GraphicsOptionsButton")
@@ -87,9 +83,9 @@ focus_neighbour_bottom = NodePath("../GraphicsOptionsButton")
 text = "sound options"
 
 [node name="GraphicsOptionsButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 283.0
+margin_top = 281.0
 margin_right = 1328.0
-margin_bottom = 330.0
+margin_bottom = 333.0
 focus_neighbour_left = NodePath("../SoundOptionsButton")
 focus_neighbour_top = NodePath("../SoundOptionsButton")
 focus_neighbour_right = NodePath("../LanguageButton")
@@ -97,9 +93,9 @@ focus_neighbour_bottom = NodePath("../LanguageButton")
 text = "graphics options"
 
 [node name="LanguageButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 400.0
+margin_top = 403.0
 margin_right = 1328.0
-margin_bottom = 447.0
+margin_bottom = 455.0
 focus_neighbour_left = NodePath("../GraphicsOptionsButton")
 focus_neighbour_top = NodePath("../GraphicsOptionsButton")
 focus_neighbour_right = NodePath("../../../BackButton")

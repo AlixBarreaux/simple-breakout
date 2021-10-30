@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/GUI/score_gui.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Themes/pasti_score_lives_theme.tres" type="Theme" id=2]
 
 [node name="ScoreGUI" type="HBoxContainer"]
-margin_left = 253.0
-margin_right = 415.0
-margin_bottom = 41.0
+margin_right = 214.0
+margin_bottom = 46.0
+theme = ExtResource( 2 )
 custom_constants/separation = 20
 alignment = 1
 script = ExtResource( 1 )
@@ -14,10 +15,8 @@ __meta__ = {
 }
 
 [node name="ScoreLabel" type="Label" parent="."]
-margin_left = 39.0
-margin_top = 13.0
-margin_right = 78.0
-margin_bottom = 27.0
+margin_right = 122.0
+margin_bottom = 46.0
 text = "score:"
 align = 1
 valign = 1
@@ -26,10 +25,9 @@ __meta__ = {
 }
 
 [node name="ScoreCounterLabel" type="Label" parent="."]
-margin_left = 98.0
-margin_top = 13.0
-margin_right = 122.0
-margin_bottom = 27.0
+margin_left = 142.0
+margin_right = 214.0
+margin_bottom = 46.0
 text = "000"
 align = 1
 valign = 1

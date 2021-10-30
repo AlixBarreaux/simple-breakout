@@ -1,22 +1,20 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/GUI/game_title.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Themes/pasti_title_label.tres" type="Theme" id=2]
 [ext_resource path="res://Scenes/GUI/QuitToDesktopButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GUI/CreditsMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/GUI/OptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/GUI/LevelSelectionMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/GUI/main_menu.gd" type="Script" id=7]
+[ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=8]
 [ext_resource path="res://Scenes/GUI/VersionLabel.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Sound/Music/chiptune_roller_derby.ogg" type="AudioStream" id=10]
-
-[sub_resource type="DynamicFont" id=1]
-size = 60
-font_data = ExtResource( 2 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 8 )
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -34,13 +32,14 @@ __meta__ = {
 [node name="TitleLabel" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -204.0
+margin_left = -250.5
 margin_top = 40.0
-margin_right = 205.0
+margin_right = 250.5
 margin_bottom = 70.0
-custom_fonts/font = SubResource( 1 )
+theme = ExtResource( 2 )
 text = "Simple Breakout"
 align = 1
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,7 +68,6 @@ focus_neighbour_right = NodePath("../SelectLevelButton")
 focus_neighbour_bottom = NodePath("../SelectLevelButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
 text = "all levels in one run"
 
 [node name="SelectLevelButton" type="Button" parent="ColorRect/ButtonsContainer"]
@@ -82,7 +80,6 @@ focus_neighbour_right = NodePath("../OptionsButton")
 focus_neighbour_bottom = NodePath("../OptionsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
 text = "select a level"
 
 [node name="OptionsButton" type="Button" parent="ColorRect/ButtonsContainer"]
@@ -95,7 +92,6 @@ focus_neighbour_right = NodePath("../CreditsButton")
 focus_neighbour_bottom = NodePath("../CreditsButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
 text = "options"
 
 [node name="CreditsButton" type="Button" parent="ColorRect/ButtonsContainer"]
@@ -108,11 +104,11 @@ focus_neighbour_right = NodePath("../QuitToDesktopButton")
 focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
 text = "credits"
 
 [node name="QuitToDesktopButton" parent="ColorRect/ButtonsContainer" instance=ExtResource( 3 )]
 margin_top = 523.0
+margin_bottom = 624.0
 focus_neighbour_left = NodePath("../CreditsButton")
 focus_neighbour_top = NodePath("../CreditsButton")
 focus_neighbour_right = NodePath("../NewGameButton")
@@ -121,7 +117,7 @@ text = "quit to desktop"
 
 [node name="VersionLabel" parent="ColorRect" instance=ExtResource( 9 )]
 margin_top = -85.0
-margin_bottom = -38.0
+margin_bottom = -40.0
 
 [node name="MenusToDisplay" type="Control" parent="."]
 anchor_right = 1.0

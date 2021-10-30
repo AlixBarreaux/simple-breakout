@@ -1,19 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts_Data/legend_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/GUI/game_over_menu.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Fonts/Dynamic_Fonts/legend_bold_menu_buttons_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=3]
 [ext_resource path="res://Scenes/GUI/QuitToMainMenuButton.tscn" type="PackedScene" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-size = 60
-font_data = ExtResource( 1 )
+[ext_resource path="res://Resources/Themes/pasti_title_label.tres" type="Theme" id=5]
 
 [node name="GameOverMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 2.24487
 margin_right = 2.24487
+theme = ExtResource( 3 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -38,7 +35,7 @@ margin_left = -472.0
 margin_top = 80.0
 margin_right = 471.0
 margin_bottom = 150.0
-custom_fonts/font = SubResource( 1 )
+theme = ExtResource( 5 )
 text = "game over"
 align = 1
 __meta__ = {
@@ -70,7 +67,6 @@ focus_neighbour_right = NodePath("../QuitToMainMenuButton")
 focus_neighbour_bottom = NodePath("../QuitToMainMenuButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 3 )
 text = "try again"
 __meta__ = {
 "_editor_description_": ""
