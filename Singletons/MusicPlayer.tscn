@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Singletons/music_player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sound/Music/chiptune_roller_derby.ogg" type="AudioStream" id=2]
-[ext_resource path="res://Assets/Sound/Music/8_Bit_Retro_Funk_-david_renda.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sound/Music/8_bit_retro_funk_-_david_renda.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Sound/Music/retro_platforming_-_david_fesliyan.ogg" type="AudioStream" id=4]
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]

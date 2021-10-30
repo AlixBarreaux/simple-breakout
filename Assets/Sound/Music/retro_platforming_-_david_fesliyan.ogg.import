@@ -11,5 +11,5 @@ dest_files=[ "res://.import/retro_platforming_-_david_fesliyan.ogg-1bf13126adbe1
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/chiptune_roller_derby.ogg-483d130ae65b29836244cdeb38
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

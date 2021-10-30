@@ -47,7 +47,7 @@ margin_left = -320.0
 margin_top = -146.0
 margin_right = 320.0
 margin_bottom = -48.0
-text = "BACK"
+text = "back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -57,9 +57,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -505.0
+margin_left = -775.0
 margin_top = -356.0
-margin_right = 505.0
+margin_right = 775.0
 margin_bottom = 216.0
 follow_focus = true
 scroll_horizontal_enabled = false
@@ -68,32 +68,73 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
-margin_right = 998.0
-margin_bottom = 2056.0
+margin_right = 1538.0
+margin_bottom = 3684.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 200
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PastiFontLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_right = 998.0
-margin_bottom = 242.0
+margin_right = 1538.0
+margin_bottom = 351.0
+custom_constants/line_spacing = 15
 text = "Assets acquired from external sources and used in the game:
 
-Pasti Fonts (no license):
+Fonts:
+
+Pasti  by HolyJollie (no license):
 https://www.fontspace.com/pasti-font-f62804"
 align = 1
 valign = 1
 autowrap = true
 
+[node name="MusicsLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
+margin_top = 355.0
+margin_right = 1538.0
+margin_bottom = 1499.0
+custom_constants/line_spacing = 15
+text = "
+-----
+
+Musics (all downloaded on the same website with the same license):
+
+8 Bit Retro Funk by David Renda:
+https://www.fesliyanstudios.com/royalty-free-music/download/8-bit-retro-funk/883
+
+Chiptune Roller Derby:
+https://www.fesliyanstudios.com/royalty-free-music/download/retro-platforming/454
+
+Retro Platforming by David Fesliyan:
+https://www.fesliyanstudios.com/royalty-free-music/download/retro-platforming/454
+
+License for these musics:
+https://www.fesliyanstudios.com/faq"
+align = 1
+valign = 1
+autowrap = true
+
 [node name="GodotLicenseLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 442.0
-margin_right = 998.0
-margin_bottom = 2056.0
-text = "This game uses Godot Engine, available under the following license:
+margin_top = 1503.0
+margin_right = 1538.0
+margin_bottom = 3684.0
+custom_constants/line_spacing = 15
+text = "
+
+----------
+
+Game Engine:
+Godot Engine
+
+
+License Source:
+https://github.com/godotengine/godot/blob/master/LICENSE.txt
+
+License text:
+
+This game uses Godot Engine, available under the following license:
 
 Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2021 Godot Engine contributors.
 
