@@ -37,6 +37,9 @@ msgstr ""
 msgid "language selection"
 msgstr ""
 
+msgid "level"
+msgstr ""
+
 msgid "lives"
 msgstr ""
 

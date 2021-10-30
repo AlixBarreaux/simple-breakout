@@ -19,14 +19,40 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="NameLabel" type="Label" parent="."]
-self_modulate = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 65.0
+margin_top = 40.0
+margin_right = -65.0
+margin_bottom = -40.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="HBoxContainer"]
+self_modulate = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+margin_left = 242.0
+margin_top = 140.0
+margin_right = 242.0
+margin_bottom = 154.0
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="NumberLabel" type="Label" parent="HBoxContainer"]
+self_modulate = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+margin_left = 242.0
+margin_top = 140.0
+margin_right = 242.0
+margin_bottom = 154.0
+align = 1
+valign = 1
+__meta__ = {
 "_editor_description_": ""
 }
 

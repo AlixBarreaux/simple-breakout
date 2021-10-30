@@ -5,14 +5,16 @@ extends Button
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
-export var level_name: String = ""
+var level_name: String = "level"
+export var level_number: int = 0
 
 
 var game_scene_path: String = "res://Scenes/Game.tscn"
 export var level_to_load_path: String = ""
 
 
-onready var name_label: Label = $NameLabel
+onready var name_label: Label = $HBoxContainer/NameLabel
+onready var number_label: Label = $HBoxContainer/NumberLabel
 
 
 # ---------------------------------- RUN CODE ----------------------------------
@@ -29,6 +31,7 @@ func _ready() -> void:
 func _initialize_asserts() -> void:
 #	# The Level Name must be provided in the inspector!
 	assert(self.level_name != "")
+	assert(self.level_number > 0)
 	
 	
 	# The Button's text will be set by the script.
@@ -40,6 +43,7 @@ func _initialize_asserts() -> void:
 
 func _initialize() -> void:
 	self.name_label.text = self.level_name
+	self.number_label.text = " " + str(self.level_number)
 
 
 func _on_LevelSelectionButton_pressed() -> void:

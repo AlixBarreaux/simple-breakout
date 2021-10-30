@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-30 22:29+0200\n"
+"PO-Revision-Date: 2021-10-30 22:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: fr\n"
@@ -39,6 +39,9 @@ msgstr "options graphiques"
 
 msgid "language selection"
 msgstr "sélection du langage"
+
+msgid "level"
+msgstr "niveau"
 
 msgid "lives"
 msgstr "vies"

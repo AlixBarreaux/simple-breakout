@@ -83,7 +83,7 @@ focus_neighbour_right = NodePath("../LevelSelectionButton2")
 focus_neighbour_bottom = NodePath("../../HBoxContainer2/LevelSelectionButton4")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 1"
+level_number = 1
 level_to_load_path = "res://Scenes/Levels/Level1.tscn"
 
 [node name="LevelSelectionButton2" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
@@ -96,7 +96,7 @@ focus_neighbour_right = NodePath("../LevelSelectionButton3")
 focus_neighbour_bottom = NodePath("../../HBoxContainer2/LevelSelectionButton5")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 2"
+level_number = 2
 level_to_load_path = "res://Scenes/Levels/Level2.tscn"
 
 [node name="LevelSelectionButton3" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
@@ -109,7 +109,7 @@ focus_neighbour_right = NodePath("../LevelSelectionButton")
 focus_neighbour_bottom = NodePath("../../HBoxContainer2/LevelSelectionButton6")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 3"
+level_number = 3
 level_to_load_path = "res://Scenes/Levels/Level3.tscn"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
@@ -133,7 +133,7 @@ focus_neighbour_right = NodePath("../LevelSelectionButton5")
 focus_neighbour_bottom = NodePath("../../HBoxContainer3/LevelSelectionButton7")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 4"
+level_number = 4
 level_to_load_path = "res://Scenes/Levels/Level4.tscn"
 
 [node name="LevelSelectionButton5" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
@@ -146,7 +146,7 @@ focus_neighbour_right = NodePath("../LevelSelectionButton6")
 focus_neighbour_bottom = NodePath("../../HBoxContainer3/LevelSelectionButton7")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 5"
+level_number = 5
 level_to_load_path = "res://Scenes/Levels/Level5.tscn"
 
 [node name="LevelSelectionButton6" parent="ColorRect/ScrollContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 2 )]
@@ -159,7 +159,7 @@ focus_neighbour_right = NodePath("../LevelSelectionButton4")
 focus_neighbour_bottom = NodePath("../../HBoxContainer3/LevelSelectionButton7")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 6"
+level_number = 6
 level_to_load_path = "res://Scenes/Levels/Level6.tscn"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/ScrollContainer/VBoxContainer"]
@@ -183,7 +183,7 @@ focus_neighbour_right = NodePath("../../../../../BackButton")
 focus_neighbour_bottom = NodePath("../../../../../BackButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-level_name = "Level 7"
+level_number = 7
 level_to_load_path = "res://Scenes/Levels/Level7.tscn"
 
 [node name="BackButton" type="Button" parent="."]
