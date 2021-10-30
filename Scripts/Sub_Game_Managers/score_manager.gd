@@ -33,7 +33,7 @@ func _on_ScoreGUI_tree_entered() -> void:
 	yield(score_gui, "ready")
 	self._initialize()
 
-
+	
 func _initialize_signals() -> void:
 	Events.connect("score_changed", self, "on_score_changed")
 

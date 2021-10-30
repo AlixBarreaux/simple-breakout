@@ -18,7 +18,10 @@ func _ready() -> void:
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
 func _initialize_signals() -> void:
-	Events.connect("player_defeated", self, "show")
+	var _player_defeated_signal_error = Events.connect("player_defeated", self, "show")
+	if _player_defeated_signal_error != OK:
+		printerr("(!) ERROR: In " + self.name +  "Signal connection error. ")
+		printerr("in _player_defeated_signal_error")
 
 
 func _on_GameOverMenu_visibility_changed() -> void:

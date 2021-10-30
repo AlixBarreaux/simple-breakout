@@ -1,12 +1,16 @@
 # MusicPlayer Singleton
 extends AudioStreamPlayer
 
+# Music played in the levels. MainMenu stops it and 
+# plays its own music in an AudioStreamPlayer node
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 export var music_list_to_play: Array = []
 
 var current_track_index: int = -1
+
+var is_stopped: bool = true
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -28,14 +32,11 @@ func _initialize() -> void:
 
 
 func start() -> void:
-	print(self.name, " : Starting!")
 	is_stopped = false
 	self.play_next_track()
 
 
-var is_stopped: bool = true
 func stop_playing() -> void:
-	print(self.name, " : Stopping!")
 	is_stopped = true
 	self.stop()
 	self.current_track_index = -1

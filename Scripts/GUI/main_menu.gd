@@ -37,17 +37,18 @@ func _initialize_asserts() -> void:
 
 # Buttons Signals
 func _on_NewGameButton_pressed() -> void:	
+	var _error_code: int = 0
+	
 	MusicPlayer.start()
-	
-	# warning-ignore: return_value_discarded
-	var error_code: int = 0
-	
+
 	Global.set_enable_lives(true)
-	
 	Global.set_load_next_level(false)
 	
-	error_code = self.get_tree().change_scene(self.game_scene_path)
+	_error_code = self.get_tree().change_scene(self.game_scene_path)
 	Global.set_level_to_load_path(self.new_game_level_to_load_path)
+	
+	if _error_code != OK:
+		printerr(self.name + " : The scene couldn't be loaded correctly!")
 
 
 func _on_SelectLevelButton_pressed() -> void:

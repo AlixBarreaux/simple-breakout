@@ -15,7 +15,8 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_bottom = 41.0
+margin_top = 19.0
+margin_bottom = 21.0
 
 [node name="HSlider" type="HSlider" parent="."]
 margin_left = 30.0
