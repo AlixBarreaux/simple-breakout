@@ -1,3 +1,5 @@
+The licenses have been reviewed for the last time at this date:
+31/10/2021 00:03 UTC +2
 This game is released under an MIT license, be it its code or its assets excluding the 
 ones cited below.
 

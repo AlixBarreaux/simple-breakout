@@ -69,7 +69,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
 margin_right = 1538.0
-margin_bottom = 3684.0
+margin_bottom = 4172.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -79,9 +79,15 @@ __meta__ = {
 
 [node name="PastiFontLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
 margin_right = 1538.0
-margin_bottom = 351.0
+margin_bottom = 839.0
 custom_constants/line_spacing = 15
-text = "Assets acquired from external sources and used in the game:
+text = "The licenses embedded in this document have been reviewed for the last time at this date:
+31/10/2021 00:03 UTC +2
+
+This whole game and its code are released under a MIT license EXCLUDING the assets (read below) with their own license.
+
+
+Assets acquired from external sources and used in the game:
 
 Fonts:
 
@@ -92,9 +98,9 @@ valign = 1
 autowrap = true
 
 [node name="MusicsLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 355.0
+margin_top = 843.0
 margin_right = 1538.0
-margin_bottom = 1499.0
+margin_bottom = 1987.0
 custom_constants/line_spacing = 15
 text = "
 -----
@@ -117,9 +123,9 @@ valign = 1
 autowrap = true
 
 [node name="GodotLicenseLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 1503.0
+margin_top = 1991.0
 margin_right = 1538.0
-margin_bottom = 3684.0
+margin_bottom = 4172.0
 custom_constants/line_spacing = 15
 text = "
 
