@@ -1,11 +1,52 @@
-The licenses have been reviewed for the last time at this date:
+The licenses embedded in this document have been reviewed for the last time at this date:
 31/10/2021 00:03 UTC +2
-This game is released under an MIT license, be it its code or its assets excluding the 
-ones cited below.
+
+This whole game and its code are released under a MIT license EXCLUDING the assets (read below) with their own license.
 
 
-Assets Downloaded and used in the game:
+Assets acquired from external sources and used in the game:
 
-Legend Font:
-Free for Commercial Use (10/19/2021)
-https://fontesk.com/legend-font
+Fonts:
+
+Pasti  by HolyJollie (no license):
+https://www.fontspace.com/pasti-font-f62804
+
+
+-----
+
+Musics (all downloaded on the same website with the same license):
+
+8 Bit Retro Funk by David Renda:
+https://www.fesliyanstudios.com/royalty-free-music/download/8-bit-retro-funk/883
+
+Chiptune Roller Derby:
+https://www.fesliyanstudios.com/royalty-free-music/download/retro-platforming/454
+
+Retro Platforming by David Fesliyan:
+https://www.fesliyanstudios.com/royalty-free-music/download/retro-platforming/454
+
+License for these musics:
+https://www.fesliyanstudios.com/faq
+
+
+
+----------
+
+Game Engine:
+Godot Engine
+
+
+License Source:
+https://github.com/godotengine/godot/blob/master/LICENSE.txt
+
+License text:
+
+This game uses Godot Engine, available under the following license:
+
+Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2021 Godot Engine contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
