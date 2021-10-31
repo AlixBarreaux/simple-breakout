@@ -46,7 +46,7 @@ func _initialize_asserts() -> void:
 
 func _initialize_signals() -> void:
 	for language_button in self.language_buttons_container.get_children():
-		language_button.connect("selected", self, "on_language_button_selected")
+		GeneralHelpers.check_for_signals_initialization_errors(self, [language_button.connect("selected", self, "on_language_button_selected")])
 
 
 func _initialize() -> void:
