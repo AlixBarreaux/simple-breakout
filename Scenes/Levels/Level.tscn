@@ -89,3 +89,4 @@ __meta__ = {
 [connection signal="timeout" from="LevelTransitionTimer" to="." method="_on_LevelTransitionTimer_timeout"]
 
 [editable path="Balls"]
+[editable path="Balls/Ball"]

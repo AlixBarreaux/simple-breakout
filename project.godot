@@ -159,6 +159,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/sound_control_menu.gd"
 }, {
+"base": "Control",
+"class": "SplashScreenMenu",
+"language": "GDScript",
+"path": "res://Scripts/GUI/splash_screen_menu.gd"
+}, {
 "base": "Node",
 "class": "TeleportingManager",
 "language": "GDScript",
@@ -205,6 +210,7 @@ _global_script_class_icons={
 "ScoreGUI": "",
 "ScoreManager": "",
 "SoundControlMenu": "",
+"SplashScreenMenu": "",
 "TeleportingManager": "",
 "VersionLabel": "",
 "VolumeController": ""
@@ -213,7 +219,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Simple Breakout"
-run/main_scene="res://Scenes/GUI/MainMenu.tscn"
+run/main_scene="res://Scenes/GUI/SplashScreenMenu.tscn"
 config/icon="res://Miscellaneous/game_icon.png"
 config/macos_native_icon="res://Miscellaneous/game_icon.icns"
 config/windows_native_icon="res://Miscellaneous/game_icon.ico"
