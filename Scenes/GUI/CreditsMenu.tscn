@@ -69,7 +69,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
 margin_right = 1538.0
-margin_bottom = 4588.0
+margin_bottom = 4771.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -79,9 +79,12 @@ __meta__ = {
 
 [node name="PastiFontLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
 margin_right = 1538.0
-margin_bottom = 839.0
+margin_bottom = 1022.0
 custom_constants/line_spacing = 15
-text = "The licenses embedded in this document have been reviewed for the last time at this date:
+text = "Game created by CTN Phaco.
+
+
+The licenses embedded in this document have been reviewed for the last time at this date:
 31/10/2021 00:03 UTC +2
 
 This whole game and its code are released under a MIT license EXCLUDING the assets (read below) with their own license.
@@ -98,9 +101,9 @@ valign = 1
 autowrap = true
 
 [node name="MusicsLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 843.0
+margin_top = 1026.0
 margin_right = 1538.0
-margin_bottom = 1987.0
+margin_bottom = 2170.0
 custom_constants/line_spacing = 15
 text = "
 -----
@@ -123,9 +126,9 @@ valign = 1
 autowrap = true
 
 [node name="SoundEffectsLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 1991.0
+margin_top = 2174.0
 margin_right = 1538.0
-margin_bottom = 2403.0
+margin_bottom = 2586.0
 custom_constants/line_spacing = 15
 text = "
 -----
@@ -139,9 +142,9 @@ valign = 1
 autowrap = true
 
 [node name="GodotLicenseLabel" type="Label" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 2407.0
+margin_top = 2590.0
 margin_right = 1538.0
-margin_bottom = 4588.0
+margin_bottom = 4771.0
 custom_constants/line_spacing = 15
 text = "
 
