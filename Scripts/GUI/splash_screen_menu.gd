@@ -6,8 +6,14 @@ extends Control
 
 export var next_scene_to_load_path: String = ""
 
+# Node References
+onready var animation_tree: AnimationTree = $AnimationTree
 
 # ---------------------------------- RUN CODE ----------------------------------
+
+
+func _ready() -> void:
+	animation_tree.set_active(true)
 
 
 func _unhandled_key_input(event: InputEventKey) -> void:
