@@ -10,23 +10,35 @@ extends Control
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
-export (String) onready var audio_bus_name = ""
+export (String) var audio_bus_name = ""
 
 # Node References
 onready var slider: Slider = $HSlider
 
 
-onready var audio_bus_index: int = AudioServer.get_bus_index(self.audio_bus_name)
+#onready var audio_bus_index: int = AudioServer.get_bus_index(self.audio_bus_name)
+onready var audio_bus_index: int = -1
 
 
 # ---------------------------------- RUN CODE ----------------------------------
 
 
+func _enter_tree() -> void:
+	audio_bus_index = AudioServer.get_bus_index(self.audio_bus_name)
+	print("\n ENTER TREE: ")
+	print(self.name, " : Audio bus name: ", audio_bus_name)
+	print(self.name, " : Audio bus index: ", audio_bus_index)
+
+
 func _ready() -> void:
 #	self._initialize_asserts()
 	self._initialize()
-#	print(self.name, " : Audio bus name: ", audio_bus_name)
-#	print(self.name, " : Audio bus index: ", audio_bus_index)
+	
+#	audio_bus_index = AudioServer.get_bus_index(self.audio_bus_name)
+
+	print("\nREADY: ")
+	print(self.name, " : Audio bus name: ", audio_bus_name)
+	print(self.name, " : Audio bus index: ", audio_bus_index)
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
@@ -34,7 +46,8 @@ func _ready() -> void:
 
 func _initialize_asserts() -> void:
 #	print(self.name, " : Audio bus name: ", audio_bus_name)
-	assert(self.audio_bus_name != "")
+#	assert(self.audio_bus_name != "")
+	pass
 
 
 func _initialize() -> void:
@@ -45,6 +58,9 @@ func _initialize() -> void:
 
 
 func _on_Slider_value_changed(value: int) -> void:
+	print("\nSLIDER VALUE CHANGED: ")
+	print(self.name, " : Audio bus name: ", audio_bus_name)
+	print(self.name, " : Audio bus index: ", audio_bus_index)
 #	if self.slider.value == self.slider.min_value:
 	if value == self.slider.min_value:
 		AudioServer.set_bus_mute(self.audio_bus_index, true)

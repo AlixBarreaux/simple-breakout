@@ -84,7 +84,6 @@ text = "quit to main menu"
 [node name="QuitToDesktopButton" parent="ColorRect/VBoxContainer" instance=ExtResource( 1 )]
 margin_top = 490.0
 margin_bottom = 624.0
-text = "quit to desktop"
 
 [node name="OptionsMenu" parent="." instance=ExtResource( 4 )]
 visible = false

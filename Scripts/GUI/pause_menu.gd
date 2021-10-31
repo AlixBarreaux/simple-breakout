@@ -25,7 +25,7 @@ func _ready() -> void:
 
 
 func _unhandled_key_input(_event: InputEventKey) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("pause_menu"):
 		if not self.visible:
 			self.show()
 			self.resume_button.grab_focus()
