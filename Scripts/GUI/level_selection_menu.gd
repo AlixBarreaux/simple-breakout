@@ -2,7 +2,13 @@ class_name LevelSelectionMenu
 extends Control
 
 
+# Menu containing LevelSelectionButton(s)
+# Each of these buttons must have all of their value set correctly in the
+# inspector
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 onready var first_button_to_focus: Button = $ColorRect/ScrollContainer/VBoxContainer/HBoxContainer/LevelSelectionButton
 onready var back_button_pressed: Button = $BackButton

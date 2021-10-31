@@ -2,12 +2,19 @@ class_name GameOverMenu
 extends Control
 
 
+# Menu displayed when the player lost the game
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+
+# Node References
 onready var try_again_button: Button = $ColorRect/HBoxContainer/TryAgainButton
 onready var quit_to_main_menu_button: Button = $ColorRect/HBoxContainer/QuitToMainMenuButton
 
+
 # ---------------------------------- RUN CODE ----------------------------------
+
 
 func _ready() -> void:
 	self._initialize_signals()
@@ -16,6 +23,7 @@ func _ready() -> void:
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
 
 func _initialize_signals() -> void:
 	var _player_defeated_signal_error = Events.connect("player_defeated", self, "show")

@@ -2,7 +2,13 @@ class_name LanguageSelectionMenu
 extends Control
 
 
+# Language Selection Menu
+# When the player focuses a LanguageButton and presses ui_accept, if s/he
+# presses the Apply button, the whole game will be translated in the
+# chosen language.
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 # Node Paths
 export (NodePath) var language_buttons_container_node_path = null
@@ -14,6 +20,7 @@ onready var back_button: Button = get_node(back_button_node_path)
 
 # Keep it null!
 onready var language_button_to_focus: Button = null
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 

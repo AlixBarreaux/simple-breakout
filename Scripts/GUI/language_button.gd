@@ -1,6 +1,7 @@
 class_name LanguageButton
 extends Button
 
+
 # Button Class to select a language.
 # In order to create a new LanguageButton, create a scene inheriting this one.
 # Then all its info must be provided in the inspector.
@@ -15,7 +16,9 @@ extends Button
 
 # Example: Language Name: Deitsch. Country Name: Österreich. Locale: de_AT
 
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 export var language_name: String = ""
 export var country_name: String = ""
@@ -23,7 +26,9 @@ export var locale: String = ""
 
 signal selected
 
+
 # ---------------------------------- RUN CODE ----------------------------------
+
 
 func _ready() -> void:
 	self._initialize_asserts()
@@ -31,6 +36,7 @@ func _ready() -> void:
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
 
 func _initialize_asserts() -> void:
 	# The Text property will be set automatically, please clear it!
@@ -48,5 +54,4 @@ func _initialize() -> void:
 
 
 func _on_LanguageButton_pressed() -> void:
-#	self.emit_signal("selected", self.locale)
 	self.emit_signal("selected", self)

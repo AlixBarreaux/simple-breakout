@@ -2,6 +2,9 @@ class_name LevelSelectionButton
 extends Button
 
 
+# When pressed, load a level and add it to the Game scene.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
@@ -60,15 +63,8 @@ func _on_LevelSelectionButton_pressed() -> void:
 	error_code = self.get_tree().change_scene(self.game_scene_path)
 	Global.set_level_to_load_path(self.level_to_load_path)
 	Global.set_load_next_level(true)
-	
-	
-	
-	
-#	if error_code == OK:
-#		print("Scene successfully loaded: " + str(self.level_to_load))
-	if error_code == ERR_CANT_CREATE:
-		printerr("(!) ERROR: In level_selection_button.gd")
-#		printerr("Couldn't load the PackedScene!")
-#	else:
-#		printerr("(!) ERROR: In level_selection_button.gd")
-#		printerr("(!) Unkown error!")
+
+
+	if error_code != OK:
+		printerr("(!) ERROR: In: " + self.name \
+		+ "Error code: " + str(error_code))
