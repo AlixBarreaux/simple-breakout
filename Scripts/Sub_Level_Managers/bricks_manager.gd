@@ -2,12 +2,17 @@ class_name BricksManager
 extends Node2D
 
 
+# Scene managing the bricks.
+# Each Brick is disabled when "destroyed" by the ball.
+# This Scene can reset all the bricks ("undestroy") when the level is restarted.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 var bricks_counter: int = 0
 
-# Signals
-var signals_connections_list: PoolIntArray = [
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
 	Events.connect("level_restarted", self, "reset")
 	]
 

@@ -1,6 +1,19 @@
 class_name Ball
 extends KinematicBody2D
 
+# The ball is a node colliding with any body it encounters.
+# On collision, it will bounce with an inverted angle.
+# If it gets stuck horizontally and doesn't move up anymore, it'll automatically
+# take an angle in order to go up.
+
+# The ball has a "launch_ball" key making it go down. 
+
+# This Scene contains some audio stream players in order to avoid the Bricks
+# having an AudioStreamPlayer attached to them, which would lead to many of 
+# these node duplicated. It'd lead to performance problems, especially with
+# .wav files.
+
+
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
@@ -22,8 +35,8 @@ var free_ball_vertical_angle: float = -0.3
 signal died
 
 
-# Signals to initialize
-var signals_connections_list: PoolIntArray = [
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
 	Events.connect("player_defeated", self, "_disable"),
 	Events.connect("level_restarted", self, "on_level_restarted"),
 	Events.connect("level_finished", self, "on_level_finished")
@@ -86,10 +99,6 @@ func _initialize_signals() -> void:
 func on_level_finished() -> void:
 	$VisibilityNotifier2D.disconnect("screen_exited", self, "_on_VisibilityNotifier2D_screen_exited")
 	_disable()
-
-#func randomize_ball_direction() -> void:
-	#	self.direction.x = [-1, 1] [randi() % 2]
-	#	self.direction.y = [-0.8, 8] [randi() % 2]
 
 
 func get_bounce_direction(collision: KinematicCollision2D) -> Vector2:

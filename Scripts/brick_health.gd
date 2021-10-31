@@ -4,14 +4,17 @@ extends Brick
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+
 onready var health_manager: Node = $HealthManager
 
-# Signals to initialize
+# Signals to connect to
 onready var signals_connections_list: PoolIntArray = [
 		health_manager.connect("died", self, "on_died")
 		]
 
+
 # ---------------------------------- RUN CODE ----------------------------------
+
 
 func _ready() -> void:
 	self._initialize_signals()

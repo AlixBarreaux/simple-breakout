@@ -4,10 +4,12 @@ extends Node2D
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+
 export var score_value: int = -1
 
 onready var collision_polygon_2D: CollisionPolygon2D = $CollisionPolygon2D
 
+# Signals
 signal brick_destroyed
 
 # ---------------------------------- RUN CODE ----------------------------------

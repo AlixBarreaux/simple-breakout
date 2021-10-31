@@ -2,7 +2,13 @@ class_name ScoreManager
 extends Node
 
 
+# Node managing the Player's core.
+# This Node must work with the ScoreGUI by connecting their signals together
+# manually in the node tab
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 var current_score: int = 0
 
@@ -14,9 +20,12 @@ onready var score_gui: Control = null
 
 # Signals
 signal score_set
-var signals_connections_list: PoolIntArray = [
+
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
 	Events.connect("score_changed", self, "on_score_changed")
 	]
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 

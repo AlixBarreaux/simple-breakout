@@ -2,7 +2,13 @@ class_name LivesManager
 extends Node
 
 
+# Node managing the Player's lives.
+# This Node must work with the LivesGUI by connecting their signals together
+# manually in the node tab
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 export var starting_lives: int = 3
 var current_lives: int = starting_lives
@@ -17,11 +23,14 @@ onready var lives_gui: Control = null
 # Signals
 signal lives_set
 
-var signals_connections_list: PoolIntArray = [
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
 	Events.connect("all_balls_died", self, "on_all_balls_died")
 	]
 
+
 # ---------------------------------- RUN CODE ----------------------------------
+
 
 func _ready() -> void:
 	# Enable itself or disable by not executing the initializations
@@ -31,11 +40,10 @@ func _ready() -> void:
 	
 	self._initialize_asserts()
 	self._initialize_signals()
-	
-	
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
 
 func _on_LivesGUI_tree_entered() -> void:
 	lives_gui = get_node(lives_gui_node_path)
@@ -53,6 +61,7 @@ func _initialize_asserts() -> void:
 
 func _initialize_signals() -> void:
 	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
+
 
 func _initialize() -> void:
 	self.set_current_lives(self.current_lives)

@@ -2,6 +2,10 @@ class_name GeneralHelpers
 extends Reference
 
 
+# Script containing helper functions in order to help reduce code duplicating.
+# All the functions contained in this script are static.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 
@@ -9,7 +13,9 @@ extends Reference
 # ---------------------------------- RUN CODE ----------------------------------
 
 
+
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
 
 # Check if the signals have an error on connection in
 # the signal initialization process

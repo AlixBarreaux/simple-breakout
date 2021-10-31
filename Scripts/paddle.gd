@@ -4,21 +4,20 @@ extends KinematicBody2D
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+
 export var current_speed: int = 1200
 
 var velocity: Vector2 = Vector2(0.0, 0.0)
 
-
 # Node References
 onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
-# TEST
+
 onready var paddle_width: int = $CollisionShape2D.shape.get_extents().x setget , get_paddle_width
-# END TEST
 
 
-# Signals to initialize
-var signals_connections_list: PoolIntArray = [
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
 	Events.connect("player_defeated", self, "_disable"),
 	Events.connect("level_finished", self, "_disable"),
 	Events.connect("level_started", self, "_enable")
@@ -63,8 +62,5 @@ func _enable() -> void:
 	self.show()
 
 
-# NOT REQUIRED?
-# TEST
 func get_paddle_width() -> int:
 	return paddle_width
-# END TEST

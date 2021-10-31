@@ -4,6 +4,7 @@ extends Node2D
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
+
 # Exports
 # Level to load when the level is finished
 # (If launched from NewGame into the MainMenu)
@@ -15,6 +16,8 @@ onready var next_level_to_load = load(next_level_to_load_path)
 # (If launched from LevelSelectionMenu)
 var menu_to_load_at_end_path: String = "res://Scenes/GUI/MainMenu.tscn"
 
+
+
 # Node References
 onready var level_transition_timer: Timer = $LevelTransitionTimer
 
@@ -22,13 +25,14 @@ onready var level_transition_timer: Timer = $LevelTransitionTimer
 onready var load_next_level: bool = Global.get_load_next_level()
 
 
-# Signals
-var signals_connections_list: PoolIntArray = [
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
 	Events.connect("level_finished", self, "on_level_finished")
 	]
 
 
 # ---------------------------------- RUN CODE ----------------------------------
+
 
 func _ready() -> void:
 	self._initialize_asserts()
@@ -36,9 +40,10 @@ func _ready() -> void:
 	
 	self.show()
 	Events.emit_signal("level_started")
-	
+
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
 
 func _initialize_asserts() -> void:
 	assert(self.next_level_to_load_path != "")

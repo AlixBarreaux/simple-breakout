@@ -2,11 +2,23 @@ class_name BallsManager
 extends Node2D
 
 
+# Node managing the Balls
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-#signal ball_died
+
+onready var ball: KinematicBody2D = $Ball
+
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
+	self.ball.connect("died", self, "on_ball_died")
+	]
+
 
 # ---------------------------------- RUN CODE ----------------------------------
+
+
 
 func _ready() -> void:
 	self._initialize_signals()
@@ -14,14 +26,12 @@ func _ready() -> void:
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
 
+
 func _initialize_signals() -> void:
-	# warning-ignore: return_value_discarded
-	$Ball.connect("died", self, "on_ball_died")
-
-
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 # To modify in case there are several balls since it's designed for 1 only
 func on_ball_died() -> void:
 	Events.emit_signal("all_balls_died")
-	$Ball.respawn()
+	self.ball.respawn()
