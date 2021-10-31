@@ -6,8 +6,8 @@
 audio_bus_name = "Sound Effects"
 
 [node name="Label" parent="." index="0"]
-margin_right = 206.0
+margin_right = 273.0
 text = "sound effects"
 
 [node name="HSlider" parent="." index="1"]
-margin_left = 236.0
+margin_left = 303.0

@@ -138,6 +138,7 @@ visible = false
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 autoplay = true
+bus = "Music"
 
 [connection signal="pressed" from="ColorRect/ButtonsContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="ColorRect/ButtonsContainer/SelectLevelButton" to="." method="_on_SelectLevelButton_pressed"]

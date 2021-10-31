@@ -23,5 +23,3 @@ margin_right = 393.0
 margin_bottom = 46.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[connection signal="value_changed" from="HSlider" to="." method="_on_Slider_value_changed"]
