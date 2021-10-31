@@ -14,7 +14,7 @@ onready var level_to_load_instance = load(Global.get_level_to_load_path()).insta
 
 
 func _ready() -> void:
-	var level_node: Node2D = self.add_child(level_to_load_instance)
+	self.add_child(level_to_load_instance)
 	self.move_child(level_to_load_instance, 0)
 
 

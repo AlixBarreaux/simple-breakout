@@ -14,6 +14,9 @@ onready var score_gui: Control = null
 
 # Signals
 signal score_set
+var signals_connections_list: PoolIntArray = [
+	Events.connect("score_changed", self, "on_score_changed")
+	]
 
 # ---------------------------------- RUN CODE ----------------------------------
 
@@ -35,7 +38,7 @@ func _on_ScoreGUI_tree_entered() -> void:
 
 	
 func _initialize_signals() -> void:
-	Events.connect("score_changed", self, "on_score_changed")
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 func _initialize() -> void:
