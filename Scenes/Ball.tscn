@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/ball.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sound/Sound_Effects/general_hit.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Sound/Sound_Effects/brick_hit.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 20 )
@@ -23,5 +25,11 @@ rect = Rect2( -10, -10, 40, 40 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="BrickHitAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="HitAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -55,12 +55,15 @@ func _physics_process(delta: float) -> void:
 				self.direction.y = self.free_ball_vertical_angle
 				
 			self.direction.bounce(collision.normal)
+			$HitAudioStreamPlayer2D.play()
 		else:
 			self.direction = self.direction.bounce(collision.normal)
+			$HitAudioStreamPlayer2D.play()
 		
-		
+			
 		if collision.collider.is_in_group("bricks"):
 			collision.collider._receive_ball_collision()
+			$BrickHitAudioStreamPlayer2D.play()
 
 
 func _unhandled_key_input(_event: InputEventKey) -> void:

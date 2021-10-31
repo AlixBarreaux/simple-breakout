@@ -54,7 +54,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/game_over_menu.gd"
 }, {
-"base": "Reference",
+"base": "Label",
 "class": "GameTitleLabel",
 "language": "GDScript",
 "path": "res://Scripts/GUI/game_title.gd"
