@@ -55,6 +55,9 @@ msgstr ""
 msgid "pause"
 msgstr ""
 
+msgid "quit"
+msgstr ""
+
 msgid "quit to desktop"
 msgstr ""
 

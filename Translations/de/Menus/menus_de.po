@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-31 13:39+0100\n"
+"PO-Revision-Date: 2021-10-31 13:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: de\n"
@@ -57,6 +57,9 @@ msgstr "Optionen"
 
 msgid "pause"
 msgstr "pause"
+
+msgid "quit"
+msgstr "beenden"
 
 msgid "quit to desktop"
 msgstr "Zum Desktop beenden"
