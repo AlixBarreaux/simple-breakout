@@ -2,7 +2,7 @@ class_name LivesManager
 extends Node
 
 
-# Node managing the Player's lives.
+# Node managing the player's lives.
 # This Node must work with the LivesGUI by connecting their signals together
 # manually in the node tab
 

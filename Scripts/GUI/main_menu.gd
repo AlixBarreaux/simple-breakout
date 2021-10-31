@@ -2,7 +2,11 @@ class_name MainMenu
 extends Control
 
 
+# Menu containing other submenus to display.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 var game_scene_path: String = "res://Scenes/Game.tscn"
 export var new_game_level_to_load_path: String = ""
@@ -19,7 +23,9 @@ onready var level_selection_menu: Control = $MenusToDisplay/LevelSelectionMenu
 onready var options_menu: Control = $MenusToDisplay/OptionsMenu
 onready var credits_menu: Control = $MenusToDisplay/CreditsMenu
 
+
 # ---------------------------------- RUN CODE ----------------------------------
+
 
 func _ready() -> void:
 	self._initialize_asserts()

@@ -2,7 +2,12 @@ class_name HealthManager
 extends Node
 
 
+# Manages the Brick's health it's attached to.
+# Must absolutely be attached to a Brick.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 export var current_health: int = 1
 export var max_health: int = 1
@@ -10,18 +15,16 @@ export var max_health: int = 1
 signal died
 signal health_decreased
 
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 
 func _ready() -> void:
 	self._initialize_asserts()
-	
-#	self.get_parent().modulate.a = health_percentage
 
-
-	
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
 
 func _initialize_asserts() -> void:
 	assert(self.current_health > 0)
@@ -32,6 +35,7 @@ func decrease_current_health(amount: int) -> void:
 	self.current_health -= amount
 	
 	self.emit_signal("health_decreased")
+	
 	if self.current_health < 1:
 		self.current_health = 0
 		die()

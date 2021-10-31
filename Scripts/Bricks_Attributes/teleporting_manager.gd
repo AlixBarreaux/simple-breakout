@@ -2,12 +2,16 @@ class_name TeleportingManager
 extends Node
 
 
+# Teleports the Brick it's attached to at several points, be it in the same 
+# order or by choosing one of them randomly.
+# Must absolutely be attached to a Brick.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 export var teleport_randomly: bool = false
 
-#onready var starting_position: Vector2 = self.get_parent().get_global_position()
-#onready var parent_starting_position: Vector2 = Vector2(0.0, 0.0)
 
 onready var teleport_locations: Node2D = $TeleportLocations
 
@@ -19,8 +23,8 @@ var teleport_locations_list: Array = []
 var rng = RandomNumberGenerator.new()
 var random_current_teleport_point_index: int = 0
 
-# ---------------------------------- RUN CODE ----------------------------------
 
+# ---------------------------------- RUN CODE ----------------------------------
 
 
 func _ready() -> void:
@@ -41,19 +45,6 @@ func _initialize_asserts() -> void:
 	# TeleportLocations children must all be a node of type Position2D
 	for child in self.teleport_locations.get_children():
 		assert(child is Position2D)
-	
-	# At least one Position2D must have a different location from the others!
-	# v
-	# TO FINISH IF NEEDED!
-#	var _has_one_child_different_location: bool = false
-#	var _teleport_location_comparison: Vector2 = Vector2(0.0, 0.0)
-#
-#	for child in self.teleport_locations.get_children():
-#		if child.get_global_position() != _teleport_location_comparison:
-#			_has_one_child_different_location = true
-#			break
-#		_teleport_location_comparison = child.get_global_position()
-#	print(_has_one_child_different_location)
 
 
 func _initialize() -> void:

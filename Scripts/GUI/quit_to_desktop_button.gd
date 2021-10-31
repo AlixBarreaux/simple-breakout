@@ -2,6 +2,9 @@ class_name QuitToDesktopButton
 extends Button
 
 
+# Simple Button class quitting the game to the user's OS desktop when clicked.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 

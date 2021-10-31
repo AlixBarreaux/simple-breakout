@@ -2,7 +2,13 @@ class_name VolumeController
 extends Control
 
 
+# Base Class Menu to control the sound on an audio bus.
+# In order to control a specific audio bus, inherit this scene
+# and provide an audio bus name in the inspector.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 export (String) onready var audio_bus_name = ""
 
@@ -11,6 +17,7 @@ onready var slider: Slider = $HSlider
 
 
 onready var audio_bus_index: int = AudioServer.get_bus_index(self.audio_bus_name)
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 

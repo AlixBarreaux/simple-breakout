@@ -13,6 +13,12 @@ onready var try_again_button: Button = $ColorRect/HBoxContainer/TryAgainButton
 onready var quit_to_main_menu_button: Button = $ColorRect/HBoxContainer/QuitToMainMenuButton
 
 
+# Signals to connect to
+onready var signals_connections_list: PoolIntArray = [
+	Events.connect("player_defeated", self, "show")
+	]
+
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 
@@ -26,10 +32,7 @@ func _ready() -> void:
 
 
 func _initialize_signals() -> void:
-	var _player_defeated_signal_error = Events.connect("player_defeated", self, "show")
-	if _player_defeated_signal_error != OK:
-		printerr("(!) ERROR: In " + self.name +  "Signal connection error. ")
-		printerr("in _player_defeated_signal_error")
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 func _on_GameOverMenu_visibility_changed() -> void:

@@ -15,13 +15,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_top = 19.0
-margin_bottom = 21.0
+margin_bottom = 46.0
 
 [node name="HSlider" type="HSlider" parent="."]
 margin_left = 30.0
 margin_right = 393.0
-margin_bottom = 41.0
+margin_bottom = 46.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 

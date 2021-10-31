@@ -2,7 +2,11 @@ class_name PauseMenu
 extends Control
 
 
+# Menu pausing the whole game with some buttons triggering different actions.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 # Buttons
 onready var resume_button: Button = $ColorRect/VBoxContainer/ResumeButton
@@ -11,6 +15,7 @@ onready var quit_to_main_menu_button: Button = $ColorRect/VBoxContainer/QuitToMa
 
 # Menus to Display
 onready var options_menu: Control = $OptionsMenu
+
 
 # ---------------------------------- RUN CODE ----------------------------------
 

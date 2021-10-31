@@ -2,6 +2,12 @@ class_name SplashScreenMenu
 extends Control
 
 
+# Booting screen (normally) set as the main scene in the ProjectSettings in 
+# order to make it run when the user starts the game.
+# When a key is pressed or the whole animation process is finished, it then 
+# loads a scene (MainMenu normally)
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 export var next_scene_to_load_path: String = ""

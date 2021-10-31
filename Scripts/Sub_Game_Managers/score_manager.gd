@@ -2,7 +2,7 @@ class_name ScoreManager
 extends Node
 
 
-# Node managing the Player's core.
+# Node managing the player's core.
 # This Node must work with the ScoreGUI by connecting their signals together
 # manually in the node tab
 

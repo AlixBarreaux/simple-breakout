@@ -2,6 +2,9 @@ class_name SoundControlMenu
 extends Control
 
 
+# Menu containing submenus specialized in controlling sound.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
 # Node Paths

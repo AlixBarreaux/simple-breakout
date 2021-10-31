@@ -2,7 +2,8 @@ class_name GameTitleLabel
 extends Label
 
 
-# Simple script setting the Label's text to the game name.
+# Simple script setting the Label's text to the game name. (set in the 
+# ProjectSettings)
 # This script must be attached to a Label node. 
 
 

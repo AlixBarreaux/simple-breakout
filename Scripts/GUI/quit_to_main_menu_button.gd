@@ -1,13 +1,13 @@
 class_name QuitToMainMenuButton
 extends Button
 
-# Note: Loading a PackedScene with a Control Node containing this Scene
-# leads to a crash with a lot of errors about cyclic dependency
-# Instead, everything is loaded via a string with the Scene Path to load
+
+# Simple Button class quitting the game to the MainMenu when clicked.
+
 
 # ----------------------------- DECLARE VARIABLES ------------------------------
 
-#export var scene_to_load: PackedScene = null
+
 export var scene_to_load_path: String = "res://Scenes/GUI/MainMenu.tscn"
 
 # ---------------------------------- RUN CODE ----------------------------------

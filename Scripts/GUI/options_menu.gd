@@ -2,7 +2,11 @@ class_name OptionsMenu
 extends Control
 
 
+# Menu containing other specialized options submenus to display.
+
+
 # ----------------------------- DECLARE VARIABLES ------------------------------
+
 
 # Node Paths
 # Buttons
@@ -34,11 +38,13 @@ onready var language_selection_menu: Control = get_node(self.language_selection_
 
 # ---------------------------------- RUN CODE ----------------------------------
 
+
 func _ready() -> void:
 	self._initialize_asserts()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
+
 
 func _initialize_asserts() -> void:
 	# Buttons
