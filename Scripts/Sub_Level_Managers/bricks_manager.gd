@@ -6,6 +6,11 @@ extends Node2D
 
 var bricks_counter: int = 0
 
+# Signals
+var signals_connections_list: PoolIntArray = [
+	Events.connect("level_restarted", self, "reset")
+	]
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
@@ -18,18 +23,13 @@ func _initialize_signals() -> void:
 	for child in self.get_children():
 		child.connect("brick_destroyed", self, "on_brick_destroyed")
 		self.bricks_counter += 1
-#		print(str(child) + " | " + str(self.bricks_counter))
 	
-	# TEST
-	Events.connect("level_restarted", self, "reset")
-	# END TEST
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
-# TEST
 func reset() -> void:
 	for child in self.get_children():
 		child._enable()
-# END TEST
 
 
 func on_brick_destroyed() -> void:

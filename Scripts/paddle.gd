@@ -17,7 +17,16 @@ onready var paddle_width: int = $CollisionShape2D.shape.get_extents().x setget ,
 # END TEST
 
 
+# Signals to initialize
+var signals_connections_list: PoolIntArray = [
+	Events.connect("player_defeated", self, "_disable"),
+	Events.connect("level_finished", self, "_disable"),
+	Events.connect("level_started", self, "_enable")
+	]
+
+
 # ---------------------------------- RUN CODE ----------------------------------
+
 
 func _physics_process(_delta: float) -> void:
 	self.velocity = Vector2(0.0, 0.0)
@@ -39,9 +48,7 @@ func _ready() -> void:
 
 
 func _initialize_signals() -> void:
-	Events.connect("player_defeated", self, "_disable")
-	Events.connect("level_finished", self, "_disable")
-	Events.connect("level_started", self, "_enable")
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 func _disable() -> void:

@@ -17,6 +17,10 @@ onready var lives_gui: Control = null
 # Signals
 signal lives_set
 
+var signals_connections_list: PoolIntArray = [
+	Events.connect("all_balls_died", self, "on_all_balls_died")
+	]
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
@@ -48,7 +52,7 @@ func _initialize_asserts() -> void:
 
 
 func _initialize_signals() -> void:
-	Events.connect("all_balls_died", self, "on_all_balls_died")
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 func _initialize() -> void:
 	self.set_current_lives(self.current_lives)

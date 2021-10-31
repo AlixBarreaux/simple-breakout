@@ -22,6 +22,12 @@ onready var level_transition_timer: Timer = $LevelTransitionTimer
 onready var load_next_level: bool = Global.get_load_next_level()
 
 
+# Signals
+var signals_connections_list: PoolIntArray = [
+	Events.connect("level_finished", self, "on_level_finished")
+	]
+
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
@@ -39,7 +45,7 @@ func _initialize_asserts() -> void:
 
 
 func _initialize_signals() -> void:
-	Events.connect("level_finished", self, "on_level_finished")
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 func on_level_finished() -> void:

@@ -6,6 +6,11 @@ extends Brick
 
 onready var health_manager: Node = $HealthManager
 
+# Signals to initialize
+var signals_connections_list: PoolIntArray = [
+		health_manager.connect("died", self, "on_died")
+		]
+
 # ---------------------------------- RUN CODE ----------------------------------
 
 func _ready() -> void:
@@ -16,8 +21,7 @@ func _ready() -> void:
 
 
 func _initialize_signals() -> void:
-	# warning-ignore: return_value_discardedddddd
-	health_manager.connect("died", self, "on_died")
+	GeneralHelpers.check_for_signals_initialization_errors(self, self.signals_connections_list)
 
 
 func _receive_ball_collision() -> void:

@@ -23,9 +23,11 @@ signal died
 
 
 # Signals to initialize
-var signals_connections_list: PoolIntArray = [Events.connect("player_defeated", self, "_disable"),
+var signals_connections_list: PoolIntArray = [
+	Events.connect("player_defeated", self, "_disable"),
 	Events.connect("level_restarted", self, "on_level_restarted"),
-	Events.connect("level_finished", self, "on_level_finished")]
+	Events.connect("level_finished", self, "on_level_finished")
+	]
 
 # ---------------------------------- RUN CODE ----------------------------------
 
