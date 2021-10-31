@@ -69,6 +69,7 @@ func _physics_process(delta: float) -> void:
 			if self.direction == Vector2(1.0, 0.0) or self.direction == Vector2(-1.0, 0.0):
 				self.direction.y = self.free_ball_vertical_angle
 				
+				# warning-ignore: return_value_discarded
 			self.direction.bounce(collision.normal)
 			$HitAudioStreamPlayer.play()
 		else:

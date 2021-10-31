@@ -30,3 +30,16 @@ static func check_for_signals_initialization_errors(caller_node_reference: Node,
 			+ "Signal index: " + str(_current_signal_index)
 			+ "\nError ID: " + str(signal_to_check))
 	return
+
+
+static func check_for_generic_error_code(caller_node_reference: Node, generic_error_code: int) -> void:
+	var _current_signal_index: int = -1
+	
+	for signal_to_check in generic_error_code:
+		_current_signal_index += 1
+
+		if signal_to_check != OK:
+			printerr("(!) ERROR: In " + caller_node_reference.name + " : Signal connection error.\n"
+			+ "Signal index: " + str(_current_signal_index)
+			+ "\nError ID: " + str(signal_to_check))
+	return

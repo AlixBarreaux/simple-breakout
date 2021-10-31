@@ -53,8 +53,7 @@ func _on_NewGameButton_pressed() -> void:
 	_error_code = self.get_tree().change_scene(self.game_scene_path)
 	Global.set_level_to_load_path(self.new_game_level_to_load_path)
 	
-	if _error_code != OK:
-		printerr(self.name + " : The scene couldn't be loaded correctly!")
+	GeneralHelpers.check_for_generic_error_code(self, _error_code)
 
 
 func _on_SelectLevelButton_pressed() -> void:

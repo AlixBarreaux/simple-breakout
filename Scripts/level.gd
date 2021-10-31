@@ -58,8 +58,10 @@ func on_level_finished() -> void:
 
 
 func _on_LevelTransitionTimer_timeout() -> void:
+	var _error_code: int = 0
 	# Check wether the next level or the menu to load will be loaded
 	if not self.load_next_level:
 		Global.replace_scene(self, self.next_level_to_load, self.get_parent(), self.get_index())
 	else:
-		get_tree().change_scene(menu_to_load_at_end_path)
+		_error_code = get_tree().change_scene(menu_to_load_at_end_path)
+		GeneralHelpers.check_for_generic_error_code(self, _error_code)

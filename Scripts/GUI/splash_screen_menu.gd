@@ -36,4 +36,6 @@ func _initiliaze_asserts() -> void:
 
 
 func skip_to_next_scene_to_load() -> void:
-	get_tree().change_scene(next_scene_to_load_path)
+	var _error_code: int = 0
+	_error_code = get_tree().change_scene(next_scene_to_load_path)
+	GeneralHelpers.check_for_generic_error_code(self, _error_code)
