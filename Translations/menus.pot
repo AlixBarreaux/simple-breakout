@@ -82,6 +82,9 @@ msgstr ""
 msgid "sound effects"
 msgstr ""
 
+msgid "try again"
+msgstr ""
+
 msgid "You won!\nYou are incredible!\nThanks for playing this small game!"
 msgstr ""
 

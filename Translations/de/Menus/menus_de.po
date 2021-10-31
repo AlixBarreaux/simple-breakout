@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ki Squad Studio\n"
 "POT-Creation-Date: 2022-10-22 11:00+0200\n"
-"PO-Revision-Date: 2021-10-31 13:41+0100\n"
+"PO-Revision-Date: 2021-10-31 23:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: Ki Squad Studio <none@none.com>\n"
 "Language: de\n"
@@ -84,6 +84,9 @@ msgstr "sound Optionen"
 
 msgid "sound effects"
 msgstr "Soundeffekten"
+
+msgid "try again"
+msgstr "try again"
 
 msgid ""
 "You won!\n"
