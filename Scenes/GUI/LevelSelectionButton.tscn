@@ -46,9 +46,9 @@ __meta__ = {
 
 [node name="NumberLabel" type="Label" parent="HBoxContainer"]
 self_modulate = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
-margin_left = 242.0
+margin_left = 246.0
 margin_top = 140.0
-margin_right = 242.0
+margin_right = 246.0
 margin_bottom = 154.0
 align = 1
 valign = 1

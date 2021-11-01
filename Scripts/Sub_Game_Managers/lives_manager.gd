@@ -92,4 +92,6 @@ func increase_current_lives(value: int) -> void:
 
 
 func on_all_balls_died() -> void:
+	if not Global.get_enable_lives():
+		return
 	self.decrease_current_lives(1)
