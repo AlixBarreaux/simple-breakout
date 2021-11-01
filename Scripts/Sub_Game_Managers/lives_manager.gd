@@ -76,7 +76,7 @@ func set_current_lives(value: int) -> void:
 func decrease_current_lives(value: int) -> void:
 	self.current_lives -= value
 	
-	if self.current_lives < 1:
+	if self.current_lives <= 0:
 		Events.emit_signal("player_defeated")
 	
 	self.set_current_lives(self.current_lives)

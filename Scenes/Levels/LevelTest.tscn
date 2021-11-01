@@ -67,3 +67,4 @@ disabled = true
 position = Vector2( 1050, 840 )
 
 [editable path="Balls"]
+[editable path="Balls/Ball"]
