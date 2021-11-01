@@ -61,15 +61,16 @@ func _physics_process(delta: float) -> void:
 	var collision: KinematicCollision2D = self.move_and_collide(self.velocity * delta * self.current_speed)
 	if collision:
 		
+	# Prevent the ball from bouncing from left to right and not
+		# being able to go up or down anymore
+		if self.direction == Vector2(1.0, 0.0) or self.direction == Vector2(-1.0, 0.0):
+			self.direction.y = self.free_ball_vertical_angle
+
+
 		if collision.collider is Paddle:
 			self.direction = get_bounce_direction(collision)
 			
-			# Prevent the ball from bouncing from left to right and not
-			# being able to go up or down anymore
-			if self.direction == Vector2(1.0, 0.0) or self.direction == Vector2(-1.0, 0.0):
-				self.direction.y = self.free_ball_vertical_angle
-				
-				# warning-ignore: return_value_discarded
+			# warning-ignore: return_value_discarded
 			self.direction.bounce(collision.normal)
 			$HitAudioStreamPlayer.play()
 		else:
