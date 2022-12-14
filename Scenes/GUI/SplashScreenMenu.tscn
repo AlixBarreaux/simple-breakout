@@ -287,8 +287,8 @@ margin_right = 1790.0
 margin_bottom = 858.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 10 )
 custom_constants/line_spacing = 20
+custom_fonts/font = SubResource( 10 )
 text = "Made with
 Godot Engine"
 align = 1
