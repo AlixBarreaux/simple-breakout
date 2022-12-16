@@ -50,7 +50,7 @@ func _initialize() -> void:
 
 
 func _on_LevelSelectionButton_pressed() -> void:
-	MusicPlayer.start()
+	MusicPlayer.play_track_at_index(0)
 	
 	
 	var error_code: int = 0

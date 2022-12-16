@@ -29,9 +29,10 @@ onready var credits_menu: Control = $MenusToDisplay/CreditsMenu
 
 func _ready() -> void:
 	self._initialize_asserts()
+	self._initialize()
 	self.new_game_button.grab_focus()
 	
-	MusicPlayer.stop_playing()
+#	Player.stop_playing()
 
 
 # ------------------------------ DECLARE FUNCTIONS -----------------------------
@@ -39,13 +40,18 @@ func _ready() -> void:
 
 func _initialize_asserts() -> void:
 	assert(self.new_game_level_to_load_path != "")
+	return
 
+
+func _initialize() -> void:
+	MusicPlayer.play_track_at_index(2)
+	return
 
 # Buttons Signals
-func _on_NewGameButton_pressed() -> void:	
+func _on_NewGameButton_pressed() -> void:
 	var _error_code: int = 0
 	
-	MusicPlayer.start()
+	MusicPlayer.play_track_at_index(1)
 
 	Global.set_enable_lives(true)
 	Global.set_load_next_level(false)
