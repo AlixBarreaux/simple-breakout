@@ -7,6 +7,6 @@
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
 script = ExtResource( 1 )
-music_list_to_play = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ]
+music_list_to_play = [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ) ]
 
 [connection signal="finished" from="." to="." method="_on_MusicPlayer_finished"]

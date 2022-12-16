@@ -44,14 +44,14 @@ func _initialize_asserts() -> void:
 
 
 func _initialize() -> void:
-	MusicPlayer.play_track_at_index(2)
+	MusicPlayer.play_track_at_index(1)
 	return
 
 # Buttons Signals
 func _on_NewGameButton_pressed() -> void:
 	var _error_code: int = 0
 	
-	MusicPlayer.play_track_at_index(1)
+	MusicPlayer.play_track_at_index(2)
 
 	Global.set_enable_lives(true)
 	Global.set_load_next_level(false)
