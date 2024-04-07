@@ -68,10 +68,8 @@ func _physics_process(delta: float) -> void:
 
 
 		if collision.collider is Paddle:
-			self.direction = get_bounce_direction(collision)
-			
-			# warning-ignore: return_value_discarded
-			self.direction.bounce(collision.normal)
+			var paddle: Paddle = collision.collider
+			direction = (self.global_position - paddle.global_position).normalized()
 			$HitAudioStreamPlayer.play()
 		else:
 			self.direction = self.direction.bounce(collision.normal)
