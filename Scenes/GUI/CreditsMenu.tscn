@@ -9,9 +9,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 3 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 back_button_node_path = NodePath("ColorRect/BackButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -47,10 +44,13 @@ margin_left = -320.0
 margin_top = -146.0
 margin_right = 320.0
 margin_bottom = -48.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
 text = "back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
 anchor_left = 0.5

@@ -59,3 +59,4 @@ polygon = PoolVector2Array( 90, 0, 0, 60, 72.03, 60, 180, 60 )
 [editable path="Bricks/TriangleBrick19"]
 [editable path="Bricks/TriangleBrick20"]
 [editable path="Balls"]
+[editable path="Balls/Ball"]

@@ -53,5 +53,10 @@ func _initialize() -> void:
 	self.text = self.language_name + " (" + self.country_name + ")"
 
 
+func _gui_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		TranslationServer.set_locale(self.locale)
+
+
 func _on_LanguageButton_pressed() -> void:
 	self.emit_signal("selected", self)

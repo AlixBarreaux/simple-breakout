@@ -13,7 +13,6 @@ anchor_bottom = 1.0
 theme = ExtResource( 2 )
 script = ExtResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 language_buttons_container_node_path = NodePath("ColorRect/ScrollContainer/LanguageButtonsContainer")
@@ -77,6 +76,8 @@ focus_neighbour_left = NodePath("../../../BottomContainer/HBoxContainer/BackButt
 focus_neighbour_top = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
 focus_neighbour_right = NodePath("../LanguageButtonFrenchFrance")
 focus_neighbour_bottom = NodePath("../LanguageButtonFrenchFrance")
+focus_next = NodePath("../LanguageButtonFrenchFrance")
+focus_previous = NodePath("../../../BottomContainer/HBoxContainer/ApplyButton")
 
 [node name="LanguageButtonFrenchFrance" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 4 )]
 margin_top = 260.0
@@ -86,6 +87,8 @@ focus_neighbour_left = NodePath("../LanguageButtonEnglishUSA")
 focus_neighbour_top = NodePath("../LanguageButtonEnglishUSA")
 focus_neighbour_right = NodePath("../LanguageButtonGermanGermany")
 focus_neighbour_bottom = NodePath("../LanguageButtonGermanGermany")
+focus_next = NodePath("../LanguageButtonGermanGermany")
+focus_previous = NodePath("../LanguageButtonEnglishUSA")
 
 [node name="LanguageButtonGermanGermany" parent="ColorRect/ScrollContainer/LanguageButtonsContainer" instance=ExtResource( 5 )]
 margin_top = 382.0
@@ -95,6 +98,8 @@ focus_neighbour_left = NodePath("../LanguageButtonFrenchFrance")
 focus_neighbour_top = NodePath("../LanguageButtonFrenchFrance")
 focus_neighbour_right = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
 focus_neighbour_bottom = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
+focus_next = NodePath("../../../BottomContainer/HBoxContainer/BackButton")
+focus_previous = NodePath("../LanguageButtonFrenchFrance")
 
 [node name="BottomContainer" type="VBoxContainer" parent="ColorRect"]
 anchor_top = 1.0
@@ -138,6 +143,8 @@ focus_neighbour_left = NodePath("../ApplyButton")
 focus_neighbour_top = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonGermanGermany")
 focus_neighbour_right = NodePath("../ApplyButton")
 focus_neighbour_bottom = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonEnglishUSA")
+focus_next = NodePath("../ApplyButton")
+focus_previous = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonGermanGermany")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "back"
@@ -153,6 +160,8 @@ focus_neighbour_left = NodePath("../BackButton")
 focus_neighbour_top = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonGermanGermany")
 focus_neighbour_right = NodePath("../BackButton")
 focus_neighbour_bottom = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonEnglishUSA")
+focus_next = NodePath("../../../ScrollContainer/LanguageButtonsContainer/LanguageButtonEnglishUSA")
+focus_previous = NodePath("../BackButton")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "apply"

@@ -23,11 +23,10 @@ __meta__ = {
 }
 
 [node name="LivesGUI" parent="HBoxContainer" instance=ExtResource( 4 )]
-margin_left = 911.0
-margin_right = 940.0
-margin_bottom = 16.0
+margin_left = 744.0
+margin_right = 930.0
+margin_bottom = 46.0
 
 [node name="ScoreGUI" parent="HBoxContainer" instance=ExtResource( 5 )]
-margin_left = 1040.0
-margin_right = 1069.0
-margin_bottom = 16.0
+margin_left = 1030.0
+margin_right = 1235.0

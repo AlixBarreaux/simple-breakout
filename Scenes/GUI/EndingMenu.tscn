@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Themes/pasti_title_label.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/GUI/QuitToMainMenuButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/GUI/QuitToDesktopButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Resources/Themes/main_theme.tres" type="Theme" id=4]
+[ext_resource path="res://Scripts/GUI/ending_menu.gd" type="Script" id=5]
 
 [node name="EndingMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource( 5 )
+back_button_node_path = NodePath("ColorRect/HBoxContainer/QuitToMainMenuButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -57,13 +57,21 @@ __meta__ = {
 margin_top = 0.0
 margin_right = 867.0
 margin_bottom = 213.0
-focus_neighbour_left = NodePath("../TryAgainButton")
-focus_neighbour_top = NodePath("../TryAgainButton")
-focus_neighbour_right = NodePath("../TryAgainButton")
-focus_neighbour_bottom = NodePath("../TryAgainButton")
+focus_neighbour_left = NodePath("../QuitToDesktopButton")
+focus_neighbour_top = NodePath("../QuitToDesktopButton")
+focus_neighbour_right = NodePath("../QuitToDesktopButton")
+focus_neighbour_bottom = NodePath("../QuitToDesktopButton")
+focus_next = NodePath("../QuitToDesktopButton")
+focus_previous = NodePath("../QuitToDesktopButton")
 text = "quit to main menu"
 
 [node name="QuitToDesktopButton" parent="ColorRect/HBoxContainer" instance=ExtResource( 3 )]
 margin_left = 897.0
 margin_right = 1764.0
 margin_bottom = 213.0
+focus_neighbour_left = NodePath("../QuitToMainMenuButton")
+focus_neighbour_top = NodePath("../QuitToMainMenuButton")
+focus_neighbour_right = NodePath("../QuitToMainMenuButton")
+focus_neighbour_bottom = NodePath("../QuitToMainMenuButton")
+focus_next = NodePath("../QuitToMainMenuButton")
+focus_previous = NodePath("../QuitToMainMenuButton")

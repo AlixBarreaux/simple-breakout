@@ -12,9 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 back_button_node_path = NodePath("ColorRect/BackButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -96,6 +93,8 @@ focus_neighbour_left = NodePath("../../../../BackButton")
 focus_neighbour_top = NodePath("../../../../BackButton")
 focus_neighbour_right = NodePath("../../MusicVolumeControllerGUI/HSlider")
 focus_neighbour_bottom = NodePath("../../MusicVolumeControllerGUI/HSlider")
+focus_next = NodePath("../../MusicVolumeControllerGUI/HSlider")
+focus_previous = NodePath("../../../../BackButton")
 
 [node name="MusicVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
 margin_top = 321.0
@@ -115,6 +114,8 @@ focus_neighbour_left = NodePath("../../MasterVolumeControllerGUI/HSlider")
 focus_neighbour_top = NodePath("../../MasterVolumeControllerGUI/HSlider")
 focus_neighbour_right = NodePath("../../SoundEffectsVolumeControllerGUI/HSlider")
 focus_neighbour_bottom = NodePath("../../SoundEffectsVolumeControllerGUI/HSlider")
+focus_next = NodePath("../../SoundEffectsVolumeControllerGUI/HSlider")
+focus_previous = NodePath("../../MasterVolumeControllerGUI/HSlider")
 
 [node name="SoundEffectsVolumeControllerGUI" parent="ColorRect/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
 margin_top = 481.0
@@ -134,23 +135,27 @@ focus_neighbour_left = NodePath("../../MusicVolumeControllerGUI/HSlider")
 focus_neighbour_top = NodePath("../../MusicVolumeControllerGUI/HSlider")
 focus_neighbour_right = NodePath("../../../../BackButton")
 focus_neighbour_bottom = NodePath("../../../../BackButton")
+focus_next = NodePath("../../../../BackButton")
+focus_previous = NodePath("../../MusicVolumeControllerGUI/HSlider")
 
 [node name="BackButton" type="Button" parent="ColorRect"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -525.5
-margin_top = -100.0
-margin_right = 525.5
-margin_bottom = -50.0
+margin_left = -320.0
+margin_top = -146.0
+margin_right = 320.0
+margin_bottom = -48.0
 focus_neighbour_left = NodePath("../ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI/HSlider")
 focus_neighbour_top = NodePath("../ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI/HSlider")
 focus_neighbour_right = NodePath("../ScrollContainer/VBoxContainer/MasterVolumeControllerGUI/HSlider")
 focus_neighbour_bottom = NodePath("../ScrollContainer/VBoxContainer/MasterVolumeControllerGUI/HSlider")
+focus_next = NodePath("../ScrollContainer/VBoxContainer/MasterVolumeControllerGUI/HSlider")
+focus_previous = NodePath("../ScrollContainer/VBoxContainer/SoundEffectsVolumeControllerGUI/HSlider")
 text = "back"
 __meta__ = {
-"_edit_use_anchors_": false
+"_editor_description_": ""
 }
 
 [connection signal="visibility_changed" from="." to="." method="_on_SoundControlMenu_visibility_changed"]

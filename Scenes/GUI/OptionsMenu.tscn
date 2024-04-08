@@ -12,9 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 sound_options_button_node_path = NodePath("ColorRect/ScrollContainer/VBoxContainer/SoundOptionsButton")
 graphics_options_button_node_path = NodePath("ColorRect/ScrollContainer/VBoxContainer/GraphicsOptionsButton")
 language_button_node_path = NodePath("ColorRect/ScrollContainer/VBoxContainer/LanguageButton")
@@ -52,18 +49,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -664.0
-margin_top = -307.0
-margin_right = 664.0
-margin_bottom = 307.0
+margin_left = -425.0
+margin_top = -257.0
+margin_right = 425.0
+margin_bottom = 257.0
 scroll_horizontal_enabled = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
-margin_right = 1328.0
-margin_bottom = 614.0
+margin_right = 850.0
+margin_bottom = 514.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 70
@@ -73,33 +67,38 @@ __meta__ = {
 }
 
 [node name="SoundOptionsButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 159.0
-margin_right = 1328.0
-margin_bottom = 211.0
+margin_right = 850.0
+margin_bottom = 124.0
 focus_neighbour_left = NodePath("../../../BackButton")
 focus_neighbour_top = NodePath("../../../BackButton")
 focus_neighbour_right = NodePath("../GraphicsOptionsButton")
 focus_neighbour_bottom = NodePath("../GraphicsOptionsButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "sound options"
 
 [node name="GraphicsOptionsButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 281.0
-margin_right = 1328.0
-margin_bottom = 333.0
+margin_top = 194.0
+margin_right = 850.0
+margin_bottom = 319.0
 focus_neighbour_left = NodePath("../SoundOptionsButton")
 focus_neighbour_top = NodePath("../SoundOptionsButton")
 focus_neighbour_right = NodePath("../LanguageButton")
 focus_neighbour_bottom = NodePath("../LanguageButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "graphics options"
 
 [node name="LanguageButton" type="Button" parent="ColorRect/ScrollContainer/VBoxContainer"]
-margin_top = 403.0
-margin_right = 1328.0
-margin_bottom = 455.0
+margin_top = 389.0
+margin_right = 850.0
+margin_bottom = 514.0
 focus_neighbour_left = NodePath("../GraphicsOptionsButton")
 focus_neighbour_top = NodePath("../GraphicsOptionsButton")
 focus_neighbour_right = NodePath("../../../BackButton")
 focus_neighbour_bottom = NodePath("../../../BackButton")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "language selection"
 
 [node name="BackButton" type="Button" parent="ColorRect"]
@@ -107,26 +106,26 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -525.5
-margin_top = -100.0
-margin_right = 525.5
-margin_bottom = -50.0
+margin_left = -320.0
+margin_top = -146.0
+margin_right = 320.0
+margin_bottom = -48.0
 focus_neighbour_left = NodePath("../ScrollContainer/VBoxContainer/LanguageButton")
 focus_neighbour_top = NodePath("../ScrollContainer/VBoxContainer/LanguageButton")
 focus_neighbour_right = NodePath("../ScrollContainer/VBoxContainer/SoundOptionsButton")
 focus_neighbour_bottom = NodePath("../ScrollContainer/VBoxContainer/SoundOptionsButton")
+focus_next = NodePath("../ScrollContainer/VBoxContainer/SoundOptionsButton")
+focus_previous = NodePath("../ScrollContainer/VBoxContainer/LanguageButton")
 text = "back"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="MenusToDisplay" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SoundOptionsMenu" parent="MenusToDisplay" instance=ExtResource( 4 )]
 visible = false

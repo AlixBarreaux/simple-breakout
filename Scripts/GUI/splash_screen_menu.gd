@@ -22,6 +22,13 @@ func _ready() -> void:
 	animation_tree.set_active(true)
 
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.pressed:
+			if event.button_index == 1 or event.button_index == 2:
+				skip_to_next_scene_to_load()
+
+
 func _unhandled_key_input(event: InputEventKey) -> void:
 	if event:
 		self.set_process_unhandled_key_input(false)

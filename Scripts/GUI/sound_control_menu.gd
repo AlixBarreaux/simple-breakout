@@ -28,7 +28,7 @@ func _initialize_asserts() -> void:
 
 func _on_SoundControlMenu_visibility_changed() -> void:
 	if self.visible:
-		self.back_button.grab_focus()
+		back_button.grab_focus()
 
 
 func _on_BackButton_pressed() -> void:

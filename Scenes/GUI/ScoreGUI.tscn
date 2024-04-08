@@ -10,9 +10,6 @@ theme = ExtResource( 2 )
 custom_constants/separation = 20
 alignment = 1
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScoreLabel" type="Label" parent="."]
 margin_left = 4.0

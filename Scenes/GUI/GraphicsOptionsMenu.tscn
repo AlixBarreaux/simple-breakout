@@ -10,9 +10,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 3 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 back_button_node_path = NodePath("ColorRect/BackButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -77,12 +74,10 @@ alignment = 1
 [node name="Label" parent="ColorRect/ScrollContainer/VBoxContainer/FullScreenController" index="0"]
 margin_left = 337.0
 margin_right = 546.0
-margin_bottom = 50.0
 
 [node name="CheckButton" parent="ColorRect/ScrollContainer/VBoxContainer/FullScreenController" index="1"]
 margin_left = 596.0
 margin_right = 672.0
-margin_bottom = 54.0
 focus_neighbour_left = NodePath("../../../../BackButton")
 focus_neighbour_top = NodePath("../../../../BackButton")
 focus_neighbour_right = NodePath("../../../../BackButton")
@@ -93,17 +88,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -525.5
-margin_top = -100.0
-margin_right = 525.5
-margin_bottom = -50.0
+margin_left = -320.0
+margin_top = -146.0
+margin_right = 320.0
+margin_bottom = -48.0
 focus_neighbour_left = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
 focus_neighbour_top = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
 focus_neighbour_right = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
 focus_neighbour_bottom = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+focus_next = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
+focus_previous = NodePath("../ScrollContainer/VBoxContainer/FullScreenController/CheckButton")
 text = "back"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [connection signal="visibility_changed" from="." to="." method="_on_GraphicsOptionsMenu_visibility_changed"]
