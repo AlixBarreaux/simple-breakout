@@ -6,7 +6,6 @@
 extents = Vector2( 125, 25 )
 
 [node name="Paddle" type="KinematicBody2D"]
-position = Vector2( 492.765, 597.036 )
 collision_mask = 2
 script = ExtResource( 1 )
 __meta__ = {
@@ -14,9 +13,8 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -25 )
 shape = SubResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2( -125, -50 )
+position = Vector2( -125, -25 )
 polygon = PoolVector2Array( 0, 0, 250, 0, 250, 50, 0, 50 )
