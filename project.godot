@@ -39,6 +39,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/GUI/credits_menu.gd"
 }, {
+"base": "Control",
+"class": "EndingMenu",
+"language": "GDScript",
+"path": "res://Scripts/GUI/ending_menu.gd"
+}, {
 "base": "HBoxContainer",
 "class": "FullScreenController",
 "language": "GDScript",
@@ -186,6 +191,7 @@ _global_script_class_icons={
 "BrickHealth": "",
 "BricksManager": "",
 "CreditsMenu": "",
+"EndingMenu": "",
 "FullScreenController": "",
 "Game": "",
 "GameOverMenu": "",
@@ -248,6 +254,10 @@ window/stretch/aspect="keep"
 [global]
 
 version=0
+
+[gui]
+
+theme/custom_font="res://Resources/Fonts/Dynamic_Fonts/pasti_dynamicfont.tres"
 
 [input]
 
