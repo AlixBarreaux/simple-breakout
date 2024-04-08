@@ -229,7 +229,7 @@ run/main_scene="res://Scenes/GUI/SplashScreenMenu.tscn"
 config/icon="res://Miscellaneous/game_icon.png"
 config/macos_native_icon="res://Miscellaneous/game_icon.icns"
 config/windows_native_icon="res://Miscellaneous/game_icon.ico"
-config/version=1
+config/version="0.1.0"
 
 [audio]
 
